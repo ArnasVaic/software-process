@@ -13,6 +13,56 @@
 % \subsubsection{Participants (optional)}
 % \subsubsection{Tools used (optional)}
 
+\subsection{Client Engagement Process}
+
+\subsection{Draft \& Client Engagement Process (PRO/ClientEng)}
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/ClientEng}        & \textbf{} \\ \hline
+Purpose &  Engage with the client to understand their high-level ideas and initiate formal agreements such as confidentiality and service provision contracts. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{CI}. Client idea
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+     \item Initial client communication to capture high-level needs and expectations.
+    \item Drafting confidentiality and service provision agreements.
+    \item Internal review and alignment of client's idea with organisational capabilities.
+    \item Finalisation and signing of agreements.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{SLC}. Signed legal contract 
+\end{itemize}
+\end{tabular}
+\caption{PRO/SIGN}
+\label{pro/sign}
+\end{table}
+
+\subsection{ReqAnal. Requirement analysis} % DOMANTAS
+% Requirement analysis/kalbėjimas su client
+
+IN PROGRESS \\
+
+Purpose: Agree on final list of user needs with the client. Derive technical requirements the delivered system must meet.
+
+IN: 
+    - NDA. Non-disclouse aggrement
+    - SC. Service contract % Paslaugų teikimo sutartis?
+
+ACTIVITES:
+
+
+OUT:
+    - UN. User needs
+    - FR. Functional requirements
+    - NFR. Non-functional requirements
+
+\newpage
 \subsection{Primary project planning (PRO/PLAN)}
 
 %TEMPLATE
@@ -104,6 +154,242 @@ Created work products &
 \caption{PRO/BACK}
 \label{pro/back}
 \end{table}
+
+\newpage
+\subsection{SCRUM CYCLE (PRO/SCRUM)}
+
+\subsubsection{Refinement (PRO/REF)}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/REF}        & \textbf{} \\ \hline
+Purpose & Review and refine the backlog of tasks by breaking them into smaller, more manageable parts. Adjust priorities and ensure clarity in the tasks to align with the product goals. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PB}. Project backlog
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Review the current backlog with the team, focusing on any new backlog items added.
+    \item Break down large tasks into smaller, atomic tasks.
+    \item Ensure clarity in task descriptions for better understanding and execution.
+    \item Reassess and assign priorities to tasks based on current goals and resources.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{PB}. Project backlog
+\end{itemize}
+\end{tabular}
+\caption{PRO/REF}
+\label{PRO/REF}
+\end{table}
+
+\newpage
+\subsubsection{Planning (PRO/SPLAN)}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/SPLAN}        & \textbf{} \\ \hline
+Purpose & To have the entire Scrum team review the highest-priority features presented by the Product Owner (PO), decide which tasks can be completed in the upcoming sprint, and create a detailed Sprint Backlog with task breakdowns and time estimates. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PB}. Product Backlog 
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item The Product Owner presents the highest-priority functions from the Product Backlog. The Scrum team  estimates or re-estimating (if the task already has an estimate) the effort required for each task using story points, typically following the Fibonacci sequence.
+    \item Create the Sprint Backlog with the selected tasks for the sprint with total work loading fitting into the story points range for the sprint.
+    \item Team members plan who will execute each task.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{SB}. Sprint Backlog
+\end{itemize}
+\end{tabular}
+\caption{PRO/SPLAN}
+\label{PRO/SPLAN}
+\end{table}
+
+
+\newpage
+\subsubsection{Development (PRO/DEV)}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/DEV}        & \textbf{} \\ \hline
+Purpose & To implement the tasks listed in the Sprint Backlog according to the plan. The development team focuses on delivering potentially shippable product increments, ensuring the quality and functionality of the features. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{SB}. Sprint Backlog
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Develop features and functionalities as defined in the Sprint Backlog.
+    \item Write and maintain code following coding standards and best practices.
+    \item Perform unit testing to ensure code quality and functionality.
+    \item Collaborate with team members through code reviews.
+    \item Continuously update the status of tasks in the Sprint Backlog.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{PI}. Product increment 
+    \item \textit{UC}. Updated codebase
+    \item \textit{DS}. Documentation 
+\end{itemize}
+\end{tabular}
+\caption{PRO/DEV}
+\label{development_process}
+\end{table}
+
+\newpage
+\subsubsection{Quality Assurance (PRO/QA)}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/QA}        & \textbf{} \\ \hline
+Purpose & To verify that the product increment meets the defined acceptance criteria and quality standards. Quality Assurance ensures the product is functional, reliable. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PI}. Product increment
+    \item \textit{UC}. Updated codebase
+    \item \textit{DS}. Documentation
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Review the product increment against acceptance criteria and requirements.
+    \item Perform functional and non-functional testing (e.g., unit, integration, system, performance, and security testing).
+    \item Identify and log defects or issues in the codebase.
+    \item Collaborate with the development team to resolve identified defects.
+    \item Conduct regression testing to ensure new changes do not affect existing functionality.
+    \item Update testing documentation and report the quality status.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{TR}. Test results and reports
+    \item \textit{DR}. Defect reports
+\end{itemize}
+\end{tabular}
+\caption{Quality Assurance Process (PRO/QA)}
+\label{quality_assurance_process}
+\end{table}
+
+\newpage
+\newpage
+\subsubsection{Control (sprint review, time assesment \& alignment) PRO/CONTROL}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/CONTROL}        & \textbf{} \\ \hline
+Purpose & To review and demonstrate the work completed during the sprint in an informal setting, allowing the team to self-evaluate how the sprint went, identify any unfinished tasks, and assess whether the sprint goals were achieved. This process aims to gather feedback, assess time management, and align on future improvements. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PI}. Product increment
+    \item \textit{TR}. Test results and reports
+    \item \textit{DR}. Defect reports
+    \item \textit{SB}. Sprint Backlog
+    \item \textit{TE}. Time estimates
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Reflect on the sprint's progress, discussing what went well and what challenges were encountered.
+    \item Evaluate if all planned tasks were completed and identify any unfinished tasks.
+    \item Assess the actual time spent on tasks compared to the initial estimates to understand the team's time management.
+    \item Align on action items and necessary adjustments for the next sprint, including updates to the Product Backlog and process enhancements.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{SRR}. Sprint Review Report summarizing the sprint's outcomes 
+    \item \textit{PB}. Updates to the Product Backlog based on the review
+\end{itemize}
+\end{tabular}
+\caption{PRO/CONTROL}
+\label{control_process}
+\end{table}
+
+\newpage
+\subsubsection{Partial delivery, feedback \& alignment (PRO/PD)}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/PD}        & \textbf{} \\ \hline
+Purpose & To deliver a  product increment to stakeholders, gather feedback, and align the team and product goals for the next iteration. This process ensures that the product is moving in the right direction and that stakeholder expectations are met. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PI}. Product Increment
+    \item \textit{TR}. Test Results and Reports
+    \item \textit{DR}. Defect Reports
+    \item \textit{PB}. Product Backlog updates
+    \item \textit{SRR}. Sprint Review Report
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Deliver the Product Increment to stakeholders for initial feedback.
+    \item Present the outcomes of the latest sprint, including the features developed and known issues.
+    \item Collect feedback from stakeholders regarding the delivered increment and its alignment with their needs.
+    \item Discuss any gaps, potential improvements, and changes to the Product Backlog.
+    \item Align on adjustments to the project direction, priorities, and goals for the next sprint based on stakeholder feedback.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{FD}. Feedback documentation
+    \item \textit{PB}. Updated Product Backlog with changes and new priorities
+\end{itemize}
+\end{tabular}
+\caption{PRO/PD}
+\label{partial_delivery_feedback_alignment}
+\end{table}
+
+
+\newpage
+\subsubsection{Demo Time (PRO/DEMO)}
+\begin{table}[h!]
+\begin{tabular}{l|p{0.9\textwidth}}
+\hline
+\textbf{PRO/DEMO}        & \textbf{} \\ \hline
+Purpose & To formally demonstrate the latest product increment to stakeholders and gather direct feedback. This demo serves as an opportunity to showcase progress, validate the work done, and ensure the product aligns with stakeholder expectations. \\ \hline
+Used work products    &      
+\begin{itemize}
+    \item \textit{PI}. Product Increment
+    \item \textit{FD}. Feedback documentation
+    \item \textit{PB}. Updated Product Backlog
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Prepare a live demonstration of the Product Increment, highlighting new features and improvements.
+    \item Showcase how feedback from previous sprints has been incorporated into the product.
+    \item Note any immediate concerns, suggestions, or new ideas raised during the demo.
+\end{enumerate}
+\\ \hline
+Created work products &     
+\begin{itemize}
+    \item \textit{PB}. Updated Product Backlog
+\end{itemize}
+\end{tabular}
+\caption{PRO/DEMO}
+\label{demo_time_process}
+\end{table}
+
+
+\newpage
 
 \subsection{PRO/MAN. Usage Documentation}
 
