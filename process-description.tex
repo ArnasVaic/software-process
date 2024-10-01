@@ -6,39 +6,15 @@
 % originalus failas: processes.bpmn
 
 \begin{landscape}
-\section{Process description}
+\section{Procesų aprašymas}
 \thispagestyle{empty}
-  % \fillandplacepagenumber
 \begin{figure}[H]%[htpb!]
     \centering
-    % \includegraphics[width=0.75\linewidth]{etc/diagram.png}
     \includegraphics[width=\linewidth]{etc/diagram.png}
 \end{figure}
 \end{landscape}
-% \begin{figure}[htbp]
-%     \centering
-%     \includesvg[width=0.75\columnwidth]{etc/export.svg}
-%     
-% \end{figure}
 
-% \subsection{Process 1}
-
-% \subsubsection{Identifier}
-% \subsubsection{Name}
-% \subsubsection{Goal}
-% \subsubsection{Activities}
-% % Diagramos tikriausiai eis čia?
-
-% \subsubsection{Work products used}
-% \subsubsection{Developed work products}
-% \subsubsection{Participants (optional)}
-% \subsubsection{Tools used (optional)}
-
-
-
-
-\newpage
-\subsection{PRO/CLIENT. Client Engagement Process }
+\subsection{\process{EngageClient}}
 \begin{table}[h!]
 \begin{tabular}{l|p{0.725\textwidth}}
 \hline
@@ -184,7 +160,7 @@ Activities            &
 
 \newpage
 % TODO:
-\subsection{PRO/BACK. Backlog drafting} % Aranas
+\subsection{\process{DraftBacklog}} % Aranas
 \begin{table}[h!]
 \begin{tabular}{l|p{0.725\textwidth}}
 \hline
@@ -388,16 +364,16 @@ Activities            &
 
 
 \newpage
-\subsection{CreateManual. Naudojimo dokumentacija}
+\subsection{\process{CreateManual}}
 \begin{table}[h]
 \begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{CreateManual}               & \textbf{Naudojimo dokumentacija} \\ \hline
+\textbf{\processId{CreateManual}}  & \textbf{\processName{CreateManual}} \\ \hline
 Tikslas & Paruošti produkto naudojimo instrukciją, suprantamą naudotojams.\\ \hline
 Naudojami darbo produktai (IN)    &      
 \begin{itemize}
-    \item \workProd{UserNeed}
-	\item \workProd{UseCase}
+    \item \workProd{UserNeeds}
+	\item \workProd{UseCases}
 	\item \workProd{Product}
 \end{itemize}
 \\ \hline
@@ -408,7 +384,7 @@ Sukuriami darbo produktai (OUT) &
 \\ \hline
 Veiklos            &   
 \begin{enumerate}
-     \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui (\workProdId{UseCase}) naudojant produktą (\workProdId{Product}). \label{CreateManual/1}
+     \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui (\workProdId{UseCases}) naudojant produktą (\workProdId{Product}). \label{CreateManual/1}
 	\item Detaliai aprašomos visos produkto (\workProdId{Product}) funkcijos (t.y. kaip jomis pasinaudoti) \label{CreateManual/2}
 	\item Iš \ref{CreateManual/1}. ir \ref{CreateManual/2}. sudaromas struktūrizuotas, vientisas dokumentas - produkto naudojimo instrukcija (\workProdId{Manual})
 	\item Atliekama produkto naudojimo instrukcijos validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms \label{CreateManual/3}
@@ -421,12 +397,12 @@ Veiklos            &
 \end{table}
 
 \newpage
-\subsection{CloseProject. Projekto užbaigimas}
+\subsection{\process{CloseProject}}
 
 \begin{table}[h]
 \begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{CloseProject}          & \textbf{Projekto užbaigimas} \\ \hline
+\textbf{\processId{CloseProject}}          & \textbf{\processName{CloseProject}} \\ \hline
 Tikslas & Užbaigti projektą, perduoti paruoštą naudojimui produktą klientams. \\ \hline
 Naudojami darbo produktai (IN)    &      
 \begin{itemize}
@@ -463,11 +439,11 @@ Veiklos            &
 %----------------------------------------
 
 
-\subsection{BugFix. Klaidos taisymas}
+\subsection{\process{BugFix}}
 \begin{table}[h]
 \begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{BugFix}    & \textbf{Klaidos taisymas} \\ \hline
+\textbf{\processId{BugFix}}    & \textbf{\processName{BugFix}} \\ \hline
 Tikslas &  Ištaisyti ne dėl kliento kaltės kilusias produkto klaidas \\ \hline
 Naudojami darbo produktai (IN)    &      
 \begin{itemize}
