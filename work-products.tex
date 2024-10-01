@@ -1,17 +1,40 @@
-\section{List of working products}
 
-\subsection{Work product 1}
 
-\subsubsection{Identifier}
+\newcommand{\describeWorkProd}[2]{
+    \expandafter\def\csname desc#1\endcsname{#1}
+}
+\newcommand{\workProdDescriptions}{
 
-PrPlan.
+}
 
-\subsubsection{Name}
+\forlistloop{}{\WorkProdList}
 
-Project plan
+\section{List of work products}
 
-\subsubsection{Description}
- 
-The project plan includes an assessment of the size and effort, the project
-schedule, resource plan, configuration management plan,
-change management plan, risk management plan
+\begin{longtable}{|c|c|p{0.5\textwidth}|}
+\hline
+\textbf{Identifier} & \textbf{Name} & \textbf{Description} \\ \hline
+CI & Client ideas & Spoken client ideas, comments or any other format in which they would provide information about a new system they want to order or a new feature they want to implement. \\ \hline
+EST & Resource, time and cost estimates & Estimates for needed human resources, time and cost. \\ \hline
+HLR & High level requirements & High level requirements of a system that would identify key components, establish specific domain and contain other important information about the desired system. \\ \hline
+LCS & Legal contracts & Collection of legal contracts that are required to begin working on a project for some client \\ \hline
+UN & User needs & Requirements, expectations, and desires of the end-users or stakeholders that the software must fulfil in order to solve specific problems, provide value, or enhance the user experience. \\ \hline
+FR & Functional requirements & Specific behaviours, features, and functionalities that a software system must have in order to meet the needs of its users and stakeholders. \\ \hline
+NFR & Non-functional requirements & Quality attributes, performance standards, and operational constraints of a software system, focusing on how the system should perform rather than what it should do. \\ \hline
+HLSA & High level system architecture & Moderately detailed documentation of overall system architecture that covers all relevant system components and domain knowledge required.  \\ \hline
+PB & Project backlog & Project backlog is the initial prioritised list of tasks, that need to be completed for a project to be finished that will be periodically refined during SCRUM activities. \\ \hline
+SP & Story point range & A relative measure used to estimate how much story points (work) can be completed in one scrum cycle. \\ \hline
+SRR & Sprint review report & A document that summarises the outcomes of the sprint. The SRR includes updates on necessary adjustments for the next sprint, such as changes to the project backlog, task reprioritization. It serves as a formal record of the sprint’s progress, ensuring alignment for future sprints. \\ \hline
+SB & Sprint backlog & A subset of the project backlog that contains tasks and features selected for completion during the current sprint.\\ \hline
+DR & Defect report & A report documenting defects discovered during testing. \\ \hline
+CODE & Code-base & Complete collection of source code that is used to build and run a particular system. It encompasses all the files, scripts, libraries, and dependencies that are necessary for the application to function, including both the human-readable code (written in programming languages) and sometimes machine-readable compiled code. \\ \hline
+PI & Product increment & A version of the product that includes all completed features and fixes from the current sprint. It represents a concrete step toward the final product. \\ \hline
+DOC & Technical documentation & Written materials that describe the functionality, architecture, and use of a system. It serves as a reference for developers, end-users, administrators, and other stakeholders to understand how to build, operate, maintain, or use the system. \\ \hline
+FD & Feedback documentation & A record of feedback provided by stakeholders after reviewing the product increment and scrum cycle outcome. It includes suggestions for improvement, and other inputs that will influence future sprints and project direction. \\ \hline
+UC & Use cases & The detailed scenarios in which the product should be used.\\ \hline
+INTRO & User training material & The training materials, including video and other types of media, which cover more complex or niche cases that would otherwise be difficult to describe in the user manual\\ \hline
+MAN & User manual & The document which must be referenced by the client whenever they wish to use the product as it was designed.\\ \hline
+WRNTY & Warranty Agreement & The legal contract which enables the client to request fixing product defects for a specific period of time.\\ \hline
+BUG & Bug/patch/vulnerability ticket & Bug/patch/vulnerability ticket specifying the issue exactly (is not
+produced by our processes, comes from the outside) \\ \hline
+\end{longtable}

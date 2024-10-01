@@ -1,8 +1,24 @@
 \documentclass{article}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[lithuanian]{babel}
 \usepackage{graphicx} % Required for inserting images
+\usepackage{float} % For accuratelly placing images
 \usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{xltabular}
+\usepackage{enumitem}
+
+% BEGIN: FOR SVG
+% \usepackage[inkscapelatex=false]{svg}
+\usepackage{svg}
+\usepackage{amsmath}
+% END: FOR SVG
+
+\usepackage{everypage}
+\usepackage{lscape} % Ensure landscape pages are recognized
+
 
 \title{"PTN" process description}
 \author{
@@ -12,14 +28,16 @@
     Arnas Vaicekauskas \\
     \textbf{Liudas Kasperavičius (Leader)} 
 }
-\date{September 2024}
+\date{September 2024\\v1.2}
 
 \begin{document}
+
 \maketitle
 
 \newpage
 \tableofcontents
 
+\include{work-product-definitions}
 \include{company-description}
 \include{process-description}
 \include{work-products}

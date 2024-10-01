@@ -1,4 +1,25 @@
+
+
+
+% svg debiliškai gaunas, sueis screeshot'as for the moment
+% redaguoti galima čia https://demo.bpmn.io/s/start
+% originalus failas: processes.bpmn
+
+\begin{landscape}
 \section{Process description}
+\thispagestyle{empty}
+  % \fillandplacepagenumber
+\begin{figure}[H]%[htpb!]
+    \centering
+    % \includegraphics[width=0.75\linewidth]{etc/diagram.png}
+    \includegraphics[width=\linewidth]{etc/diagram.png}
+\end{figure}
+\end{landscape}
+% \begin{figure}[htbp]
+%     \centering
+%     \includesvg[width=0.75\columnwidth]{etc/export.svg}
+%     
+% \end{figure}
 
 % \subsection{Process 1}
 
@@ -15,531 +36,478 @@
 
 
 
-\subsection{Client Engagement Process (PRO/CLIENT)}
+
+\newpage
+\subsection{PRO/CLIENT. Client Engagement Process }
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/CLIENT}        & \textbf{} \\ \hline
-Purpose &  Engage with the client to understand their high-level ideas and initiate formal agreements such as confidentiality and service provision contracts. \\ \hline
-Used work products    &      
+\textbf{PRO/CLIENT}        & \textbf{Client Engagement Process} \\ \hline
+Purpose &  To engage with the client in order to understand their high-level ideas, outline the resources required for the project. This includes: defining the initial time frame, and determining the number of team members involved. This process provides a foundation for clear communication and allows the client to negotiate adjustments if any part of the proposal does not meet their expectations.  \\ \hline
+Used work products (IN)   &      
 \begin{itemize}
-    \item \textit{CI}. Client idea
+    \item \textit{CI}. Client ideas (is not produced by our processes, comes from the outside)
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
+\begin{itemize}
+    % \item \textit{CA}. Confidentiality agreement
+    \item \textit{EST}. Resource, cost \& time estimates
+    \item \textit{HLR}. High level requirements 
 \end{itemize}
 \\ \hline
 Activities            &   
 \begin{enumerate}
-     \item Initial client communication to capture high-level needs and expectations.
-    \item Drafting confidentiality and service provision agreements.
-    \item Internal review and alignment of client's idea with organisational capabilities.
-    \item Finalisation and signing of agreements.
+    \item Initial communication with the client to define high-level requirements (HLR), project scope, and expectations (\textit{CI}).
+    \item Analysts provide resource estimates (EST) based on the client's idea (CI)
+    \item Project manager provides time and cost estimates (EST)
+    \item Price, scope and time negotiations with the client to determine whether the project is feasible and reasonable
+     
 \end{enumerate}
 \\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{CA}. Confidentiality agreement
-    \item \textit{SPA}. Service provision agreement
-    \item \textit{SLA}. Service Level Agreement
-    \item \textit{SOW}. Statement of Work
-\end{itemize}
+
 \end{tabular}
-\caption{PRO/CLIENT}
+
 \label{pro/sign}
 \end{table}
 
-\subsection{ReqAnal. Requirement analysis} % DOMANTAS
-% Requirement analysis/kalbėjimas su client
+% TODO: reikia pakeisti
+% 'Prepare legal contract' diagramoje
+% Pevadint procesa ir pakeisti diagramoje
+\subsection{PRO/CONTRACT. Prepare legal contract } % ARNAS
+\begin{table}[h!]
+\begin{tabular}{l|p{0.725\textwidth}}
+\hline
+\textbf{PRO/CONTRACT}        & \textbf{Prepare legal contract} \\ \hline
 
-IN PROGRESS \\
+% to do what: prepare legal contracts
+% why: because legal contracts are formal agreements to start work
+% wha
+Purpose & To prepare legal contracts that would be signed by our company and the client to formally start working on the project. The contracts would be based on the initial high level requirements and resource estimates for the project. \\ \hline
+Used work products (IN)   &      
+\begin{itemize}
+    \item \textit{HLR}. High level requirements 
+    \item \textit{EST}. Estimate of all resources
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
+\begin{itemize}
+    \item \textit{LCS}. Legal contracts
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Procure required legal contracts with the aid of a legal consultant (\textit{CI}, \textit{RE}, \textit{LCS})
+\end{enumerate}
+\\ \hline
+\end{tabular}
 
-Purpose: Agree on final list of user needs with the client. Derive technical requirements the delivered system must meet.
-
-IN: 
-    - NDA. Non-disclouse aggrement
-    - SC. Service contract % Paslaugų teikimo sutartis?
-
-ACTIVITES:
-
-
-OUT:
-    - UN. User needs
-    - FR. Functional requirements
-    - NFR. Non-functional requirements
+\label{pro/sign}
+\end{table}
 
 \newpage
-\subsection{Primary project planning (PRO/PLAN)}
-
-%TEMPLATE
+\subsection{PRO/REQ. Requirement analysis \& architecture } % DOMANTAS
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.7\textwidth}}
 \hline
-\textbf{PRO/PLAN}        & \textbf{} \\ \hline
-Purpose & Design and document the system architecture and make estimations for time and cost.   \\ \hline
-Used work products    &      
+\textbf{PRO/REQ}        & \textbf{Requirement analysis \& architecture} \\ \hline Purpose &
+Derive technical requirements that the system must meet and design the system accordingly. \\ \hline
+
+Used work products (IN)   &      
+\begin{itemize}
+    % \item \textit{SPA}. Service provision agreement
+    % \item \textit{SLA}. Service Level Agreement
+    % \item \textit{SOW}. Statement of Work
+    % \item \textit{CE}. Cost estimates
+    % \item \textit{TE}. Time estimates
+    \item \textit{EST}. Resource, cost \& time estimates
+    \item \textit{LCS}. Legal contracts
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
 \begin{itemize}
     \item \textit{UN}. User needs
     \item \textit{FR}. Functional requirements
     \item \textit{NFR}. Non-functional requirements
+    \item \textit{HLSA}. High-level system architecture ()
+    % Architecture
 \end{itemize}
 \\ \hline
 Activities            &   
 \begin{enumerate}
-    \item Internal meetings between IT division members to discuss and design the system architecture and make resource estimates
-    \item Meetings with the client to discuss unforeseen issues
-    \item Documentation of system architecture \& resource estimates
+  \item Main stakeholders and information sources are identified.
+  \item Information is gathered via interviews and analysis of business processes.
+  \item Perform analysis of gathered intel, document concrete user needs (\textit{UN}).
+  \item Define requirements (\textit{NFR} \& \textit{FR}) from derived user needs (\textbf{UN}), legal agreements (\textit{LCS}) and resource estimates (\textit{EST}).
+  \item A high-level system architecture (\textit{HLSA}) is documented to meet the requirements.
 \end{enumerate}
 \\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SA}. System architecture
-    \item \textit{CE}. Cost estimates
-    \item \textit{TE}. Time estimates
-\end{itemize}
 \end{tabular}
-\caption{PRO/PLAN}
+
 \label{pro/plan}
 \end{table}
 
-\newpage
+% \newpage
+% \subsection{PRO/PLAN. Primary project planning }
 
-\subsection{Draft \& sign project implementation agreement (PRO/SIGN)}
-\begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/SIGN}        & \textbf{} \\ \hline
-Purpose &  Present architecture and resource estimates to the client and get approval in a form of a legal contract. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{SA}. System architecture
-    \item \textit{CE}. Cost estimates
-    \item \textit{TE}. Time estimates
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Prepare legal contract
-    \item Present architecture and resource estimates to the client
-    \item Sign legal contract with the client
-\end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SLC}. Signed legal contract 
-\end{itemize}
-\end{tabular}
-\caption{PRO/SIGN}
-\label{pro/sign}
-\end{table}
+% %TEMPLATE
+% \begin{table}[h!]
+% \begin{tabular}{l|p{0.725\textwidth}}
+% \hline
+% \textbf{PRO/PLAN}        & \textbf{} \\ \hline
+% Purpose & Design and document the system architecture and make estimations for time and cost.   \\ \hline
+% Used work products (IN)  &      
+% \begin{itemize}
+%     \item \textit{UN}. User needs
+%     \item \textit{FR}. Functional requirements
+%     \item \textit{NFR}. Non-functional requirements
+% \end{itemize}
+% \\ \hline
+% Created work products (OUT) &     
+% \begin{itemize}
+%     \item \textit{SA}. System architecture
+%     \item \textit{CE}. Cost estimates
+%     \item \textit{TE}. Time estimates
+% \end{itemize}
+% \\ \hline
+% Activities            &   
+% \begin{enumerate}
+%     \item Internal meetings between IT division members to discuss and design the system architecture and make resource estimates
+%     \item Meetings with the client to discuss unforeseen issues
+%     \item Documentation of system architecture \& resource estimates
+% \end{enumerate}
+% \\ \hline
+% \end{tabular}
+% 
+% \label{pro/plan}
+% \end{table}
 
 \newpage
-\subsection{Backlog drafting (PRO/BACK)}
+% TODO:
+\subsection{PRO/BACK. Backlog drafting} % Aranas
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/BACK}        & \textbf{} \\ \hline
-Purpose & Compile a backlog of tasks by splitting the project into small, atomic parts.  \\ \hline
-Used work products    &      
+\textbf{PRO/BACK}        & \textbf{Backlog drafting} \\ \hline
+Purpose & Compile a backlog by splitting all material gathered during analysis into tasks or user stories for which accurate estimates can be made.  \\ \hline
+Used work products (IN)&      
 \begin{itemize}
-    \item \textit{SA}. System architecture
-    \item \textit{CE}. Cost estimates
-    \item \textit{TE}. Time estimates
+    \item \textit{UN}. User needs
+    \item \textit{FR}. Functional requirements
+    \item \textit{NFR}. Non-functional requirements
+    \item \textit{HLSA}. High-level system architecture 
 \end{itemize}
 \\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Internal communication between IT division members
-\end{enumerate}
-\\ \hline
-Created work products &     
+Created work products (OUT)&     
 \begin{itemize}
     \item \textit{PB}. Project backlog
 \end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Internal communication between SCRUM team members to produce project backlog \textit{PB} tasks using \textit{UN}, \textit{FR}, \textit{NFR}, \textit{HLSA}.
+\end{enumerate}
+\\ \hline
 \end{tabular}
-\caption{PRO/BACK}
+
 \label{pro/back}
 \end{table}
 
 \newpage
-\subsection{SCRUM CYCLE (PRO/SCRUM)}
+\subsection{PRO/SCRUM. SCRUM CYCLE }
 
-\subsubsection{Refinement (PRO/REF)}
+\subsubsection{PRO/REF. Refinement }
 
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/REF}        & \textbf{} \\ \hline
-Purpose & Review and refine the backlog of tasks by breaking them into smaller, more manageable parts. Adjust priorities and ensure clarity in the tasks to align with the product goals. \\ \hline
-Used work products    &      
+\textbf{PRO/REF}        & \textbf{Refinement} \\ \hline
+Purpose & Review and refine the backlog of tasks by breaking them into smaller, more manageable parts. Adjust priorities and ensure clarity in the tasks to align with the product goals and decide what and who will execute it this sprint. \\ \hline
+Used work products (IN)   &      
 \begin{itemize}
     \item \textit{PB}. Project backlog
+    \item \textit{SP}. Story points range
+    \item \textit{SRR}. Sprint review report
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
+\begin{itemize}
+    \item \textit{PB}. Project backlog
+    \item \textit{SB}. Sprint backlog
 \end{itemize}
 \\ \hline
 Activities            &   
 \begin{enumerate}
-    \item Review the current backlog with the team, focusing on any new backlog items added.
-    \item Break down large tasks into smaller, atomic tasks.
-    \item Ensure clarity in task descriptions for better understanding and execution.
-    \item Reassess and assign priorities to tasks based on current goals and resources.
+    \item The current \textit{PB} with the team is reviewed, focusing on any new \textit{PB} items added.
+    \item Large tasks are broken into smaller, atomic tasks.
+    \item Clarity in the task descriptions for better understanding and execution are ensured.
+    \item The scrum team  estimates the effort required for each task using story points, typically following the Fibonacci sequence.
+    \item Tasks based on current goals and resources are reassessed and prioritised, taking into the consideration \textit{SRR}.
+    \item Selected tasks for the cycle with total work load fitting into the story points range (\textit{SP}) for the cycle, creating a sprint backlog (\textit{SB}).
+    \item Team members plan who will execute each task.  
 \end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{PB}. Project backlog
-\end{itemize}
 \end{tabular}
-\caption{PRO/REF}
 \label{PRO/REF}
 \end{table}
 
 \newpage
-\subsubsection{Planning (PRO/SPLAN)}
+\subsubsection{PRO/DEV. Development}
 
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/SPLAN}        & \textbf{} \\ \hline
-Purpose & To have the entire Scrum team review the highest-priority features presented by the Product Owner (PO), decide which tasks can be completed in the upcoming sprint, and create a detailed Sprint Backlog with task breakdowns and time estimates. \\ \hline
-Used work products    &      
+\textbf{PRO/DEV}        & \textbf{Development} \\ \hline
+Purpose & To implement the tasks listed in the sprint backlog according to the plan. The scrum team focuses on delivering potentially shippable product increments, ensuring the quality and functionality of the features. \\ \hline
+Used work products (IN)    &      
 \begin{itemize}
-    \item \textit{PB}. Product Backlog 
+    \item \textit{SB}. Sprint backlog
+    \item \textit{DR}. Defect report (conditional, if any defects are found int PRO/TEST)
+    \item \textit{CODE}. Code-base
 \end{itemize}
 \\ \hline
-Activities            &   
-\begin{enumerate}
-    \item The Product Owner presents the highest-priority functions from the Product Backlog. The Scrum team  estimates or re-estimating (if the task already has an estimate) the effort required for each task using story points, typically following the Fibonacci sequence.
-    \item Create the Sprint Backlog with the selected tasks for the sprint with total work loading fitting into the story points range for the sprint.
-    \item Team members plan who will execute each task.
-\end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SB}. Sprint Backlog
-\end{itemize}
-\end{tabular}
-\caption{PRO/SPLAN}
-\label{PRO/SPLAN}
-\end{table}
-
-
-\newpage
-\subsubsection{Development (PRO/DEV)}
-
-\begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/DEV}        & \textbf{} \\ \hline
-Purpose & To implement the tasks listed in the Sprint Backlog according to the plan. The development team focuses on delivering potentially shippable product increments, ensuring the quality and functionality of the features. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{SB}. Sprint Backlog
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Develop features and functionalities as defined in the Sprint Backlog.
-    \item Write and maintain code following coding standards and best practices.
-    \item Perform unit testing to ensure code quality and functionality.
-    \item Collaborate with team members through code reviews.
-    \item Continuously update the status of tasks in the Sprint Backlog.
-\end{enumerate}
-\\ \hline
-Created work products &     
+Created work products (OUT) &     
 \begin{itemize}
     \item \textit{PI}. Product increment 
-    \item \textit{UC}. Updated codebase
-    \item \textit{DS}. Documentation 
-\end{itemize}
-\end{tabular}
-\caption{PRO/DEV}
-\label{development_process}
-\end{table}
-
-\newpage
-\subsubsection{Quality Assurance (PRO/QA)}
-
-\begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/QA}        & \textbf{} \\ \hline
-Purpose & To verify that the product increment meets the defined acceptance criteria and quality standards. Quality Assurance ensures the product is functional, reliable. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{PI}. Product increment
-    \item \textit{UC}. Updated codebase
-    \item \textit{DS}. Documentation
+    \item \textit{CODE}. Updated code-base.
+    \item \textit{DOC}. Technical documentation 
 \end{itemize}
 \\ \hline
 Activities            &   
 \begin{enumerate}
-    \item Review the product increment against acceptance criteria and requirements.
-    \item Perform functional and non-functional testing (e.g., unit, integration, system, performance, and security testing).
-    \item Identify and log defects or issues in the codebase.
-    \item Collaborate with the development team to resolve identified defects.
-    \item Conduct regression testing to ensure new changes do not affect existing functionality.
-    \item Update testing documentation and report the quality status.
+    \item Each developer develops tasks as defined in the sprint backlog. Time spent on \textbf{2-7} activities must be logged in (\textit{SB}) for future alignment of tasks. 
+    \item They write and maintain code following coding standards, updating the code-base (\textit{CODE}). 
+    \item They write unit test with the line coverage of 70\% to ensure code quality and functionality, updating the code-base (\textit{CODE}).
+    \item When code and unit tests are written, another team member must review the code. If any  changes are requested the processes is repeated from \textbf{2-4}.
+    \item Once development is completed, all defects (\textit{DR}) have been addressed, and the code has been approved by another developer, the product increment (PI) for testing is prepared. The task status in the sprint backlog (SB) must be updated to reflect that the task is testable.
+    \item Any necessary documentation (\textit{DOC}) must be written as well.
 \end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{TR}. Test results and reports
-    \item \textit{DR}. Defect reports
-\end{itemize}
 \end{tabular}
-\caption{Quality Assurance Process (PRO/QA)}
+\label{PRO/DEV}
+\end{table}
+
+\newpage
+\subsubsection{PRO/TEST. Testing}
+
+\begin{table}[h!]
+\begin{tabular}{l|p{0.725\textwidth}}
+\hline
+\textbf{PRO/TEST}        & \textbf{Testing} \\ \hline
+Purpose & To verify that the product increment meets the defined acceptance criteria and quality standards without breaking something in previous product increments. Testing ensures the product is functional, reliable. \\ \hline
+Used work products (IN)    &      
+\begin{itemize}
+    \item \textit{PI}. Product increment
+    \item \textit{DOC}. Technical documentation
+    \item \textit{SB}. Sprint backlog
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
+\begin{itemize}
+    \item \textit{DR}. Defect reports
+    \item \textit{SB}. Updated sprint backlog
+\end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Testers must log work done in \textbf{2-6} in sprint backlog (\textit{SB}).
+    \item Testers review the product increment (\textit{PI}) against acceptance criteria (from \textit{SB}) and requirements, using \textit{DOC} if necessary.
+    \item They perform functional and non-functional testing (e.g. integration, system, performance, and security testing) as per requirements of the tasks.
+    \item They conduct regression testing (automated) to ensure new changes do not affect existing functionality.
+    \item They update defect reports (\textit{DR}) to reflect the quality status.
+    \item If defects are found, the task loops back into the development cycle to address the issues. The tester must change the status of the task to reflect that it is back in development in the sprint backlog (\textit{SB}).
+\end{enumerate}
+\end{tabular}
 \label{quality_assurance_process}
 \end{table}
 
 \newpage
-\newpage
-\subsubsection{Control (sprint review, time assesment \& alignment) PRO/CONTROL}
+\subsubsection{PRO/PD. Partial delivery \& feedback}
 
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/CONTROL}        & \textbf{} \\ \hline
-Purpose & To review and demonstrate the work completed during the sprint in an informal setting, allowing the team to self-evaluate how the sprint went, identify any unfinished tasks, and assess whether the sprint goals were achieved. This process aims to gather feedback, assess time management, and align on future improvements. \\ \hline
-Used work products    &      
+\textbf{PRO/PD}        & \textbf{Partial delivery \& feedback} \\ \hline
+Purpose & To deliver a  product increment to stakeholders and gather feedback. This process ensures that the product is moving in the right direction and that stakeholder expectations are met. \\ \hline
+Used work products (IN)    &      
 \begin{itemize}
     \item \textit{PI}. Product increment
-    \item \textit{TR}. Test results and reports
     \item \textit{DR}. Defect reports
-    \item \textit{SB}. Sprint Backlog
-    \item \textit{TE}. Time estimates
+    \item \textit{PB}. Project backlog
 \end{itemize}
 \\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Reflect on the sprint's progress, discussing what went well and what challenges were encountered.
-    \item Evaluate if all planned tasks were completed and identify any unfinished tasks.
-    \item Assess the actual time spent on tasks compared to the initial estimates to understand the team's time management.
-    \item Align on action items and necessary adjustments for the next sprint, including updates to the Product Backlog and process enhancements.
-\end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SRR}. Sprint Review Report summarizing the sprint's outcomes 
-    \item \textit{PB}. Updates to the Product Backlog based on the review
-\end{itemize}
-\end{tabular}
-\caption{PRO/CONTROL}
-\label{control_process}
-\end{table}
-
-\newpage
-\subsubsection{Partial delivery, feedback \& alignment (PRO/PD)}
-
-\begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/PD}        & \textbf{} \\ \hline
-Purpose & To deliver a  product increment to stakeholders, gather feedback, and align the team and product goals for the next iteration. This process ensures that the product is moving in the right direction and that stakeholder expectations are met. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{PI}. Product Increment
-    \item \textit{TR}. Test Results and Reports
-    \item \textit{DR}. Defect Reports
-    \item \textit{PB}. Product Backlog updates
-    \item \textit{SRR}. Sprint Review Report
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Deliver the Product Increment to stakeholders for initial feedback.
-    \item Present the outcomes of the latest sprint, including the features developed and known issues.
-    \item Collect feedback from stakeholders regarding the delivered increment and its alignment with their needs.
-    \item Discuss any gaps, potential improvements, and changes to the Product Backlog.
-    \item Align on adjustments to the project direction, priorities, and goals for the next sprint based on stakeholder feedback.
-\end{enumerate}
-\\ \hline
-Created work products &     
+Created work products (OUT) &     
 \begin{itemize}
     \item \textit{FD}. Feedback documentation
-    \item \textit{PB}. Updated Product Backlog with changes and new priorities
 \end{itemize}
+\\ \hline
+Activities            &   
+\begin{enumerate}
+    \item Deliver the product increment (\textit{PI}) to stakeholders for initial feedback.
+    \item Present the outcomes of the latest sprint, including the features developed and known issues from \textit{DR}.
+    \item Collect feedback from stakeholders regarding the delivered increment and its alignment with their needs. Discuss any gaps, potential improvements, and changes to the     \textit{PB}.
+    \item Write feedback documentation (\textit{FD}).
+\end{enumerate}
 \end{tabular}
-\caption{PRO/PD}
 \label{partial_delivery_feedback_alignment}
 \end{table}
 
-
 \newpage
-\subsubsection{Demo Time (PRO/DEMO)}
+\subsubsection{PRO/CONTROL. Control (sprint review \& alignment)}
+
 \begin{table}[h!]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/DEMO}        & \textbf{} \\ \hline
-Purpose & To formally demonstrate the latest product increment to stakeholders and gather direct feedback. This demo serves as an opportunity to showcase progress, validate the work done, and ensure the product aligns with stakeholder expectations. \\ \hline
-Used work products    &      
+\textbf{PRO/CONTROL}        & \textbf{Control (sprint review \& alignment)} \\ \hline
+Purpose & To review and demonstrate the work completed during the sprint, allowing the team to self-evaluate how the sprint went. Feedback from stakeholders is also considered to assess time management and align on improvements for future scrum cycles. \\ \hline
+Used work products (IN)    &      
 \begin{itemize}
-    \item \textit{PI}. Product Increment
+    \item \textit{PI}. Product increment
+    \item \textit{DR}. Defect reports
+    \item \textit{SB}. Sprint backlog
+    \item \textit{EST}.  Resource, time and cost estimates
+    \item \textit{SP}. Story point range
     \item \textit{FD}. Feedback documentation
-    \item \textit{PB}. Updated Product Backlog
+    \item \textit{PB}. Project backlog
+\end{itemize}
+\\ \hline
+Created work products (OUT) &     
+\begin{itemize}
+    \item \textit{SRR}. Sprint review report summarising the sprint's outcomes 
+    \item \textit{SP}. Updated story point range 
 \end{itemize}
 \\ \hline
 Activities            &   
 \begin{enumerate}
-    \item Prepare a live demonstration of the Product Increment, highlighting new features and improvements.
-    \item Showcase how feedback from previous sprints has been incorporated into the product.
-    \item Note any immediate concerns, suggestions, or new ideas raised during the demo.
+    \item The team reflects on the sprint's progress, discussing what went well and what challenges were encountered.
+    \item The project managed assesses the actual time spent on tasks compared to the initial estimates to understand the team's time management using sprint backlog (\textit{SB}) logged hours and initial time estimates (\textit{EST}).
+    \item Based on \textbf{1-2} and feedback documentation (\textit{FD}), the project manager and scrum team identifies necessary adjustments for the next sprint. This includes updating the project backlog (\textit{PB}), reprioritizing tasks as needed and capturing these changes in the sprint review report (\textit{SRR}), refining the story point range (\textit{SP}).
+    \item The project manager closes project if necessary - if no further sprints are required, they transition to usage documentation.
 \end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{PB}. Updated Product Backlog
-\end{itemize}
 \end{tabular}
-\caption{PRO/DEMO}
-\label{demo_time_process}
+\label{control_process}
 \end{table}
 
 
 \newpage
-
-\subsection{PRO/MAN. Usage Documentation}
-
+\subsection{CreateManual. Naudojimo dokumentacija}
 \begin{table}[h]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/MAN}               & \textbf{Usage Documentation} \\ \hline
-Purpose & Ensure that all usage scenarios are covered and that users have the needed resources to gain knowledge of how to use the system. \\ \hline
-Used work products    &      
+\textbf{CreateManual}               & \textbf{Naudojimo dokumentacija} \\ \hline
+Tikslas & Paruošti produkto naudojimo instrukciją, suprantamą naudotojams.\\ \hline
+Naudojami darbo produktai (IN)    &      
 \begin{itemize}
-    \item \textit{UN}. User needs
-    \item \textit{UC}. Defined use cases
-    \item \textit{SYS}. The system
+    \item \workProd{UserNeed}
+	\item \workProd{UseCase}
+	\item \workProd{Product}
 \end{itemize}
 \\ \hline
-Activities            &   
+Sukuriami darbo produktai (OUT) &     
+\begin{itemize}
+    \item \workProd{Manual}
+\end{itemize}
+\\ \hline
+Veiklos            &   
 \begin{enumerate}
-   \item \textit{UC} scenario testing and documentation
-   \item Emergenet behavior use case definitions, testing and documentaion (\textit{UC} updated)
-   \item \textit{UN} achievability via \textit{UC} testing and documentation
-   \item Video material preparation for more complex or niche use cases \textit{UC}
-   \item Preparation of user trainings material (\textit{INTRO})
+     \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui (\workProdId{UseCase}) naudojant produktą (\workProdId{Product}). \label{CreateManual/1}
+	\item Detaliai aprašomos visos produkto (\workProdId{Product}) funkcijos (t.y. kaip jomis pasinaudoti) \label{CreateManual/2}
+	\item Iš \ref{CreateManual/1}. ir \ref{CreateManual/2}. sudaromas struktūrizuotas, vientisas dokumentas - produkto naudojimo instrukcija (\workProdId{Manual})
+	\item Atliekama produkto naudojimo instrukcijos validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms \label{CreateManual/3}
+	\item Kol netenkinamas \ref{CreateManual/3}. punktas, atliekami naudojimo instrukcijos pakeitimai
+
 \end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{MAN}. User manual
-    \item \textit{INTRO}. User trainings material
-    \item \textit{UC}. Updated use cases with emergent behaviors
-\end{itemize}
 \end{tabular}
-\caption{PRO/MAN}
-\label{pro/man}
+
+\label{CreateManual}
 \end{table}
+
 \newpage
-%----------------------------------------
+\subsection{CloseProject. Projekto užbaigimas}
 
-\subsection{PRO/CLOSE. Project Closure}
 \begin{table}[h]
-\begin{tabular}{l|p{0.8\textwidth}}
+\begin{tabular}{l|p{0.725\textwidth}}
 \hline
-\textbf{PRO/CLOSE}               & \textbf{Project Closure} \\ \hline
-Purpose & Finalize the project and provide the agreed-upon items and services to the client.\\ \hline
-Used work products    &      
+\textbf{CloseProject}          & \textbf{Projekto užbaigimas} \\ \hline
+Tikslas & Užbaigti projektą, perduoti paruoštą naudojimui produktą klientams. \\ \hline
+Naudojami darbo produktai (IN)    &      
 \begin{itemize}
-    \item \textit{SYS}. The system
-    \item \textit{DOC}. Technical documentation
-    \item \textit{?}. Service agreement
-    \item \textit{MAN}. User manual
-    \item \textit{INTRO}. User trainings material
+    \item \workProd{Product}
+	\item \workProd{Contract}
+	\item \workProd{Backlog}
+	\item \workProd{TechDocs}
+	\item \workProd{Manual}
 \end{itemize}
 \\ \hline
-Activities            &   
+Sukuriami darbo produktai (OUT) &     
+\begin{itemize}
+    \item \workProd{Warranty}
+\end{itemize}
+\\ \hline
+Veiklos            &   
 \begin{enumerate}
- \item Installation of the system \textit{SYS} and execution of other tasks defined in the Service Agreement \textit{?}
- \item Provisioning of the Warranty \textit{WRNTY} agreement
- \item Provide \textit{DOC}, \textit{MAN} and \textit{INTRO} to the client
- \item Training of the client's IT department
- \item Training of other stakeholders defined in the Service Agreement \textit{?}
- \item Support over the adaptation period defined in the Service Agreement \textit{?}
+    \item Įsitikinama, jog visos -project backlog- (\workProdId{Backlog}) numatytos užduotys yra įgyvendintos
+    \item Atliekami -sutartyje- (\workProdId{Contract}) numatyti produkto (\workProdId{Contract}) perdavimo darbai
+    \item Perduodama produkto naudojimo instrukcija (\workProdId{Manual})
+    \item Perduodama -technical docs- (\workProdId{TechDocs}) 
+    \item Sudaroma ir pasirašoma garantinio aptarnavimo sutartis (\workProdId{Warranty}), kurioje numatomas garantinio aptarnavimo laikotarpis
+	\item Atliekama vidinė komunikacija apie užbaigtą projektą
+	\item Kol nesibaigia -sutartyje- (\workProdId{Contract}) numatytas adaptacinis laikotarpis, klientams teikiama techninė ar kitokia -sutartyje- (\workProdId{Contract}) numatyta pagalba
 \end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{WRNTY}. Warranty Agreement
-\end{itemize}
 \end{tabular}
-\caption{PRO/CLOSE}
-\label{pro/close}
-\end{table}
-\newpage
 
-
-%----------------------------------------
-
-
-\subsection{PRO/MAINT. Maintenance}
-\begin{table}[h]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/MAINT}    & \textbf{Maintenance} \\ \hline
-Purpose &  To maintain the system for a period specified in the Warrany Agreement. This includes bug fixes, patches, vulnerability fixes. This does not include the development of new features. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{WRNTY}. Warranty Agreement
-    \item \textit{SYS}. The system
-    \item \textit{BUG}. Bug/patch/vulnerability ticket specifying the issue exactly.
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Primary analysis of the issue (\textit{BUG}). Every case is handled individually, and the decision whether the issue is covered by the Warranty Agreement \textit{WRNTY} must be made.
-    \item \textit{BUG} is prioritized following the \textit{PRO/BLOG} process
-    \item \textit{BUG} fix is implemented following the \textit{PRO/SCRUM} process
-    \item New version of The system \textit{SYS} is released and provided to the client
-    \item \textit{BUG} ticket status is updated appropriately
-\end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SYS}. New version of The system
-    \item \textit{BUG}. Updated issue ticket
-\end{itemize}
-\end{tabular}
-\caption{PRO/MAINT}
-\label{pro/MAINT}
+\label{CloseProject}
 \end{table}
 \newpage
 %----------------------------------------
 
-\subsection{PRO/FEAT. Feature Request}
-\begin{table}[h]
-\begin{tabular}{l|p{0.8\textwidth}}
-\hline
-\textbf{PRO/FEAT}        & \textbf{Feature Request} \\ \hline
-Purpose & Update the system in a significant way by adding new features that did not appear in the original Service Agreement. This change is not covered by The Warranty Agreement and must be payed for and planned separately. \\ \hline
-Used work products    &      
-\begin{itemize}
-    \item \textit{SYS}. The system
-    \item \textit{FEAT}. Feature request ticket
-    \item \textit{MAN}. User manual
-    \item \textit{WRNTY}. The Warranty Agreement
-    \item \textit{?}. The Service Agreement
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Requirement analysis following the \textit{PRO/2} process
-    \item Provisioning of a new project and plan following the \textit{PRO/3} process
-    \item Provisioning of a new or updated Service Agreement \textit{?} following the \textit{PRO/4} process
-    \item Prioritization of the Feature Request \textit{FEAT} following the \textit{PRO/BLOG} process
-    \item Realization of the Feature Request \textit{FEAT} following the \textit{PRO/SCRUM} process chain
-    \item Provisioning of the \textit{FEAT} manual following the \textit{PRO/MAN} process and updating of the User manual \textit{MAN}
-    \item Release of a new System \textit{SYS} version and the finalization of the Feature Request \textit{FEAT} following the \textit{PRO/CLOSE} process including the provisioning or update of the Warranty Agreement \textit{WRNTY}
-\end{enumerate}
-\\ \hline
-Created work products &     
-\begin{itemize}
-    \item \textit{SYS}. New version of The system
-    \item \textit{WRNTY}. Revised Warranty Agreement
-    \item \textit{?}. Updated Service Agreement
-\end{itemize}
-\end{tabular}
-\caption{PRO/FEAT}
-\label{pro/FEAT}
-\end{table}
 
+%----------------------------------------
+
+
+\subsection{BugFix. Klaidos taisymas}
+\begin{table}[h]
+\begin{tabular}{l|p{0.725\textwidth}}
+\hline
+\textbf{BugFix}    & \textbf{Klaidos taisymas} \\ \hline
+Tikslas &  Ištaisyti ne dėl kliento kaltės kilusias produkto klaidas \\ \hline
+Naudojami darbo produktai (IN)    &      
+\begin{itemize}
+    \item \workProd{Product}
+	\item \workProd{TechDocs}
+	\item \workProd{Contract}
+	\item \workProd{Warranty}
+	\item \workProd{Ticket}
+	\item \workProd{Manual}
+\end{itemize}
+\\ \hline
+Sukuriami darbo produktai (OUT) &     
+\begin{itemize}
+    \item \workProd{Ticket}
+\end{itemize}
+\\ \hline
+Veiklos            &   
+\begin{enumerate}
+    \item Atliekama pirminė užregistruotos klaidos (\workProdId{Ticket}) analizė
+	\item Jei užregistruota klaida (\workProdId{Ticket}):
+        \begin{enumerate}[label=\alph*)] 
+		\item kyla dėl produkto (\workProdId{Product}) naudojimo nesilaikant produkto naudojimo instrukcijos (\workProdId{Manual})
+		\item eksploatuojant produktą (\workProdId{Product}) netinkamomis, t.y. neatitinkančiomis techninės dokumentacijos (\workProdId{TechDocs}), sąlygomis
+		\item yra ne klaida, o neegzistuojančio ir -sutartyje- (\workProdId{Contract}) nenumatyto funkcionalumo įgyvendinimo prašymas
+		\item neatitinka garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatytų sąlygų
+		\item yra užregistruota po garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatyto garantinio laikotarpio
+        \end{enumerate}
+	   tuomet užregistruota klaida (\workProdId{Ticket}) nėra taisoma ir šis procesas (\textit{BugFix}) yra užbaigiamas nevykdant tolesnių veiklų
+	\item Atliekama klaidos kilimo priežasties analizė (root cause analysis)
+	\item Kuo įmanoma greičiau ištaisoma klaida ir sukuriama nauja produkto (\workProdId{Product}) versija
+	\item Nauja produkto (\workProdId{Product}) versija perduodama klientams
+	\item Užregistruota klaida (\workProdId{Ticket}) papildoma su klaidą ištaisančia prdoukto (\workProdId{Product}) versija bei klaidos kilimo priežastimi
+\end{enumerate}
+\end{tabular}
+
+\label{BugFix}
+\end{table}
+\newpage
+
+%----------------------------------------
 
 
 %----------------------------------------
@@ -550,7 +518,7 @@ Created work products &
 % \hline
 % \textbf{PRO/}        & \textbf{} \\ \hline
 % Purpose &   \\ \hline
-% Used work products    &      
+% Used work products (IN)    &      
 % \begin{itemize}
 
 % \end{itemize}
@@ -560,12 +528,12 @@ Created work products &
 
 % \end{enumerate}
 % \\ \hline
-% Created work products &     
+% Created work products (OUT) &     
 % \begin{itemize}
 
 % \end{itemize}
 % \end{tabular}
-% \caption{PRO/}
+% 
 % \label{pro/}
 % \end{table}
 

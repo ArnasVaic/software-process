@@ -1,0 +1,19 @@
+\newcommand{\WorkProdList}{}
+\newcommand{\defineWorkProduct}[2]{%
+  \expandafter\def\csname identifier#1\endcsname{#1}%
+  \expandafter\def\csname name#1\endcsname{#2}%
+  \listgadd{\WorkProdList}{#1}
+}
+\newcommand{\workProdId}[1]{\textit{\csname identifier#1\endcsname}}
+\newcommand{\workProdName}[1]{\csname name#1\endcsname}
+\newcommand{\workProd}[1]{\workProdId{#1}. \workProdName{#1}}
+
+\defineWorkProduct{Manual}{Produkto naudojimo instrukcija}
+\defineWorkProduct{Warranty}{Garantinio aptarnavimo sutartis}
+\defineWorkProduct{Ticket}{Užregistruota klaida}
+\defineWorkProduct{UseCase}{Panaudos atvejai} % FIXME
+\defineWorkProduct{UserNeed}{Vartotojų poreikiai} % FIXME
+\defineWorkProduct{Product}{Produktas} % FIXME
+\defineWorkProduct{Contract}{Sutartis} % FIXME
+\defineWorkProduct{Backlog}{Backlogas} % FIXME
+\defineWorkProduct{TechDocs}{Techninė dokumentacija} % FIXME
