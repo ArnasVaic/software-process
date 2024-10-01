@@ -1,0 +1,16 @@
+\newcommand{\ProcList}{}
+\newcommand{\defineProcess}[2]{%
+  \expandafter\def\csname procId#1\endcsname{#1}%
+  \expandafter\def\csname procName#1\endcsname{#2}%
+  \listgadd{\ProcList}{#1}
+}
+\newcommand{\processId}[1]{\textit{\csname procId#1\endcsname}}
+\newcommand{\processName}[1]{\csname procName#1\endcsname}
+\newcommand{\process}[1]{\processId{#1}. \processName{#1}}
+
+\defineProcess{EngageClient}{Kliento įtraukimas}
+\defineProcess{DraftBacklog}{Užduočių sąrašo rengimas}
+
+\defineProcess{CreateManual}{Naudojimo dokumentacija}
+\defineProcess{CloseProject}{Projekto užbaigimas}
+\defineProcess{BugFix}{Klaidos taisymas}
