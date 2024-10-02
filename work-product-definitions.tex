@@ -1,19 +1,26 @@
 \newcommand{\WorkProdList}{}
-\newcommand{\defineWorkProduct}[2]{%
-  \expandafter\def\csname identifier#1\endcsname{#1}%
-  \expandafter\def\csname name#1\endcsname{#2}%
+\newcommand{\defineWorkProduct}[3]{%
+  \expandafter\def\csname identifier#1\endcsname{#2}%
+  \expandafter\def\csname name#1\endcsname{#3}%
   \listgadd{\WorkProdList}{#1}
 }
 \newcommand{\workProdId}[1]{\textit{\csname identifier#1\endcsname}}
 \newcommand{\workProdName}[1]{\csname name#1\endcsname}
 \newcommand{\workProd}[1]{\workProdId{#1}. \workProdName{#1}}
+\newcommand{\prodWork}[1]{\MakeLowercase{\workProdName{#1}} (\workProdId{#1})}
 
-\defineWorkProduct{Manual}{Produkto naudojimo instrukcija}
-\defineWorkProduct{Warranty}{Garantinio aptarnavimo sutartis}
-\defineWorkProduct{Ticket}{Užregistruota klaida}
-\defineWorkProduct{UseCases}{Panaudos atvejai} % FIXME
-\defineWorkProduct{UserNeeds}{Vartotojų poreikiai} % FIXME
-\defineWorkProduct{Product}{Produktas} % FIXME
-\defineWorkProduct{Contract}{Sutartis} % FIXME
-\defineWorkProduct{Backlog}{Backlogas} % FIXME
-\defineWorkProduct{TechDocs}{Techninė dokumentacija} % FIXME
+\defineWorkProduct{ResourceEstimates}{ĮS}{Laiko, kainos ir žmogiškųju˛ išteklių sąmata}
+\defineWorkProduct{FunReq}{FR}{Funkciniai reikalavimai}
+\defineWorkProduct{NonFunReq}{NFR}{Nefunkciniai reikalavimai}
+\defineWorkProduct{HighLevelArch}{ALSA}{Aukšto lygio sistemos architektūra}
+\defineWorkProduct{Experience}{PP}{Įmonės patirtis su projektais}
+\defineWorkProduct{ProjectScope}{PA}{Projekto apimtis}
+\defineWorkProduct{Manual}{PNI}{Produkto naudojimo instrukcija}
+\defineWorkProduct{Warranty}{GAS}{Garantinio aptarnavimo sutartis}
+\defineWorkProduct{Ticket}{UK}{Užregistruota klaida}
+\defineWorkProduct{UseCases}{PA}{Panaudos atvejai} % FIXME
+\defineWorkProduct{UserNeeds}{VP}{Vartotojų poreikiai} % FIXME
+\defineWorkProduct{Product}{P}{Produktas} % FIXME
+\defineWorkProduct{Contract}{KS}{Sutartis su klientu} % FIXME
+\defineWorkProduct{Backlog}{US}{Užduočių sąrašas} % FIXME
+\defineWorkProduct{TechDocs}{TD}{Techninė dokumentacija} % FIXME

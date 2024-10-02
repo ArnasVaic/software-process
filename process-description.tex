@@ -14,108 +14,91 @@
 \end{figure}
 \end{landscape}
 
-\subsection{\process{EngageClient}}
-\begin{table}[h!]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{PRO/CLIENT}        & \textbf{Client Engagement Process} \\ \hline
-Purpose &  To engage with the client in order to understand their high-level ideas, outline the resources required for the project. This includes: defining the initial time frame, and determining the number of team members involved. This process provides a foundation for clear communication and allows the client to negotiate adjustments if any part of the proposal does not meet their expectations.  \\ \hline
-Used work products (IN)   &      
-\begin{itemize}
-    \item \textit{CI}. Client ideas (is not produced by our processes, comes from the outside)
-\end{itemize}
-\\ \hline
-Created work products (OUT) &     
-\begin{itemize}
-    % \item \textit{CA}. Confidentiality agreement
-    \item \textit{EST}. Resource, cost \& time estimates
-    \item \textit{HLR}. High level requirements 
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Initial communication with the client to define high-level requirements (HLR), project scope, and expectations (\textit{CI}).
-    \item Analysts provide resource estimates (EST) based on the client's idea (CI)
-    \item Project manager provides time and cost estimates (EST)
-    \item Price, scope and time negotiations with the client to determine whether the project is feasible and reasonable
-     
-\end{enumerate}
-\\ \hline
+\subsection{\process{EngageClient}} % ARNAS
 
-\end{tabular}
+\begin{figure}[H]%[htpb!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{etc/engage-client.png}
+\end{figure}
 
-\label{pro/sign}
-\end{table}
+\begin{processTable}{EngageClient}
+    \tikslas{Įvertinti kliento poreikius, rasti kompromisą dėl projekto sąmatos bei apimties ir pasirašyti sutartį}
+    \inputs{
+        \item \textit{KP}. Kliento poreikiai ir galimybės
+        \item \workProd{Experience}
+    }
+    \outputs{   
+        \item \workProd{ResourceEstimates}
+        
+        \item \workProd{ProjectScope}
+        
+        \item \workProd{Contract}
+    }
+    \veiklos{
+         \item Projektų vadovas, architektas ir analitikas bendrauja su klientu, aiškinasi jo poreikius sistemai ir vertina kliento galimybes finansuoti tokios sistemos kūrimą. Ši veikla tęsiasi tol, kol įmonės atstovai surenka pakankamai informacijos paruošti klientui pasiūlymą.
+    
+        \item Projektų vadovas, architektas ir analitikas tarpusavyje įvertina kliento norus ir galimybes ir paruošia sutartį į kurią įeina laiko, kainos ir žmogiškųjų ištekliu sąmata bei nusakoma sistemos apimtis. \label{activity:prepare-deal}
 
-% TODO: reikia pakeisti
-% 'Prepare legal contract' diagramoje
-% Pevadint procesa ir pakeisti diagramoje
-\subsection{PRO/CONTRACT. Prepare legal contract } % ARNAS
-\begin{table}[h!]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{PRO/CONTRACT}        & \textbf{Prepare legal contract} \\ \hline
+        \item Klientui yra pateikiama sutartis. Jei klientas yra patenkintas sutarties sąlygomis pereinama prie sutarties pasirašymo \ref{activity:sign}. Klientas gali nesutikti su sutarties sąlygomis. Tokiu atveju klientas pateikia naujus poreikius ir dar kartą vykdoma veikla \ref{activity:prepare-deal}. Jei abi šalys nesugeba rasti kompromiso, procesas gali būti nutrauktas ir darbas su klientu netęsiamas.
 
-% to do what: prepare legal contracts
-% why: because legal contracts are formal agreements to start work
-% wha
-Purpose & To prepare legal contracts that would be signed by our company and the client to formally start working on the project. The contracts would be based on the initial high level requirements and resource estimates for the project. \\ \hline
-Used work products (IN)   &      
-\begin{itemize}
-    \item \textit{HLR}. High level requirements 
-    \item \textit{EST}. Estimate of all resources
-\end{itemize}
-\\ \hline
-Created work products (OUT) &     
-\begin{itemize}
-    \item \textit{LCS}. Legal contracts
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Procure required legal contracts with the aid of a legal consultant (\textit{CI}, \textit{RE}, \textit{LCS})
-\end{enumerate}
-\\ \hline
-\end{tabular}
-
-\label{pro/sign}
-\end{table}
+        \item Pasirašoma sutartis su klientu. \label{activity:sign}
+    }
+\end{processTable}
 
 \newpage
-\subsection{PRO/REQ. Requirement analysis \& architecture } % DOMANTAS
+\subsection{\process{RA}} % DOMANTAS
+
+\begin{processTable}{RA}
+    \tikslas{Nustatomi reikalavimai, kuriuos turi atitikti sistema, atitinkamai suprojektuojama sistema.Surinkti/nustatyti/išvesti? funkcinius ir nefunkcinius reikalavimus}
+    Surinkti/nustatyti/išvesti? funkcinius ir nefunkcinius reikalavimus
+
+% Derive technical requirements that the system must meet and design the system accordingly.
+    \inputs{
+       \item \workProd{Kazkas}
+    }
+    \outputs{
+       \item \workProd{Kazkas}
+    }
+    \veiklos{
+        \item Kazkokia veikla
+    }
+\end{processTable}
+
 \begin{table}[h!]
-\begin{tabular}{l|p{0.7\textwidth}}
+\begin{tabular}{p{0.1\textwidth}|p{0.8\textwidth}}
 \hline
-\textbf{PRO/REQ}        & \textbf{Requirement analysis \& architecture} \\ \hline Purpose &
+\textbf{\processId{RA}}    & \textbf{\processName{RA}} \\ \hline
+Tikslas & 
+Nustatomi reikalavimai, kuriuos turi atitikti sistema, atitinkamai suprojektuojama sistema.
+Surinkti/nustatyti/išvesti? funkcinius ir nefunkcinius reikalavimus
+
 Derive technical requirements that the system must meet and design the system accordingly. \\ \hline
 
-Used work products (IN)   &      
+Naudojami darbo produktai &
 \begin{itemize}
-    % \item \textit{SPA}. Service provision agreement
-    % \item \textit{SLA}. Service Level Agreement
-    % \item \textit{SOW}. Statement of Work
-    % \item \textit{CE}. Cost estimates
-    % \item \textit{TE}. Time estimates
-    \item \textit{EST}. Resource, cost \& time estimates
-    \item \textit{LCS}. Legal contracts
+    \item \workProd{ResourceEstimates}
+    
+    \item \workProd{ProjectScope}
 \end{itemize}
 \\ \hline
-Created work products (OUT) &     
+Sukurti darbo produktai &
 \begin{itemize}
-    \item \textit{UN}. User needs
-    \item \textit{FR}. Functional requirements
-    \item \textit{NFR}. Non-functional requirements
-    \item \textit{HLSA}. High-level system architecture ()
+    \item \workProd{FunReq}
+    \item \workProd{NonFunReq}
+    \item \workProd{HighLevelArch}
     % Architecture
 \end{itemize}
 \\ \hline
-Activities            &   
+Veiklos &   
 \begin{enumerate}
-  \item Main stakeholders and information sources are identified.
-  \item Information is gathered via interviews and analysis of business processes.
-  \item Perform analysis of gathered intel, document concrete user needs (\textit{UN}).
-  \item Define requirements (\textit{NFR} \& \textit{FR}) from derived user needs (\textbf{UN}), legal agreements (\textit{LCS}) and resource estimates (\textit{EST}).
-  \item A high-level system architecture (\textit{HLSA}) is documented to meet the requirements.
+
+    \item Identifikuojamos suinteresuotos šalys ir informacijos šaltiniai.
+    \item Renkama informacija iš suinteresuotų šalių per interviu ir modeliuojami įmonės
+    procesai iš identifikuotų informacijos šaltinių.
+    \item Iš surinktos informacijos identifikuojami konkretūs vartotojų poreikiai
+    % \item Perform analysis of gathered intel, document concrete user needs (\textit{UN}).
+    \item Apibrėžiami funkciniai ir nefunkciniai reikalavimai iš identifikuotų vartotojų poreikių; laiko kainos, žmogiškųjų išteklių sąmatos ir projekto apimties.
+    \item Aukšto lygio sistemos architektūra sukuria atsižvelgiant į apibrėžtus funkcinius ir nefunkcinius reikalavimus.
 \end{enumerate}
 \\ \hline
 \end{tabular}
@@ -123,69 +106,51 @@ Activities            &
 \label{pro/plan}
 \end{table}
 
-% \newpage
-% \subsection{PRO/PLAN. Primary project planning }
-
-% %TEMPLATE
-% \begin{table}[h!]
-% \begin{tabular}{l|p{0.725\textwidth}}
-% \hline
-% \textbf{PRO/PLAN}        & \textbf{} \\ \hline
-% Purpose & Design and document the system architecture and make estimations for time and cost.   \\ \hline
-% Used work products (IN)  &      
-% \begin{itemize}
-%     \item \textit{UN}. User needs
-%     \item \textit{FR}. Functional requirements
-%     \item \textit{NFR}. Non-functional requirements
-% \end{itemize}
-% \\ \hline
-% Created work products (OUT) &     
-% \begin{itemize}
-%     \item \textit{SA}. System architecture
-%     \item \textit{CE}. Cost estimates
-%     \item \textit{TE}. Time estimates
-% \end{itemize}
-% \\ \hline
-% Activities            &   
-% \begin{enumerate}
-%     \item Internal meetings between IT division members to discuss and design the system architecture and make resource estimates
-%     \item Meetings with the client to discuss unforeseen issues
-%     \item Documentation of system architecture \& resource estimates
-% \end{enumerate}
-% \\ \hline
-% \end{tabular}
-% 
-% \label{pro/plan}
-% \end{table}
-
 \newpage
-% TODO:
-\subsection{\process{DraftBacklog}} % Aranas
-\begin{table}[h!]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{PRO/BACK}        & \textbf{Backlog drafting} \\ \hline
-Purpose & Compile a backlog by splitting all material gathered during analysis into tasks or user stories for which accurate estimates can be made.  \\ \hline
-Used work products (IN)&      
-\begin{itemize}
-    \item \textit{UN}. User needs
-    \item \textit{FR}. Functional requirements
-    \item \textit{NFR}. Non-functional requirements
-    \item \textit{HLSA}. High-level system architecture 
-\end{itemize}
-\\ \hline
-Created work products (OUT)&     
-\begin{itemize}
-    \item \textit{PB}. Project backlog
-\end{itemize}
-\\ \hline
-Activities            &   
-\begin{enumerate}
-    \item Internal communication between SCRUM team members to produce project backlog \textit{PB} tasks using \textit{UN}, \textit{FR}, \textit{NFR}, \textit{HLSA}.
-\end{enumerate}
-\\ \hline
-\end{tabular}
 
+\subsection{\process{DraftBacklog}} % ARNAS
+
+\begin{table}[h!]
+\begin{tabular}{p{0.1\textwidth}|p{0.85\textwidth}}
+
+\hline
+
+\textbf{\processId{DraftBacklog}} & \textbf{\processName{DraftBacklog}} \\ 
+
+\hline
+
+Tikslas &
+Paversti analizės metu išgrynintus reikalavimus ir sistemos architektūra į panaudos atvejus ir technines užduotis iš kurių būtų sudaromas užduočių sąrašas. \\ 
+
+\hline
+
+Panaudoti darbo produktai & 
+
+\begin{itemize}
+    \item \workProd{FunReq}
+    \item \workProd{NonFunReq}
+    \item \workProd{HighLevelArch}
+\end{itemize}
+
+\\ \hline
+
+Sukurti darbo produktai &
+
+\begin{itemize}
+    \item \workProd{Backlog}
+\end{itemize} \\ 
+
+\hline
+
+Veiklos &
+
+\begin{enumerate}
+    \item Architektas kartu su analitiku agreguoja analizės metu surinktus reikalavimus bei aukšto lygio sistemos architektūra į panaudos atvejus ir atskiras technines užduotis. Kiekvienas panaudos atvejis ir techninė užduotis yra detaliai aprašomi
+\end{enumerate} \\ 
+
+\hline
+
+\end{tabular}
 \label{pro/back}
 \end{table}
 
@@ -365,154 +330,112 @@ Activities            &
 
 \newpage
 \subsection{\process{CreateManual}}
-\begin{table}[h]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{\processId{CreateManual}}  & \textbf{\processName{CreateManual}} \\ \hline
-Tikslas & Paruošti produkto naudojimo instrukciją, suprantamą naudotojams.\\ \hline
-Naudojami darbo produktai (IN)    &      
-\begin{itemize}
-    \item \workProd{UserNeeds}
-	\item \workProd{UseCases}
-	\item \workProd{Product}
-\end{itemize}
-\\ \hline
-Sukuriami darbo produktai (OUT) &     
-\begin{itemize}
-    \item \workProd{Manual}
-\end{itemize}
-\\ \hline
-Veiklos            &   
-\begin{enumerate}
-     \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui (\workProdId{UseCases}) naudojant produktą (\workProdId{Product}). \label{CreateManual/1}
-	\item Detaliai aprašomos visos produkto (\workProdId{Product}) funkcijos (t.y. kaip jomis pasinaudoti) \label{CreateManual/2}
-	\item Iš \ref{CreateManual/1}. ir \ref{CreateManual/2}. sudaromas struktūrizuotas, vientisas dokumentas - produkto naudojimo instrukcija (\workProdId{Manual})
-	\item Atliekama produkto naudojimo instrukcijos validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms \label{CreateManual/3}
-	\item Kol netenkinamas \ref{CreateManual/3}. punktas, atliekami naudojimo instrukcijos pakeitimai
 
-\end{enumerate}
-\end{tabular}
+\begin{processTable}{CreateManual}
+    \tikslas{Paruošti produkto naudojimo instrukciją, suprantamą naudotojams}
+    \inputs{
+        \item \workProd{UserNeeds}
+        \item \workProd{UseCases}
+        \item \workProd{Product}
+    }
+    \outputs{
+            \item \workProd{Manual}
+    }
+    \veiklos{
+         \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui (\workProdId{UseCases}) naudojant produktą (\workProdId{Product}). \label{CreateManual/1}
+        \item Detaliai aprašomos visos produkto (\workProdId{Product}) funkcijos (t.y. kaip jomis pasinaudoti) \label{CreateManual/2}
+        \item Iš \ref{CreateManual/1}. ir \ref{CreateManual/2}. sudaromas struktūrizuotas, vientisas dokumentas - \prodWork{Manual}
+        \item Atliekama produkto naudojimo instrukcijos (\workProdId{Manual}) validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms \label{CreateManual/3}
+        \item Kol netenkinamas \ref{CreateManual/3}. punktas, atliekami naudojimo instrukcijos pakeitimai
+        }
+\end{processTable}
 
-\label{CreateManual}
-\end{table}
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{etc/diagrams/Manual.png}
+\end{figure}
+% --------------------------------------------------------------------
 \newpage
 \subsection{\process{CloseProject}}
+\begin{processTable}{CloseProject}
+    \tikslas{Užbaigti projektą, perduoti paruoštą naudojimui produktą klientams}
+    \inputs{
+        \item \workProd{Product}
+    	\item \workProd{Contract}
+    	\item \workProd{Backlog}
+    	\item \workProd{TechDocs}
+    	\item \workProd{Manual}
+    }
+    \outputs{
+        \item \workProd{Warranty}
+        \item \workProd{Experience}
+    }
+    \veiklos{
+         \item Įsitikinama, jog visos užduočių sąraše (\workProdId{Backlog}) numatytos užduotys yra įgyvendintos
+        \item Atliekami sutartyje (\workProdId{Contract}) numatyti produkto (\workProdId{Contract}) perdavimo klientui darbai
+        \item Klientui perduodama \prodWork{Manual}
+        \item Klientui perduodama \prodWork{TechDocs}
+        \item Sudaroma ir pasirašoma \prodWork{Warranty}, kurioje numatomas garantinio aptarnavimo laikotarpis
+    	\item Atliekama vidinė komunikacija apie užbaigtą projektą. Projekto vadovas dalinasi projekto eiga, priimtais kritiniais sprendimais ir rezultatais. Taip kaupiama \prodWork{Experience} 
+    	\item Kol nesibaigia sutartyje (\workProdId{Contract}) numatytas adaptacinis laikotarpis, klientams teikiama techninė pagalba
+    }
+\end{processTable}
 
-\begin{table}[h]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{\processId{CloseProject}}          & \textbf{\processName{CloseProject}} \\ \hline
-Tikslas & Užbaigti projektą, perduoti paruoštą naudojimui produktą klientams. \\ \hline
-Naudojami darbo produktai (IN)    &      
-\begin{itemize}
-    \item \workProd{Product}
-	\item \workProd{Contract}
-	\item \workProd{Backlog}
-	\item \workProd{TechDocs}
-	\item \workProd{Manual}
-\end{itemize}
-\\ \hline
-Sukuriami darbo produktai (OUT) &     
-\begin{itemize}
-    \item \workProd{Warranty}
-\end{itemize}
-\\ \hline
-Veiklos            &   
-\begin{enumerate}
-    \item Įsitikinama, jog visos -project backlog- (\workProdId{Backlog}) numatytos užduotys yra įgyvendintos
-    \item Atliekami -sutartyje- (\workProdId{Contract}) numatyti produkto (\workProdId{Contract}) perdavimo darbai
-    \item Perduodama produkto naudojimo instrukcija (\workProdId{Manual})
-    \item Perduodama -technical docs- (\workProdId{TechDocs}) 
-    \item Sudaroma ir pasirašoma garantinio aptarnavimo sutartis (\workProdId{Warranty}), kurioje numatomas garantinio aptarnavimo laikotarpis
-	\item Atliekama vidinė komunikacija apie užbaigtą projektą
-	\item Kol nesibaigia -sutartyje- (\workProdId{Contract}) numatytas adaptacinis laikotarpis, klientams teikiama techninė ar kitokia -sutartyje- (\workProdId{Contract}) numatyta pagalba
-\end{enumerate}
-\end{tabular}
-
-\label{CloseProject}
-\end{table}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{etc/diagrams/projectClosure.png}
+\end{figure}
 \newpage
-%----------------------------------------
-
 
 %----------------------------------------
 
 
 \subsection{\process{BugFix}}
-\begin{table}[h]
-\begin{tabular}{l|p{0.725\textwidth}}
-\hline
-\textbf{\processId{BugFix}}    & \textbf{\processName{BugFix}} \\ \hline
-Tikslas &  Ištaisyti ne dėl kliento kaltės kilusias produkto klaidas \\ \hline
-Naudojami darbo produktai (IN)    &      
-\begin{itemize}
-    \item \workProd{Product}
-	\item \workProd{TechDocs}
-	\item \workProd{Contract}
-	\item \workProd{Warranty}
-	\item \workProd{Ticket}
-	\item \workProd{Manual}
-\end{itemize}
-\\ \hline
-Sukuriami darbo produktai (OUT) &     
-\begin{itemize}
-    \item \workProd{Ticket}
-\end{itemize}
-\\ \hline
-Veiklos            &   
-\begin{enumerate}
-    \item Atliekama pirminė užregistruotos klaidos (\workProdId{Ticket}) analizė
-	\item Jei užregistruota klaida (\workProdId{Ticket}):
-        \begin{enumerate}[label=\alph*)] 
-		\item kyla dėl produkto (\workProdId{Product}) naudojimo nesilaikant produkto naudojimo instrukcijos (\workProdId{Manual})
-		\item eksploatuojant produktą (\workProdId{Product}) netinkamomis, t.y. neatitinkančiomis techninės dokumentacijos (\workProdId{TechDocs}), sąlygomis
-		\item yra ne klaida, o neegzistuojančio ir -sutartyje- (\workProdId{Contract}) nenumatyto funkcionalumo įgyvendinimo prašymas
-		\item neatitinka garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatytų sąlygų
-		\item yra užregistruota po garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatyto garantinio laikotarpio
-        \end{enumerate}
-	   tuomet užregistruota klaida (\workProdId{Ticket}) nėra taisoma ir šis procesas (\textit{BugFix}) yra užbaigiamas nevykdant tolesnių veiklų
-	\item Atliekama klaidos kilimo priežasties analizė (root cause analysis)
-	\item Kuo įmanoma greičiau ištaisoma klaida ir sukuriama nauja produkto (\workProdId{Product}) versija
-	\item Nauja produkto (\workProdId{Product}) versija perduodama klientams
-	\item Užregistruota klaida (\workProdId{Ticket}) papildoma su klaidą ištaisančia prdoukto (\workProdId{Product}) versija bei klaidos kilimo priežastimi
-\end{enumerate}
-\end{tabular}
-
-\label{BugFix}
-\end{table}
+\begin{processTable}{BugFix}
+    \tikslas{Ištaisyti ne dėl kliento kaltės kilusias produkto klaidas}
+    \inputs{
+        \item \workProd{Product}
+    	\item \workProd{TechDocs}
+    	\item \workProd{Contract}
+    	\item \workProd{Warranty}
+    	\item \workProd{Ticket}
+    	\item \workProd{Manual}    }
+    \outputs{
+        \item \workProd{Ticket}
+    }
+    \veiklos{
+        \item Atliekama pirminė užregistruotos klaidos (\workProdId{Ticket}) analizė
+	   \item Jei užregistruota klaida (\workProdId{Ticket}):
+            \begin{enumerate}[label=\alph*)] 
+        		\item kyla dėl produkto (\workProdId{Product}) naudojimo nesilaikant produkto naudojimo instrukcijos (\workProdId{Manual})
+        		\item eksploatuojant produktą (\workProdId{Product}) netinkamomis, t.y. neatitinkančiomis techninės dokumentacijos (\workProdId{TechDocs}), sąlygomis
+        		\item yra ne klaida, o neegzistuojančio ir -sutartyje- (\workProdId{Contract}) nenumatyto funkcionalumo įgyvendinimo prašymas
+        		\item neatitinka garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatytų sąlygų
+        		\item yra užregistruota po garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatyto garantinio laikotarpio
+            \end{enumerate}
+            tuomet užregistruota klaida (\workProdId{Ticket}) nėra taisoma ir šis procesas (\textit{BugFix}) yra užbaigiamas nevykdant tolesnių veiklų
+    	\item Atliekama klaidos kilimo priežasties analizė (root cause analysis)
+    	\item Kuo įmanoma greičiau ištaisoma klaida ir sukuriama nauja produkto (\workProdId{Product}) versija
+    	\item Nauja produkto (\workProdId{Product}) versija perduodama klientams
+    	\item Užregistruota klaida (\workProdId{Ticket}) papildoma su klaidą ištaisančia prdoukto (\workProdId{Product}) versija bei klaidos kilimo priežastimi    
+    }
+\end{processTable}
 \newpage
 
 %----------------------------------------
 
-
-%----------------------------------------
-
-%%TEMPLATE
-% \begin{table}[]
-% \begin{tabular}{l|p{0.8\textwidth}}
-% \hline
-% \textbf{PRO/}        & \textbf{} \\ \hline
-% Purpose &   \\ \hline
-% Used work products (IN)    &      
-% \begin{itemize}
-
-% \end{itemize}
-% \\ \hline
-% Activities            &   
-% \begin{enumerate}
-
-% \end{enumerate}
-% \\ \hline
-% Created work products (OUT) &     
-% \begin{itemize}
-
-% \end{itemize}
-% \end{tabular}
-% 
-% \label{pro/}
-% \end{table}
-
+% \begin{processTable}{PrimaryKey}
+%     \tikslas{}
+%     \inputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \outputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \veiklos{
+%         \item Kazkokia veikla
+%     }
+% \end{processTable}
 
 
 %----------------------------------------

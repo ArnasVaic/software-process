@@ -1,16 +1,63 @@
 \newcommand{\ProcList}{}
-\newcommand{\defineProcess}[2]{%
-  \expandafter\def\csname procId#1\endcsname{#1}%
-  \expandafter\def\csname procName#1\endcsname{#2}%
+\newcommand{\defineProcess}[3]{%
+  \expandafter\def\csname procId#1\endcsname{#2}%
+  \expandafter\def\csname procName#1\endcsname{#3}%
   \listgadd{\ProcList}{#1}
 }
 \newcommand{\processId}[1]{\textit{\csname procId#1\endcsname}}
 \newcommand{\processName}[1]{\csname procName#1\endcsname}
 \newcommand{\process}[1]{\processId{#1}. \processName{#1}}
 
-\defineProcess{EngageClient}{Kliento įtraukimas}
-\defineProcess{DraftBacklog}{Užduočių sąrašo rengimas}
+% ---------------- Define Processes
 
-\defineProcess{CreateManual}{Naudojimo dokumentacija}
-\defineProcess{CloseProject}{Projekto užbaigimas}
-\defineProcess{BugFix}{Klaidos taisymas}
+\defineProcess{EngageClient}{KĮ}{Kliento įtraukimas}
+\defineProcess{RA}{RA}{Reikalavimų analizė}
+\defineProcess{DraftBacklog}{UR}{Užduočių sąrašo rengimas}
+
+\defineProcess{CreateManual}{ND}{Naudojimo dokumentacija}
+\defineProcess{CloseProject}{PU}{Projekto užbaigimas}
+\defineProcess{BugFix}{KT}{Klaidos taisymas}
+
+
+% -----------------------Process Table Environment
+\newenvironment{processTable}[1]
+{
+\newcommand{\tikslas}[1]{\gdef\purpose{##1}}
+\newcommand{\inputs}[1]{\gdef\usedWorkProducts{##1}}
+\newcommand{\outputs}[1]{\gdef\producedWorkProducts{##1}}
+\newcommand{\veiklos}[1]{\gdef\activities{##1}}
+\def\purpose{}
+\def\usedWorkProducts{}
+\def\producedWorkProducts{}
+\def\activities{}
+\def\processPK{#1}
+}
+{
+\begin{table}[h]
+\label{processTable:\processPK}
+\begin{tabular}{p{0.175\textwidth}|p{0.725\textwidth}}
+
+\textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} \\ \hline
+Tikslas & \purpose 
+\\ \hline
+Naudojami darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
+\\ \hline
+Sukuriami darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize} 
+\\ \hline
+Veiklos & \begin{enumerate} \activities \end{enumerate}
+\end{tabular}
+\end{table}
+}
+
+% \begin{processTable}{PrimaryKey}
+%     \tikslas{}
+%     \inputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \outputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \veiklos{
+%         \item Kazkokia veikla
+%     }
+% \end{processTable}
