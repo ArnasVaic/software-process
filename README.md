@@ -64,6 +64,9 @@ Fig 1. vietoje Figure 1:
 
 ### Formatavimas
 
-- [ ] Visi procesai aprašyti lentelėse be išorinių šonų
-- [ ] Procesų lentelių pirmos eilutės laukelių tekstas yra paryškinti su `\textbf`
-- [ ] Procesų lentelių skyrių pavadinimai (visas pirmas stulpelis be pirmos eilutės) sutampa tarp procesų (Tikslas, Panaudoti darbo produktai, Sukurti darbo produktai, Veiklos)
+- [x] Visi procesai aprašyti lentelėse be išorinių šonų
+- [x] Procesų lentelių pirmos eilutės laukelių tekstas yra paryškinti su `\textbf`
+- [x] Procesų lentelių skyrių pavadinimai (visas pirmas stulpelis be pirmos eilutės) sutampa tarp procesų (Tikslas, Panaudoti darbo produktai, Sukurti darbo produktai, Veiklos)
+
+## Domanto klausimai
+- Jeigu sprinto backlog'e įdedamos klaidos (t.y. klaida yra tiesiog dar vienas task'as sprinto užduočių sąraše), kam tada reikalingas "KL. Klaidos" darbo produktas?

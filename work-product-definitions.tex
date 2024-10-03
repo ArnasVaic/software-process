@@ -9,7 +9,7 @@
 \newcommand{\workProd}[1]{\workProdId{#1}. \workProdName{#1}}
 \newcommand{\prodWork}[1]{\MakeLowercase{\workProdName{#1}} (\workProdId{#1})}
 
-\defineWorkProduct{ResourceEstimates}{ĮS}{Laiko, kainos ir žmogiškųju˛ išteklių sąmata}
+\defineWorkProduct{ResourceEstimates}{ĮS}{Laiko, kainos ir žmogiškųjų išteklių sąmata}
 \defineWorkProduct{FunReq}{FR}{Funkciniai reikalavimai}
 \defineWorkProduct{NonFunReq}{NFR}{Nefunkciniai reikalavimai}
 \defineWorkProduct{HighLevelArch}{ALSA}{Aukšto lygio sistemos architektūra}
@@ -18,9 +18,19 @@
 \defineWorkProduct{Manual}{PNI}{Produkto naudojimo instrukcija}
 \defineWorkProduct{Warranty}{GAS}{Garantinio aptarnavimo sutartis}
 \defineWorkProduct{Ticket}{UK}{Užregistruota klaida}
-\defineWorkProduct{UseCases}{PA}{Panaudos atvejai} % FIXME
 \defineWorkProduct{UserNeeds}{VP}{Vartotojų poreikiai} % FIXME
-\defineWorkProduct{Product}{P}{Produktas} % FIXME
+\defineWorkProduct{Product}{PROD}{Produktas} % FIXME
 \defineWorkProduct{Contract}{KS}{Sutartis su klientu} % FIXME
-\defineWorkProduct{Backlog}{US}{Užduočių sąrašas} % FIXME
+\defineWorkProduct{Backlog}{US}{Projekto užduočių sąrašas}
 \defineWorkProduct{TechDocs}{TD}{Techninė dokumentacija} % FIXME
+
+% SCRUM
+
+\defineWorkProduct{SprintBacklog}{SUS}{Sprinto užduočių sąrašas}
+\defineWorkProduct{SprintReviewDoc}{SPA}{Sprinto peržiūros ataskaita}
+\defineWorkProduct{SotryPointRange}{PVI}{Pasakojimo vienetų intervalas}
+
+\defineWorkProduct{ProductIncrement}{PP}{Produkto prieaugis}
+\defineWorkProduct{Codebase}{PK}{Programinis kodas}
+\defineWorkProduct{TechDoc}{TD}{Techninė dokumentacija}
+\defineWorkProduct{DefectReport}{KL}{Klaidos}

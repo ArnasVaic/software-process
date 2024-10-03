@@ -10,6 +10,14 @@
     \forlistloop{\printRow}{\WorkProdList}
 }
 
+\describeWorkProd{ResourceEstimates}{
+Dokumentas, kuriame surašyta informacija apie atsakomybę nešančius žmones, kurie prisideda prie šio projekto vykdymo, projekto kaina bei pabaigos terminas. 
+}
+
+\describeWorkProd{ProjectScope}{
+Dokumentas, apibūdinantis ką yra planuojama sukurti projekto metu, kokios numatytos sistemų funkcijos ir kokios funkcijos yra už kuriamų sistemų ribų.
+}
+
 \describeWorkProd{Manual}{Skirta sistemos naudotojams. Čia aprašomi visi panaudos atvejai, visos produkto funkcijos bei kaip jomis naudotis. PTN užtikrina teisingą produkto veikimą, jei laikomasi šio dokumento, priešingu atveju -- PTN nėra atsakinga už galimus produkto sutrikimus.
 }
 
@@ -30,8 +38,38 @@
     \item IN REVIEW -- atliekama pirminė analizė
     \item REJECTED -- klaida (jei tai klaida) nebus taisoma (pridedama priežastis)
     \item IN PROGRESS -- atliekama \textit{Root Cause Analysis} ir ruošiama nauja produkto versija
-    \item RESOLVED -- nauja produkto versija išleista ir perduota klientui
+    \item DONE -- nauja produkto versija išleista ir perduota klientui
 \end{itemize}
+}
+
+\describeWorkProd{Backlog}{
+Užduočių sąrašą sudaro bent viena užduotis. Užduotys gali būti kelių tipų:
+
+\begin{itemize}
+
+    \item Panaudos atvejis - tai stambi užduotis, kuri gali būti skaidoma į mažesnes užduotis, yra suformuluota iš sistemos vartotojo perspektyvos ir apibūdina sistemos funkcionalumą.
+
+    \item Bendro pobūdžio užduotis - tai užduotis, kuri negali būti apibūdinta iš vartotojo perspektyvos, tačiau aprašo būtiną darbą sistemos veikimui užtikrinti.
+
+\end{itemize}
+
+Visi išvardinti užduočių tipai gali turėti vaikines, nedalomas užduotis. Taip pat, kiekviena užduotis turi tam tikrus atributus; ne visi yra iš karto priskiriami užduotims jas sukūrus, visi atributai gali keistis per laiką jei atsirastų toks poreikis. Užduočių atributų sąrašas:
+
+\begin{itemize}
+    \item Pavadinimas - trumpas pavadinimas nusakantis užduoties kontekstą 
+    \item Aprašas - išsamus tekstas aprašantis užduotį
+    \item Statusas - nusako kokioje stadijoje yra užduotis. Gali turėti tik viena iš šių reikšmių:
+    \begin{itemize}
+        \item OPEN - užduotis nepradėta
+        \item IN PROGRESS - užduotis yra daroma
+        \item IN REVIEW - užduotis padaryta ir reikalauja bent vieno komandos nario peržiūros
+        \item TESTING - užduotis yra perduota testuotojams
+        \item DONE - užduotis įvykdyta
+    \end{itemize}
+    \item Priėmimo kriterijai - sąlygos, kurios turi būti tenkinamos norint keisti užduoties statusą į DONE
+    \item Pasakojimo vienetai - 
+\end{itemize}
+
 }
 
 

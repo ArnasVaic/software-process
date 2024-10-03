@@ -18,6 +18,17 @@
 \defineProcess{CloseProject}{PU}{Projekto užbaigimas}
 \defineProcess{BugFix}{KT}{Klaidos taisymas}
 
+ % Vertimus paėmiau iš čia:
+ % - https://agile.lt/agile-lietuviskai-senas/
+ % - https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-LTU.pdf
+\defineProcess{ScrumCycle}{SC}{Scrum ciklas}
+\defineProcess{Refinement}{SP}{Sprinto Planavimas}
+\defineProcess{Development}{ĮG}{Įgyvendinimas}
+\defineProcess{Testing}{TE}{Testavimas}
+\defineProcess{PartialDelivery}{PDF}{PartialDelivery} % TODO: translate
+\defineProcess{Control}{KO}{Kontrolė} % Čia gal review'iu???
+ 
+
 
 % -----------------------Process Table Environment
 \newenvironment{processTable}[1]
@@ -40,9 +51,9 @@
 \textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} \\ \hline
 Tikslas & \purpose 
 \\ \hline
-Naudojami darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
+Panaudoti darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
 \\ \hline
-Sukuriami darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize} 
+Sukurti darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize} 
 \\ \hline
 Veiklos & \begin{enumerate} \activities \end{enumerate}
 \end{tabular}
