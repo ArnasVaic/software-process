@@ -1,14 +1,3 @@
-\newcommand{\describeWorkProd}[2]{
-    \expandafter\def\csname desc#1\endcsname{#2}
-}
-\newcommand{\printRow}[1]{
-        \workProdId{#1} &
-        \workProdName{#1} &
-        \csname desc#1\endcsname \\ \hline
-}
-\newcommand{\workProdDescriptions}{
-    \forlistloop{\printRow}{\WorkProdList}
-}
 
 \describeWorkProd{ResourceEstimates}{
 Dokumentas, kuriame surašyta informacija apie atsakomybę nešančius žmones, kurie prisideda prie šio projekto vykdymo, projekto kaina bei pabaigos terminas. 
@@ -67,7 +56,11 @@ Visi išvardinti užduočių tipai gali turėti vaikines, nedalomas užduotis. T
         \item DONE - užduotis įvykdyta
     \end{itemize}
     \item Priėmimo kriterijai - sąlygos, kurios turi būti tenkinamos norint keisti užduoties statusą į DONE
-    \item Pasakojimo vienetai - 
+    \item Pasakojimo vienetai - skaliarinis įvertis, kuris nusako reliatyvų užduoties sudėtingumą.
+    \item Atsakingas asmuo - šiuo metu užduotį atliekantis arba testuojantis asmuo.
+    \item Prioritetas - užduoties svarba. Vertinama reliatyviai, t. y. kuo užduočių sąraše užduotis yra aukščiau, tuo užduotis turi būti greičiau atlikta.
+    \item Kūrimo valandos - užduočiai įgyvendinti skiriamos valandos.
+    \item Testavimo valandos - užduočiai testuoti skiriamos valandos.
 \end{itemize}
 
 }

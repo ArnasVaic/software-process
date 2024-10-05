@@ -1,19 +1,9 @@
-\newcommand{\WorkProdList}{}
-\newcommand{\defineWorkProduct}[3]{%
-  \expandafter\def\csname identifier#1\endcsname{#2}%
-  \expandafter\def\csname name#1\endcsname{#3}%
-  \listgadd{\WorkProdList}{#1}
-}
-\newcommand{\workProdId}[1]{\textit{\csname identifier#1\endcsname}}
-\newcommand{\workProdName}[1]{\csname name#1\endcsname}
-\newcommand{\workProd}[1]{\workProdId{#1}. \workProdName{#1}}
-\newcommand{\prodWork}[1]{\MakeLowercase{\workProdName{#1}} (\workProdId{#1})}
 
 \defineWorkProduct{ResourceEstimates}{ĮS}{Laiko, kainos ir žmogiškųjų išteklių sąmata}
 \defineWorkProduct{FunReq}{FR}{Funkciniai reikalavimai}
 \defineWorkProduct{NonFunReq}{NFR}{Nefunkciniai reikalavimai}
 \defineWorkProduct{HighLevelArch}{ALSA}{Aukšto lygio sistemos architektūra}
-\defineWorkProduct{Experience}{PP}{Įmonės patirtis su projektais}
+\defineWorkProduct{Experience}{PAT}{Įmonės patirtis su projektais}
 \defineWorkProduct{ProjectScope}{PA}{Projekto apimtis}
 \defineWorkProduct{Manual}{PNI}{Produkto naudojimo instrukcija}
 \defineWorkProduct{Warranty}{GAS}{Garantinio aptarnavimo sutartis}
@@ -21,16 +11,17 @@
 \defineWorkProduct{UserNeeds}{VP}{Vartotojų poreikiai} % FIXME
 \defineWorkProduct{Product}{PROD}{Produktas} % FIXME
 \defineWorkProduct{Contract}{KS}{Sutartis su klientu} % FIXME
-\defineWorkProduct{Backlog}{US}{Projekto užduočių sąrašas}
-\defineWorkProduct{TechDocs}{TD}{Techninė dokumentacija} % FIXME
+\defineWorkProduct{Backlog}{PUS}{Projekto užduočių sąrašas}
 
 % SCRUM
 
 \defineWorkProduct{SprintBacklog}{SUS}{Sprinto užduočių sąrašas}
 \defineWorkProduct{SprintReviewDoc}{SPA}{Sprinto peržiūros ataskaita}
-\defineWorkProduct{SotryPointRange}{PVI}{Pasakojimo vienetų intervalas}
+\defineWorkProduct{StoryPointRange}{PVI}{Pasakojimo vienetų intervalas}
 
 \defineWorkProduct{ProductIncrement}{PP}{Produkto prieaugis}
 \defineWorkProduct{Codebase}{PK}{Programinis kodas}
 \defineWorkProduct{TechDoc}{TD}{Techninė dokumentacija}
-\defineWorkProduct{DefectReport}{KL}{Klaidos}
+\defineWorkProduct{DefectReport}{KA}{Klaidų aprašas}
+
+\defineWorkProduct{Feedback}{AR}{Atsiliepinų registras}
