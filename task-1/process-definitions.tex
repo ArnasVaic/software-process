@@ -15,7 +15,7 @@
 \defineProcess{Refinement}{SP}{Sprinto planavimas}
 \defineProcess{Development}{ĮG}{Įgyvendinimas}
 \defineProcess{Testing}{TE}{Testavimas}
-\defineProcess{PartialDelivery}{PAS}{Pristatymas ir atsiliepimo surinkimas} % TODO: translate
+\defineProcess{PartialDelivery}{PAS}{Pristatymas ir grįžtamojo ryšio surinkimas} % TODO: translate
 \defineProcess{Control}{KO}{Kontrolė} % Čia gal review'iu???
  
 
@@ -34,11 +34,10 @@
 \def\processPK{#1}
 }
 {
-\begin{table}[h]
-\label{processTable:\processPK}
-\begin{tabular}{p{0.175\textwidth}|p{0.725\textwidth}}
+\begin{tabular}{p{0.1\textwidth}|p{0.9\textwidth}}
 
-\textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} \\ \hline
+\textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} 
+\\ \hline
 Tikslas & \purpose 
 \\ \hline
 Panaudoti darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
@@ -46,8 +45,8 @@ Panaudoti darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
 Sukurti darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize} 
 \\ \hline
 Veiklos & \begin{enumerate} \activities \end{enumerate}
+\label{processTable:\processPK}
 \end{tabular}
-\end{table}
 }
 
 % \begin{processTable}{PrimaryKey}

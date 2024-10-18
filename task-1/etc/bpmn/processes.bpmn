@@ -32,7 +32,7 @@
       <incoming>Flow_112j4xj</incoming>
       <outgoing>Flow_0llogik</outgoing>
     </task>
-    <task id="Activity_1jusdjo" name="Pristatymas ir atsiliepimo surinkimas">
+    <task id="Activity_1jusdjo" name="Pristatymas ir grįžtamojo ryšio surinkimas">
       <incoming>Flow_0aqw8c6</incoming>
       <outgoing>Flow_112j4xj</outgoing>
     </task>
@@ -95,7 +95,7 @@
     <sequenceFlow id="Flow_1agri6a" name="Ne" sourceRef="Gateway_1w4s8m7" targetRef="Event_179vqr8" />
     <sequenceFlow id="Flow_07fvx04" sourceRef="Event_1tx2wcv" targetRef="Activity_1l0usei" />
     <sequenceFlow id="Flow_0js6tte" sourceRef="Activity_1ku9q66" targetRef="Activity_0tv13d6" />
-    <intermediateCatchEvent id="Event_1y9pcoy" name="Klientas išreiškia poreikį naujam funkcionalumui">
+    <intermediateCatchEvent id="Event_1y9pcoy" name="Klientas išreiškia poreikį apie naują funkcionalumą">
       <outgoing>Flow_113ns7n</outgoing>
       <messageEventDefinition id="MessageEventDefinition_1q5o8j6" />
     </intermediateCatchEvent>
@@ -183,7 +183,7 @@
       <bpmndi:BPMNShape id="BPMNShape_05i2bei" bpmnElement="Event_1y9pcoy">
         <omgdc:Bounds x="372" y="112" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="349" y="60" width="82" height="40" />
+          <omgdc:Bounds x="348" y="53" width="83" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1l0usei_di" bpmnElement="Activity_1l0usei">

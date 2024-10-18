@@ -1,0 +1,181 @@
+\newcommand{\hiden}[1]{}
+
+\describeWorkProd{ResourceEstimates}{
+Dokumentas, kuriame surašytas projekto pabaigos terminas, projekto kaina ir informacija apie už projekto įgyvendinimą atsakingus darbuotojus. 
+}
+
+\describeWorkProd{FunReq}{
+
+% > Software requirements express the needs and
+% constraints placed on a software product that
+% contribute to the solution of some real-world
+% problem.
+
+%     -- SWEBOK
+
+% > At its most basic, a software requirement is a
+% property that must be exhibited by something in order to solve some problem in the real world.
+
+%     -- SWEBOK
+
+% > Functional requirements describe the functions
+% that the software is to execute; for example, for-
+% matting some text or modulating a signal. They
+% are sometimes known as capabilities or features.
+% A functional requirement can also be described
+% as one for which a finite set of test steps can be
+% written to validate its behavior.
+
+%     -- SWEBOK
+
+Funkciniai reikalavimai apibūdina funkcijas, kurias turi atlikti produktas, kad būtų išspręsta kliento problema.
+}
+
+\describeWorkProd{NonFunReq}{
+Nefunkciniai reikalavimai yra kokybės kriterijai, t.\,y. jie nusako, kaip produktas turi atlikti savo funkcijas. Jie apibrėžia, kokius našumo, greitaveikos\hiden{performance}, saugumo\hiden{security}, panaudojamumo\hiden{usability}, pasiekiamumo\hiden{reliability} kriterijus turi atitkti produktas.
+}
+
+\describeWorkProd{HighLevelArch}{
+
+Nusako kaip programinė įranga yra organizuojama į atskirus komponentus, jų savybes bei kaip tie komponentai sąveikauja.
+
+% > * Architectural design (also referred to as high-level design and top-level design) describes how software is organized into components.
+
+%     -- SWEBOK
+
+% > In its strict sense, a software architecture is
+% “the set of structures needed to reason about
+% the system, which comprise software elements,
+% relations among them, and properties of both”
+
+%     -- SWEBOK
+}
+
+\describeWorkProd{ProjectScope}{
+Dokumentas, apibūdinantis, kas yra planuojama sukurti projekto metu, kokios numatytos sistemų funkcijos ir kokios funkcijos yra už kuriamų sistemų ribų.
+}
+
+\describeWorkProd{Manual}{Skirta sistemos naudotojams. Čia aprašomi visi panaudos atvejai, visos produkto funkcijos bei kaip jomis naudotis. „PTN“ įmonė užtikrina teisingą produkto veikimą, jei laikomasi šio dokumento, priešingu atveju -- „PTN“ nėra atsakinga už galimus produkto sutrikimus.
+}
+
+\describeWorkProd{Warranty}{Šis dokumentas pasirašomas perduodant klientui užbaigtą produktą. Čia numatomos sąlygos, kuriomis kliento pastebėtos produkto klaidos bus ištaisomos „PTN“ įmonės be papildomo mokesčio per tam tikrą (taip pat šiame dokumente) numatytą laiką. Ši sutartis turi numatytą galiojimo laikotarpį.
+}
+
+\describeWorkProd{Ticket}{Tai dokumentas, užregistruotas užduočių sekimo platformoje („Jira“), kuriame privalo būti ši informacija:
+\begin{itemize}
+    \item Registravimo data ir laikas
+    \item Autorius („PTN“ įmonės darbuotojas arba kliento atstovas)
+    \item Detalus klaidos aprašymas
+    \item Kuo įmanoma detalesnis situacijos, kurioje įvyksta klaida, aprašymas
+    \item Produkto versija, kurioje pastebėta klaida
+\end{itemize}
+Šio dokumento statusas atspindi klaidos taisymo proceso (\processId{BugFix}) stadiją:
+\begin{itemize}
+    \item OPEN -- klaida užregistruota
+    \item IN REVIEW -- atliekama pirminė analizė
+    \item REJECTED -- kliento pateikta klaida nebus taisoma (pridedama priežastis) 
+    \item IN PROGRESS -- atliekama \textit{Root Cause Analysis} ir ruošiama nauja produkto versija
+    \item DONE -- nauja produkto versija išleista ir perduota klientui
+\end{itemize}
+}
+
+\describeWorkProd{Contract} {
+Sutartis tarp įmonės ir kliento, kuri įpareigoja įmonę įvykdyti kliento užsakymą pagal numatytą apimtį, laiką ir biudžetą. Taip pat nurodytos produkto perdavimo sąlygos ir adaptacinis laiko terminas (perdavus produktą, suteikiama techninė pagalba tam tikrą numatytą laikotarpį).
+}
+
+\describeWorkProd{Backlog}{
+Užduočių sąrašą sudaro bent viena užduotis. Užduotys gali būti kelių tipų:
+
+\begin{itemize}
+
+    \item Panaudos atvejis - tai stambi užduotis, kuri yra suformuluota iš sistemos naudotojo perspektyvos ir apibūdina sistemos funkcionalumą.
+
+    \item Bendro pobūdžio užduotis - tai užduotis, kuri negali būti apibūdinta iš naudotojo perspektyvos, tačiau aprašo būtiną darbą sistemos veikimui užtikrinti.
+
+\end{itemize}
+
+Visi išvardinti užduočių tipai gali turėti vaikines, nedalomas užduotis. Taip pat, kiekviena užduotis turi tam tikrus atributus; ne visi yra iš karto priskiriami užduotims jas sukūrus, tačiau atributai gali keistis projekto gyvavimo laikotarpiu, jei atsirastų toks poreikis. Užduočių atributų sąrašas:
+
+\begin{itemize}
+    \item Pavadinimas - trumpas pavadinimas nusakantis užduoties kontekstą 
+    \item Aprašas - išsamus tekstas aprašantis užduotį, jame atskleidžiami funkciniai ir nefunkciniai užduoties reikalavimai.
+    \item Statusas - nusako kokioje stadijoje yra užduotis. Gali turėti tik viena iš šių reikšmių:
+    \begin{itemize}
+        \item OPEN - užduotis nepradėta. Kiekviena nauja užduotis automatiškai turi šį statusą
+        \item IN PROGRESS - užduotis yra daroma
+        \item IN REVIEW - užduotis padaryta ir reikalauja bent vieno komandos nario peržiūros
+        \item TESTING - užduotis yra perduota testuotojams
+        \item DONE - užduotis įgyvendinta
+    \end{itemize}
+    \item Priėmimo kriterijai - sąlygos, kurios turi būti tenkinamos norint keisti užduoties statusą į DONE
+    \item Pasakojimo vienetai - skaliarinis įvertis, kuris nusako reliatyvų užduoties sudėtingumą.
+    \item Atsakingas asmuo - šiuo metu užduotį atliekantis arba testuojantis asmuo.
+    \item Prioritetas - užduoties svarba. Vertinama reliatyviai, t.\,y. kuo užduočių sąraše užduotis yra aukščiau, tuo užduotis turi būti greičiau atlikta.
+    \item Kūrimo valandos - užduočiai įgyvendinti skiriamos valandos.
+    \item Kūrimo valandų įvertinimas - užduočiai įgyvendinti planuojamas valandų kiekis.
+    \item Testavimo valandos - užduočiai testuoti skiriamos valandos.
+\end{itemize}
+
+}
+
+\describeWorkProd{SprintBacklog}{
+Tai yra užduočių sąrašas, kuris yra projekto užduočių sąrašo poaibis. Jį sudaro sprintui atrinktos užduotys iš projekto užduočių sąrašo, taigi, užduoties tipai gali būti tie patys kaip ir (\workProdId{Backlog}), o užduočių atributų būsena (\workProdId{Backlog}) ir (\workProdId{SprintBacklog}) visada sutampa. 
+}
+
+\describeWorkProd{SprintReviewDoc} {
+Dokumentas, kuriame fiksuojami sprinto pabaigoje vykstančio susitikimo metu aptarti komandinio darbo pakeitimai. Be to, sprinto peržiūros ataskaita apima rekomendacijas kitam sprintui, numatytus pakeitimus, atnaujintus prioritetus. Ši ataskaita padeda komandai mokytis iš ankstesnių sprintų ir tobulinti darbo procesą ateityje.
+}
+
+\describeWorkProd{StoryPointRange} {
+ Tai diapazonas, kuris nurodo bendrą sprintui skirtų užduočių sudėtingumą. Šis intervalas padeda komandai nustatyti, kiek darbų jie gali atlikti per sprintą, remiantis ankstesniais sprintais arba bendra komandos patirtimi. Pasakojimo vienetai (angl. story points) dažniausiai naudojami įvertinti užduočių sudėtingumą ar darbų apimtį, atsižvelgiant į laiką, resursus ir pastangas, reikalingas užduotims atlikti.
+}
+
+\describeWorkProd{Codebase} {
+Tai programinės įrangos sukurtas instrukcijų rinkinys, kuris įgyvendina produkto užduočių sąraše (\workProdId{Backlog}) nurodytus reikalavimus. Programinis kodas apima ir  programininės įrangos kūrėjų parašytus vienetų testus ir testuotojų sukurtus testus.
+}
+
+\describeWorkProd{TechDoc} {
+Dokumentas, kuriame aprašoma, kokios programinės įrangos funkcijos, struktūra ir kiti techniniai aspektai. Techninę dokumentaciją rašo programinės įrangos kūrėjai, kad ji būtų naudinga tiek kitiems kūrėjams, tiek projekto komandos nariams. Dokumentacija yra svarbi norint užtikrinti aiškų supratimą apie programos sistemos veikimą bei lengvą jos palaikymą ir vystymą ateityje.
+}
+
+\describeWorkProd{DefectReport} {
+Dokumentas, kuriame apibūdinamos programinės įrangos klaidos, pastebėtos testavimo metu. Tipiškai klaidų aprašymas apima šiuos elementus:
+
+\begin{itemize}
+    \item Klaidos ID – unikalus identifikatorius, skirtas kiekvienai klaidai sekti.
+    \item Klaidos aprašymas – detali informacija apie tai, kas neveikia arba kurioje sistemos dalyje pastebėta problema.
+    \item Žingsniai klaidai atkurti – žingsniai, kurie leidžia atkurti klaidą, siekiant patikrinti ir išspręsti problemą.
+    \item Tikėtinas rezultatas – aprašymas, kaip sistema turėtų veikti normaliomis sąlygomis.
+    \item Gautas rezultatas – aprašymas, kas iš tikrųjų nutiko.
+    \item Svarba – nurodo, kiek svarbu yra išspręsti klaidą (kritinė, didelės svarbos, mažos svarbos).
+    \item Klaidų statusas – dabartinė klaidos būsena.
+    \item Atsakingas asmuo – nurodomas asmuo, kuris atsakingas už klaidos ištaisymą.
+\end{itemize}
+}
+
+\describeWorkProd{Feedback} {
+Dokumentas, kuriame fiksuojami suinteresuotų šalių pateikti atsiliepimai apie projekto pokyčius, siūlomus patobulinimus.
+}
+
+\describeWorkProd{Product} { 
+Programų sistema, kurią vysto „Produktų vystymo“ departamentas, pagal projekto apimtį (\workProdId{ProjectScope}).
+}
+
+\describeWorkProd{Experience}{
+    „Produktų vystymo“ departamento sukaupta patirtis, kuri padeda įvertinti laiko, kainos ir žmogiškųjų išteklių sąmatą (\workProdId{ResourceEstimates}) bei projekto apimtį (\workProdId{ProjectScope}).
+}
+
+\describeWorkProd{ClientNeeds}{
+    Kliento lūkesčiai projektui kurie apibūdina funkcionalumą, apimtį, biudžetą ir terminus. Šie poreikiai surenkami per susitikimus su klientu ir yra svarbūs nusprendžiant projekto apimtį, sąmatą bei sutarties sudarymui.
+}
+
+
+
+% -------------- END OF DESCRIPTIONS-------------------------
+\section{Darbo produktų sąrašas}
+
+\begin{longtable}{|c|p{0.15\textwidth}|p{0.75\textwidth}|}
+    \hline
+    \textbf{Id} & \textbf{Pavadinimas} & \textbf{Aprašymas} \\ \hline
+    \workProdDescriptions
+\end{longtable}
