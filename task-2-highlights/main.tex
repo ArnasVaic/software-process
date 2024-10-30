@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[lithuanian]{babel}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float} % For accuratelly placing images
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{xltabular}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+% For striketrghough
+\usepackage{soul}
+
+% For colored highlights 
+\usepackage{xcolor}
+
+% BEGIN: FOR SVG
+% \usepackage[inkscapelatex=false]{svg}
+\usepackage{svg}
+\usepackage{amsmath}
+% END: FOR SVG
+
+\usepackage{everypage}
+\usepackage{lscape} % Ensure landscape pages are recognized
+\usepackage{lipsum}
+
+\title{
+    Įmonės „PTN“ procesų aprašymas \\
+    \large versija 2.0 \\
+    \large Komanda „PTN“}
+\author{
+    Greta Virpšaitė \\
+    Rugilė Vasaitytė \\
+    Domantas Keturakis \\
+    Arnas Vaicekauskas \\
+    \textbf{Liudas Kasperavičius (Lyderis)} 
+}
+\date{Spalis 2024}
+
+\begin{document}
+\include{commands}
+
+\maketitle
+
+\newpage
+\tableofcontents
+
+\include{task-1/work-product-definitions}
+\include{task-1/process-definitions}
+\include{task-1/company-description}
+\include{task-1/process-description}
+\include{task-1/work-products}
+
+\end{document}
