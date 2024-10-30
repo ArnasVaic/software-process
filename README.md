@@ -9,6 +9,7 @@ Grading:
 - Personal tasks (0%-10%)
 - Fast tests (0%-10%)
 
+
 # Exam
 
 Max 1 test.
