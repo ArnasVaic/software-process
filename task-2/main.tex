@@ -108,7 +108,11 @@ Duomenis yra/bus? renkami iš deperatemnto "PTN" procesų aprašo dokumento (TOD
 \section{Gerinimas}
 
 \subsection{Tikslinis gebėjimo profilis}
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{tikslinis-profilis.png}
+    \label{fig:enter-label}
+\end{figure}
 \subsection{Gerinimo veiksmų planas}
 
 \subsubsection{Exploration aspect}
@@ -117,7 +121,7 @@ Duomenis yra/bus? renkami iš deperatemnto "PTN" procesų aprašo dokumento (TOD
 AA 1.1 iš L (77\%) bus pakeltas į F (88\%). Tą pasiekti galima atsižvelgus į šiuo metu procesuose neįgyvendintą E.AP4 aspekto praktiką.
 
 \pagebreak
-\subsubsubsection{E.AP4 aspekto praktikos gerinimas}
+\subsubsubsection{E.AP4 aspekto praktikos įgyvendinimas}
 
 E.AP4 praktika yra neįgyvendinta N (0\%), ją keliame iki F (100\%) įvykdžius tokius veiklų pakeitimus procesuose:
 
@@ -172,12 +176,12 @@ Aspektas keliamas iš 2 judrumo lygio į 3 judrumo lygį. Tam pasiekti gerinami 
 \begin{enumerate}
 \item AA 2.1 iš L (75\%) į F (87,5\%) 
 \item AA 2.2 iš L (75\%) į F (87,5\%) 
-\item AA 3.1 iš P (25\%) į L (\%) 
+\item AA 3.1 iš P (25\%) į F (96\%) 
 \end{enumerate}
 
-\subsubsubsection{AA 2.1 aspekto atributo gerinimas}
+\subsubsubsection{AA 2.1 aspekto atributo iki F gerinimas}
 
-AA 2.1 atributas pagerinamas nuo L (75\%) iki F (87,5\%), pasiekiant GP 2.1.2 bendrosios praktikos įvertį 100\%. Tam procesuose atlikti šie pakeitimai
+AA 2.1 atributas pagerinamas nuo L (75\%) iki F (87,5\%), pakėlus GP 2.1.2 bendrosios praktikos įvertį nuo 75\% iki 100\%. Tam procesuose atlikti šie pakeitimai
 
 \subparagraph{Kasdieniai Stand-Up susitikimai}
 \begin{itemize}
@@ -208,7 +212,7 @@ AA 2.1 atributas pagerinamas nuo L (75\%) iki F (87,5\%), pasiekiant GP 2.1.2 be
 \end{itemize}
 
 
-\subsubsubsection{AA 2.2 Simple iki F gerinimas}
+\subsubsubsection{AA 2.2 Simple aspekto atributo iki F gerinimas}
 %-----------------------------------------------MUST FIX START-----------------------------------------------
 
 GP 2.2.2 gerinimas nuo 75\% iki 100\%, siekiant AA 2.2 F (87,5\%) įverčio.
@@ -224,9 +228,9 @@ GP 2.2.2 gerinimas nuo 75\% iki 100\%, siekiant AA 2.2 F (87,5\%) įverčio.
 \color{black}
 %-----------------------------------------------MUST FIX END-----------------------------------------------
 
-\subsubsubsection{Patobulinimai aspekto praktikai GP 3.1.1 siekiant AA 3. L brandos lygio}
+\subsubsubsection{AA 3.1 aspekto atributo iki F gerinimas}
 
-Norint pasiekti L brandos lygį GP 3.1.1 atlikti šie pakeitimai
+Norint pasiekti F brandos lygį aspekto atributui AA 3.1, GP 3.1.1 atlikti šie pakeitimai, praktiką pakeliant nuo L (25\%) iki F (100\%):
 
 \subparagraph{Integruoti TDD}
 \begin{itemize}
@@ -244,20 +248,18 @@ Norint pasiekti L brandos lygį GP 3.1.1 atlikti šie pakeitimai
     \end{quote}
 \end{itemize}
 
+Be to, užtikrinamas CI/CD procesas, kuris nenorint kartotis yra aprašytas Transition aspekte, taigi sakykime, kad ši praktika pasiekia F (100\%)
+
 \subsubsection{Transition aspect}
 
 Šis aspektas pagal esamus procesus yra pasiekęs 1 judrumo lygį. Aspektas gali pasiekti 2 judrumo lygi˛ jei aspekto 
 atributas AA 1.1 iš L (77\%) bus pakeltas į F.
 
-Toliau gerinkime aspekto praktikas.
+Toliau gerinkime aspekto atributo praktikas.
 
 \subsubsubsection{T.API1: Sukurkite ir tvarkykite darbo aplinką (angl. Create and Manage the Workspace)}
 
-\textbf{Trūkumai:}  
-\begin{enumerate}
-\item Artefaktai ir trečių šalių bibliotekos turėtų būti saugomos tam skirtose saugyklose. 
-\item Kūrimo ir testavimo aplinkos turėtų būti atskirtos, o šių aplinkų valdymas aprašytas išreikštinai
-\end{enumerate}
+Išskirti praktikos trūkumai yra tie, jog artefaktai ir trečių šalių bibliotekos turėtų būti saugomos tam skirtose saugyklose, be to kūrimo ir testavimo aplinkos turėtų būti atskirtos, o šių aplinkų valdymas aprašytas išreikštinai. 
 
 \textbf{Reikalingi pakeitimai }
 \begin{itemize}
@@ -269,11 +271,7 @@ Toliau gerinkime aspekto praktikas.
 
 \subsubsubsection{T.API2: Kodo integravimas (angl. Integrate the Code)}
 
-\textbf{Trūkumai:} 
-\begin{enumerate}
-\item Kodo integravimas turėtų vykti pusiau automatiškai (kodo konfliktų sprendimas negali būti visiškai automatizuotas) ir būti išreikštinai aprašytas
-\item Artefaktų kūrimas turėtų būti automatizuotas
-\end{enumerate}
+Kodo integravimas turėtų vykti pusiau automatiškai (kodo konfliktų sprendimas negali būti visiškai automatizuotas) ir būti išreikštinai aprašytas, o artefaktų kūrimas turėtų būti automatizuotas
 
 \textbf{Reikalingi pakeitimai}
 \begin{itemize}
@@ -284,11 +282,8 @@ Toliau gerinkime aspekto praktikas.
     \item „Modulinių testų padengimo lygis turi būti ne mažesnis kaip 80\%, o visi pagrindiniai funkcionalumai turi būti patikrinti automatiniais testais.“
 \end{itemize}
 
-\textbf{Priežastis:} Automatiniai CI/CD procesai užtikrina, kad visi kodo pakeitimai būtų išbandyti ir patikrinti prieš pateikiant produkcijai, sumažinant galimų klaidų skaičių.
 
-\subsection*{3. T.API3: Diegti sprendimą („Deploy the Solution“) }
-
-\textbf{Tikslas:} Užtikrinti, kad visos aplinkos būtų tinkamai konfigūruotos ir diegimo procesas būtų visiškai automatizuotas.
+\subsubsubsection{T.API3: Diegti sprendimą (angl. „Deploy the Solution“) }
 
 \textbf{Reikalingi pakeitimai PDF:}
 \begin{itemize}
@@ -331,21 +326,6 @@ Toliau gerinkime aspekto praktikas.
 
 \textbf{Priežastis:} Progreso matomumas padeda komandai stebėti darbo eigą ir laiku aptikti galimas problemas bei nukrypimus nuo plano.
 
-\subsection*{6. T.API6: Sukurti palaikomą dokumentaciją („Create the Supporting Documentation“) }
-
-\textbf{Tikslas:} Sukurti ir pateikti visą reikalingą palaikomą dokumentaciją, kuri padėtų palaikyti ir plėsti sprendimą.
-
-\textbf{Reikalingi pakeitimai PDF:}
-\begin{itemize}
-    \item Skyrius „Naudojimo dokumentacija“ (2.5 ND) turėtų būti papildytas su reikalavimais techninei dokumentacijai:
-    \begin{quote}
-    „Kiekvienas programos modulis turi turėti atskirą techninę dokumentaciją, kurioje pateikiamas kodo aprašymas, architektūros diagramos ir kiti svarbūs techniniai aspektai.“
-    \end{quote}
-    \item „Produkto naudojimo instrukcija (PNI) turi būti periodiškai atnaujinama pagal atliktus produkto pakeitimus.“
-\end{itemize}
-
-\textbf{Priežastis:} Tinkamai parengta dokumentacija padeda užtikrinti, kad produkto palaikymas būtų efektyvus ir kad nauji komandos nariai galėtų greitai įsitraukti į darbo eigą.
-
 \subsubsection{Management aspect}
 
 Šis aspektas pagal esamus procesus yra pasiekęs 1 judrumo lygi. Aspektas gali pasiekti 2 judrumo lygį, jei
@@ -360,24 +340,42 @@ Pasiekti 2 judrumo lygį galime pakelti M.AP1 ir M.AP3 lygį iki F.
     \item \textbf{Vieta:} sekcija 2.1 KĮ. Kliento įtraukimas (veikla \#2).
     \item \textbf{Modifikacija:} pataisyti veiklą ir ją išskirti į dvi:
     \begin{quote}
-    
-        "Projektų vadovas, architektas ir analitikas atlieka pagrįstumo analizę, siekdami įvertinti, ar kliento poreikiai (KP) yra įgyvendinami. 
+        "Projektų vadovas, architektas ir analitikas paruošia pradinė projekto viziją tam, kad būtų patvirtintas projekto įgyvendinamumas ir suderinta bendra projekto kryptis su SŠ. Jie taip pat atlieka pagrįstumo analizę, siekdami įvertinti, ar kliento poreikiai (KP) yra įgyvendinami. 
     \end{quote}
     
     \begin{quote}
-        "Atsižvelgdami į projekto viziją, pagrįstumo analizę bei departamento patirtį su kitais projektais (PAT) nustato laiko, kainos ir žmogiškųjų išteklių sąmata (IS) bei projekto apimtimi (PA). Laikas, kaina (nustatyti iš IS), projekto apimtis (PA), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (KS)."
+        "Projektų vadovas, architektas ir analitikas  atsižvelgdami į projekto viziją, pagrįstumo analizę, departamento patirtį su kitais projektais (PAT) bei projekto apimtimi (PA) nustato laiko, kainos ir žmogiškųjų išteklių sąmatą (IS). Laikas, kaina (nustatyti iš IS), projekto apimtis (PA), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (KS)."
     \end{quote}
 \end{itemize}
 
-\paragraph{M.AP3 gerinimas siekiant AA 1.1 F lygio}
+\paragraph{M.AP8 gerinimas siekiant AA 1.1 F lygio}
 
-\subparagraph{Priklausomybių sekimas Projekto užduočių sąrašė (UR)}
+\subparagraph{Rizikų įvertinimas}
 \begin{itemize}
-    \item \textbf{Vieta:} sekcija 2.3 UR. Užduočių sąrašo rengimas
+    \item \textbf{Vieta:} sekcija 2.1 KĮ. Klientų įtraukimas
     \item \textbf{Modifikacija:} pridėti veiklą:
     \begin{quote}
-        "Kiekvienai užduočiai (PUS) priskiriamos priklausomybių žymos, nurodant, ar užduotis priklauso nuo kitų užduočių."
+        "Analitikas įvertina projekto rizikas"
     \end{quote}
 \end{itemize}
+
+\subparagraph{Rizikų sekimas}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.4.5 KO. Kontrolė
+    \item \textbf{Modifikacija:} pridėti veiklą:
+    \begin{quote}
+        "Projekto vadovas peržiūri projekto rizikas ir dokumentuoja neatitikimus".
+    \end{quote}
+\end{itemize}
+
+\subparagraph{Rizikų sekimas}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.4.5 KO. Kontrolė (veikla \#3)
+    \item \textbf{Modifikacija:} pridėti prie veiklos:
+    \begin{quote}
+        "Remiantis grįžtamojo ryšio registru (GRR) ir laiko valdymo ataskaita, dokumentuotais neatitikimais projekto vadovas atlieka projekto užduočių sąrašo (PUS) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetu intervalo (PVI) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiuros ataskaitoje (SPA)."
+    \end{quote}
+\end{itemize}
+
 
 \end{document}
