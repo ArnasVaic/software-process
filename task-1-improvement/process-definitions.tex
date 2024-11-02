@@ -1,0 +1,63 @@
+% ---------------- Define Processes
+
+\defineProcess{EngageClient}{KĮ}{Kliento įtraukimas}
+\defineProcess{RA}{RA}{Reikalavimų analizė}
+\defineProcess{DraftBacklog}{UR}{Užduočių sąrašo rengimas}
+
+\defineProcess{CreateManual}{ND}{Naudojimo dokumentacija}
+\defineProcess{CloseProject}{PU}{Projekto užbaigimas}
+\defineProcess{BugFix}{KT}{Klaidos taisymas}
+
+ % Vertimus paėmiau iš čia:
+ % - https://agile.lt/agile-lietuviskai-senas/
+ % - https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-LTU.pdf
+\defineProcess{ScrumCycle}{SC}{Scrum ciklas}
+\defineProcess{Refinement}{SP}{Sprinto planavimas}
+\defineProcess{Development}{ĮG}{Įgyvendinimas}
+\defineProcess{Testing}{TE}{Testavimas}
+\defineProcess{PartialDelivery}{PAS}{Pristatymas ir grįžtamojo ryšio surinkimas} % TODO: translate
+\defineProcess{Control}{KO}{Kontrolė} % Čia gal review'iu???
+ 
+
+
+% -----------------------Process Table Environment
+\newenvironment{processTable}[1]
+{
+\newcommand{\tikslas}[1]{\gdef\purpose{##1}}
+\newcommand{\inputs}[1]{\gdef\usedWorkProducts{##1}}
+\newcommand{\outputs}[1]{\gdef\producedWorkProducts{##1}}
+\newcommand{\veiklos}[1]{\gdef\activities{##1}}
+\def\purpose{}
+\def\usedWorkProducts{}
+\def\producedWorkProducts{}
+\def\activities{}
+\def\processPK{#1}
+}
+{
+\begin{tabular}{p{0.1\textwidth}|p{0.9\textwidth}}
+
+\textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} 
+\\ \hline
+Tikslas & \purpose 
+\\ \hline
+Panaudoti darbo produktai & \begin{itemize} \usedWorkProducts \end{itemize}
+\\ \hline
+Sukurti darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize} 
+\\ \hline
+Veiklos & \begin{enumerate} \activities \end{enumerate}
+\label{processTable:\processPK}
+\end{tabular}
+}
+
+% \begin{processTable}{PrimaryKey}
+%     \tikslas{}
+%     \inputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \outputs{
+%        \item \workProd{Kazkas}
+%     }
+%     \veiklos{
+%         \item Kazkokia veikla
+%     }
+% \end{processTable}

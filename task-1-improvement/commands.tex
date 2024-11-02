@@ -1,0 +1,63 @@
+% Globals
+\newcommand{\WorkProdIdsList}{}
+\newcommand{\ProcIdsList}{}
+
+\newcommand{\CheckUniqueWorkProd}[1]{
+    \ifinlist{#1}{\WorkProdIdsList} {
+    \PackageError{\WorkProdIdsList}{Work product "#1" already exists}{}
+    } {
+    \ifinlist{#1}{\ProcIdsList} {
+        \PackageError{\ProcIdsList}{"#1" exists as a Process}{}
+    } {
+     \listgadd{\WorkProdIdsList}{#1}
+    }
+  }
+}
+
+\newcommand{\CheckUniqueProc}[1]{
+    \ifinlist{#1}{\ProcIdsList} {
+    \PackageError{\ProcIdsList}{Work product "#1" already exists}{}
+    } {
+    \ifinlist{#1}{\WorkProdIdsList} {
+        \PackageError{\WorkProdIdsList}{"#1" exists as a Work product}{}
+    } {
+     \listgadd{\ProcIdsList}{#1}
+    }
+  }
+}
+
+% Work products
+\newcommand{\WorkProdList}{}
+\newcommand{\defineWorkProduct}[3]{%
+  \expandafter\def\csname identifier#1\endcsname{#2}%
+  \expandafter\def\csname name#1\endcsname{#3}%
+  \CheckUniqueWorkProd{#2}
+  \listgadd{\WorkProdList}{#1}
+}
+\newcommand{\workProdId}[1]{\textit{\csname identifier#1\endcsname}}
+\newcommand{\workProdName}[1]{\csname name#1\endcsname}
+\newcommand{\workProd}[1]{\workProdId{#1}. \workProdName{#1}}
+\newcommand{\prodWork}[1]{\MakeLowercase{\workProdName{#1}} (\workProdId{#1})}
+
+\newcommand{\describeWorkProd}[2]{
+    \expandafter\def\csname desc#1\endcsname{#2}
+}
+\newcommand{\printRow}[1]{
+        \workProdId{#1} &
+        \workProdName{#1} &
+        \csname desc#1\endcsname \\ \hline
+}
+\newcommand{\workProdDescriptions}{
+    \forlistloop{\printRow}{\WorkProdList}
+}
+
+% Processes
+\newcommand{\defineProcess}[3]{%
+  \expandafter\def\csname procId#1\endcsname{#2}%
+  \expandafter\def\csname procName#1\endcsname{#3}%
+  \CheckUniqueProc{#2}
+  \listgadd{\ProcList}{#1}
+}
+\newcommand{\processId}[1]{\textit{\csname procId#1\endcsname}}
+\newcommand{\processName}[1]{\csname procName#1\endcsname}
+\newcommand{\process}[1]{\processId{#1}. \processName{#1}}
