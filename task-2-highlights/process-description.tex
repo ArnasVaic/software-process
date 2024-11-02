@@ -40,7 +40,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     \veiklos{
          \item Projektų vadovas, architektas ir analitikas bendrauja su klientu, aiškinasi jo poreikius projektui (\workProdId{ClientNeeds}). Ši veikla tęsiasi tol, kol įmonės atstovai surenka pakankamai informacijos paruošti klientui pasiūlymą.
     
-        \item Projektų vadovas, architektas ir analitikas tarpusavyje įvertina kliento poreikius projektui (\workProdId{ClientNeeds}) atsižvelgdami į departamento patirtį su kitais projektais (\workProdId{Experience}) ir nustato laiko, kainos ir žmogiškųjų ištekliu sąmata (\workProdId{ResourceEstimates}) bei projekto apimtį (\workProdId{ProjectScope}). Laikas, kaina (nustatyti iš \workProdId{ResourceEstimates}), projekto apimtis (\workProdId{ProjectScope}), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (\workProdId{Contract}). \label{activity:prepare-deal}
+        \item \hl{Projekto vadovas, architektas ir analitikas tarpusavyje įvertina kliento poreikius projektui (\workProdId{ClientNeeds}) atsižvelgdami į departamento patirtį su kitais projektais (\workProdId{Experience}) ir nustato laiko, kainos ir žmogiškųjų ištekliu sąmata (\workProdId{ResourceEstimates}) bei projekto apimtį (\workProdId{ProjectScope}). Laikas, kaina (nustatyti iš \workProdId{ResourceEstimates}), projekto apimtis (\workProdId{ProjectScope}), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (\workProdId{Contract}).} \label{activity:prepare-deal}
 
         \item Klientui yra pateikiama sutartis (\workProdId{Contract}). Jei klientas yra patenkintas sutarties sąlygomis, pereinama prie sutarties pasirašymo \ref{activity:sign}. Klientas gali nesutikti su sutarties sąlygomis. Tokiu atveju vyksta derybos - klientas pateikia naujus poreikius (\workProdId{ClientNeeds}) ir dar kartą vykdoma veikla \ref{activity:prepare-deal}. Jei abi šalys nesugeba rasti kompromiso, procesas gali būti nutrauktas ir darbas su klientu netęsiamas.
 
@@ -65,14 +65,14 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{HighLevelArch}
     }
     \veiklos{
-        \item Analitikas renka informaciją iš kliento. Pagal tai modeliuoja verslo procesus ir identifikuoja konkrečius naudotojų poreikius.
-        \item Architektas ir analitikas apibrėžia funkcinius (\workProdId{FunReq}) ir nefunkcinius reikalavimus (\workProdId{NonFunReq}) iš
+        \item \hl{Analitikas renka informaciją iš kliento. Pagal tai modeliuoja verslo procesus ir identifikuoja konkrečius naudotojų poreikius.}
+        \item \hl{Architektas ir analitikas apibrėžia funkcinius (\workProdId{FunReq}) ir nefunkcinius reikalavimus (\workProdId{NonFunReq})} iš
             \begin{itemize}
                 \item identifikuotų naudotojų poreikių
                 \item modeliuojamų verslo procesų
                 \item projekto apimties (\workProdId{ProjectScope})
             \end{itemize}
-        \item Architektas sukuria aukšto lygio sistemos architektūrą (\workProdId{HighLevelArch}) atsižvelgdamas į apibrėžtus funkcinius (\workProdId{FunReq}) ir nefunkcinius reikalavimus (\workProdId{NonFunReq}).
+        \item \hl{Architektas sukuria aukšto lygio sistemos architektūrą (\workProdId{HighLevelArch}) atsižvelgdamas į apibrėžtus funkcinius (\workProdId{FunReq}) ir nefunkcinius reikalavimus (\workProdId{NonFunReq}).}
     }
 \end{processTable}
 
@@ -94,9 +94,9 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     
     \veiklos{
 
-        \item Architektas kartu su analitiku grupuoja susijusius funkcinius (\workProdId{FunReq}) ir nefunkcinius (\workProdId{NonFunReq}) reikalavimus bei skaido aukšto lygio architektūrą (\workProdId{HighLevelArch}) į panaudos atvejus arba bendro pobūdžio užduotis, kurios bendrai sudaro projekto užduočių sąrašą (\workProdId{Backlog}).
+        \item \hl{Architektas kartu su analitiku grupuoja susijusius funkcinius (\workProdId{FunReq}) ir nefunkcinius (\workProdId{NonFunReq}) reikalavimus bei skaido aukšto lygio architektūrą (\workProdId{HighLevelArch}) į panaudos atvejus arba bendro pobūdžio užduotis, kurios bendrai sudaro projekto užduočių sąrašą (\workProdId{Backlog}).}
 
-        \item Architektas kartu su analitiku detaliai aprašo užduotis, nurodydami kokie funkciniai (\workProdId{FunReq}) bei nefunkciniai (\workProdId{NonFunReq}) reikalavimai įeiną į konkrečios užduoties apimtį.
+        \item \hl{Architektas kartu su analitiku detaliai aprašo užduotis}, nurodydami kokie funkciniai (\workProdId{FunReq}) bei nefunkciniai (\workProdId{NonFunReq}) reikalavimai įeiną į konkrečios užduoties apimtį.
         \item Architektas kartu su analitiku nurodo užduočių priėmimo kriterijus, kuriais vadovaujantis galima  objektyviai įvertini ar užduotis yra įgyvendinta.
         \item Projektų vadovas, architektas ir analitikas prioritetizuoja projekto užduočių sąrašą (\workProdId{Backlog}) jį surūšiuodami.
     }
@@ -128,11 +128,11 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Projektų vadovas, kuris atsižvelgia į sprinto peržiūros ataskaitą (\workProdId{SprintReviewDoc}), nustato sprinto tikslus. Jei istoriniai praėjusių sprintų duomenys dar neegzistuoja, nes vykdomas pirmasis sprintas, atsižvelgiama į projektų užduočių sąrašo (\workProdId{Backlog}) pirminę prioritetizacija.
         \label{SP:1}
 
-        \item Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus.
-        \item Jei komandos nariai nusprendžia, kad tam tikra užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  turi būti išskaidoma į atomiškas užduotis, tai ir yra atliekama - skaidomai užduočiai sukuriamos vaikinės užduotys.
-        \item Komanda kiekvienai neįvertintai užduočiai įvertina laiką ir pastangas, naudojant pasakojimo vienetus, įprastai sekančius Fibonači seką.  Tai atliekama remiantis kelių komandos narių darbine patirtimi ir bendru susitarimu. Tuomet projekto užduočių sąraše (\workProdId{Backlog}) esančios užduoties atributas -- pasakojimo vienetai -- keičiamas į nutartą skaičių.
-        \item Projektų vadovas sukuria sprinto užduočių sarašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}). Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia.
-        \item Komandos nariai planuoja, kas atliks kurią sprinto užduotį. Nutarus, sprinto užduočių sąraše (\workProdId{SprintBacklog}) kiekvienos užduoties atributas -- atsakingas asmuo --  keičiamas į už užduoties įgyvendinimą atsakingo asmens vardą ir pavardę.
+        \item \hl{Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus}.
+        \item \hl{Jei komandos nariai nusprendžia, kad tam tikra užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  turi būti išskaidoma į atomiškas užduotis, tai ir yra atliekama - skaidomai užduočiai sukuriamos vaikinės užduotys.}
+        \item \hl{Komanda kiekvienai neįvertintai užduočiai įvertina laiką ir pastangas, naudojant pasakojimo vienetus, įprastai sekančius Fibonači seką.  Tai atliekama remiantis kelių komandos narių darbine patirtimi ir bendru susitarimu.} Tuomet projekto užduočių sąraše (\workProdId{Backlog}) esančios užduoties atributas -- pasakojimo vienetai -- keičiamas į nutartą skaičių.
+        \item \hl{Projektų vadovas sukuria sprinto užduočių sąrašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}).} Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia.
+        \item \hl{Komandos nariai planuoja, kas atliks kurią sprinto užduotį.} Nutarus, sprinto užduočių sąraše (\workProdId{SprintBacklog}) kiekvienos užduoties atributas -- atsakingas asmuo --  keičiamas į už užduoties įgyvendinimą atsakingo asmens vardą ir pavardę.
     }
 \end{processTable}
 
@@ -158,18 +158,18 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Kai programinės įrangos kūrėjai atlieka jiems priskirtą užduotį, užduoties statusas keičiamas IN PROGRESS. 
         \item Jei šis procesas vykdomas, kai užduotis buvo grąžinta į įgyvendinimą (\textit{ĮG}) po testavimo proceso (\textit{TE}), programinės įrangos kūrėjai atsižvelgia į klaidų aprašus (\workProdId{DefectReport}), kad ištaisytų klaidas. Kitu atveju veikla praleidžiama.
         \label{IG:2}
-        \item Kiekvienas programinės įrangos kūrėjas rašo kodą, taip papildydami programinį kodą   
-        (\workProdId{Codebase}). 
+        \item \hl{Kiekvienas programinės įrangos kūrėjas rašo kodą, taip papildydami programinį kodą   
+        (\workProdId{Codebase}).}
         \label{IG:3}
-        \item Programinės įrangos kūrėjai rašo vienetų testus, kurie padengia 70\% kodo eilučių, kad užtikrintų kodo korektiškumą. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).
+        \item \hl{Programinės įrangos kūrėjai rašo modulių testus, kurie padengia 70\% kodo eilučių, kad užtikrintų kodo korektiškumą.} Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).
         \label{IG:4}
         \item Programinės įrangos kūrėjas, atsakingas už užduotį, keičia užduoties statuso atributą į \mbox{IN~REVIEW}.
         \label{IG:5}
-        \item Užduotį, kuri yra IN REVIEW, kitas komandos narys peržiūri, komentuoja kodą. Jeigu kitas komandos narys pareikalauja pakeitimų, pakeičia užduoties statusą į IN PROGRESS. Už užduotį atsakingas asmuo turi pakartoti \ref{IG:3}-\ref{IG:6} veiklas.
+        \item \hl{Užduotį, kuri yra IN REVIEW, kitas komandos narys peržiūri, komentuoja kodą.} \hl{Jeigu kitas komandos narys pareikalauja pakeitimų, pakeičia užduoties statusą į IN PROGRESS}. Už užduotį atsakingas asmuo turi pakartoti \ref{IG:3}-\ref{IG:6} veiklas.
         \label{IG:6}
-        \item Kitam komandos nariui patvirtinus kodo kokybę, programinės įrangos kūrėjas pažymi, kad programinį kodą (\workProdId{Codebase}) galima testuoti - užduoties statusas keičiamas į TESTING, o atributas atsakingas asmuo  keičiamas į už užduoties testavimą atsakingo asmens vardą ir pavardę.  
+        \item \hl{Kitam komandos nariui patvirtinus kodo kokybę, programinės įrangos kūrėjas pažymi, kad programinį kodą (\workProdId{Codebase}) galima testuoti - užduoties statusas keičiamas į TESTING}, o atributas atsakingas asmuo  keičiamas į už užduoties testavimą atsakingo asmens vardą ir pavardę.  
         \label{IG:7}
-        \item Visą reikalingą techninę dokumentaciją (\workProdId{TechDoc}) parašo programinės įrangos kūrėjas.
+        \item \hl{Visą reikalingą techninę dokumentaciją (\workProdId{TechDoc}) parašo programinės įrangos kūrėjas.}
         \label{IG:8}
         \item Laikas, praleistas atliekant \ref{IG:2}-\ref{IG:8} veiklas pažymimas sprinto užduočių sąrašo (\workProdId{SprintBacklog})  užduoties atribute  „kūrimo valandos“.
     }
@@ -196,11 +196,11 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     \veiklos{
         \item Kiekvienas testuotojas atlieka jam priskirtą užduotį kaip nurodyta sprinto užduočių saraše (\workProdId{SprintBacklog}). 
         \label{TE:1}
-        \item Testuotojai testuoja užduoties programinį kodą (\workProdId{Codebase}) pagal užduoties aprašymą, kuriame nurodyti funkciniai ir nefunkciniai reikalavimai. Jie taip pat atsižvelgia į užduoties priėmimo kriterijus, kurie nurodyti viename iš užduoties atributų. Pagal patirtį arba pasitarę su kitais komandos nariais, testuotojai gali nuspręsti atlikti integracijos, našumo, saugumo, regresijos ir kitus testus. 
+        \item \hl{Testuotojai testuoja užduoties programinį kodą (\workProdId{Codebase}) pagal užduoties aprašymą, kuriame nurodyti funkciniai ir nefunkciniai reikalavimai. Jie taip pat atsižvelgia į užduoties priėmimo kriterijus, kurie nurodyti viename iš užduoties atributų.} Pagal patirtį arba pasitarę su kitais komandos nariais, testuotojai gali nuspręsti atlikti integracijos, našumo, saugumo, regresijos ir kitus testus. 
         \label{TE:2}
-        \item Testuotojai rašo arba taiso klaidų aprašus (\workProdId{DefectReport}), kad jie atspindėtų programinio kodo kokybės būklę.
+        \item \hl{Testuotojai rašo arba taiso klaidų aprašus (\workProdId{DefectReport}), kad jie atspindėtų programinio kodo kokybės būklę.}
          \label{TE:3}
-        \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę.  
+        \item \hl{Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS}, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę.  
          \label{TE:4}
         \item Laikas, kuris buvo praleistas atliekant \ref{TE:2}-\ref{TE:4} veiklas pažymimas sprinto užduočių sąraše (\workProdId{SprintBacklog}) esančios užduoties atribute 
          „testavimo valandos“.
@@ -224,10 +224,10 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
        \item \workProd{Product}
     }
     \veiklos{
-        \item Programinės įrangos kurėjai sukuria naujos produkto versijos (\workProdId{Product}) artefaktą.
-        \item Programinės įrangos kūrėjas pristato produktą (\workProdId{Product}) suinteresuotoms šalims.
-        \item Komandos nariai išklauso SŠ atsiliepimus apie atliktą darbą. Aptaria visus trūkumus, galimus patobulinimus ir pakeitimus projekto užduočių saraše (\workProdId{Backlog}).
-        \item Projekto vadovas surašo surinktus atisiliepimus į grįžtamojo ryšio registrą (\workProdId{Feedback}).
+        \item \hl{Programinės įrangos kurėjai sukuria naujos produkto versijos (\workProdId{Product}) artefaktą.}
+        \item \hl{Programinės įrangos kūrėjas pristato produktą (\workProdId{Product}) suinteresuotoms šalims.}
+        \item \hl{Komandos nariai išklauso SŠ atsiliepimus apie atliktą darbą. Aptaria visus trūkumus, galimus patobulinimus ir pakeitimus projekto užduočių sąraše (\workProdId{Backlog}).}
+        \item \hl{Projekto vadovas surašo surinktus atsiliepimus į grįžtamojo ryšio registrą (\workProdId{Feedback}).}
     }
 \end{processTable}
 
@@ -251,20 +251,20 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{StoryPointRange}
     }
     \veiklos{
-        \item Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė. Visi komandos nariai surašo savo  atsiliepimus.
+        \item \hl{Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė. Visi komandos nariai surašo savo atsiliepimus.}
         
-        \item Projekto vadovas peržiūri sprinto užduočių sąrašą (\workProdId{SprintBacklog}), palygina faktinį užduotims atlikti sugaištą laiką su kūrimo valandų įvertinimais ir parengia laiko valdymo ataskaitą atsižvelgdamas į likusį laiką iš pradinių sąmatų (\workProdId{ResourceEstimates}).
+        \item \hl{Projekto vadovas peržiūri sprinto užduočių sąrašą (\workProdId{SprintBacklog}), palygina faktinį užduotims atlikti sugaištą laiką su kūrimo valandų įvertinimais ir parengia laiko valdymo ataskaitą atsižvelgdamas į likusį laiką iš pradinių sąmatų (\workProdId{ResourceEstimates}).}
 
-        \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
+        \item \hl{Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).}
         
-        \item Remiantis komandos atsiliepimais, komanda ir projektų vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.
+        \item \hl{Remiantis komandos atsiliepimais, komanda ir projekto vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.}
         % \item Based on \textbf{1-2} and feedback documentation (\textit{FD}), the project manager and scrum team identifies necessary adjustments for the next sprint.
         
         % NOTE: Bet ar tai tikrai reikia čia atlikti? Gal geriau tai pažymėti sprinto peržiūros ataskaitoj ir td koregavimas atliekamas Sprinto Planavime?? also jeigu keičiama čia, tai reikia pridėti atitinkamai prie input'ų ir output'ų.
         
         % This includes updating the project backlog (\textit{PB}), reprioritizing tasks as needed and capturing these changes in the sprint review report (\textit{SRR}), refining the story point range (\textit{SP}).
 
-        \item Jei projekto užduočių sąraše (\workProdId{Backlog}) visų užduočių statusas yra DONE, pereinama prie naudojimo dokumentacijos (\processId{CreateManual}), o SCRUM ciklai šiam projektui nebetęsiami.
+        \item \hl{Jei projekto užduočių sąraše (\workProdId{Backlog}) visų užduočių statusas yra DONE, pereinama prie naudojimo dokumentacijos (\processId{CreateManual}), o SCRUM ciklai šiam projektui nebetęsiami.}
         % NOTE: čia gal nurodyti kokiomis sąlygomis nebereikia kitų sprint'ų?
         % \item The project manager closes project if necessary - if no further sprints are required, they transition to usage documentation.
     }
@@ -283,11 +283,11 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
             \item \workProd{Manual}
     }
     \veiklos{
-        \item Iš užduočių sąrašo (\workProdId{Backlog}) išrenkami panaudos atvejai. 
+        \item \hl{Iš užduočių sąrašo (\workProdId{Backlog}) išrenkami panaudos atvejai.}
         \item Detaliai aprašomi visi žingsniai kiekvienam panaudos atvejui įgyvendinti naudojant produkto (\workProdId{Product}) iliustracijas. \label{CreateManual/1}
         \item Detaliai aprašomos visos produkto (\workProdId{Product}) funkcijos (t.\,y. kaip jomis pasinaudoti). \label{CreateManual/2}
         \item Iš \ref{CreateManual/1} ir \ref{CreateManual/2} veiklų rezultatų sudaromas struktūrizuotas, vientisas dokumentas - \prodWork{Manual}
-        \item Atliekama produkto naudojimo instrukcijos (\workProdId{Manual}) validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms. \label{CreateManual/3}
+        \item \hl{Atliekama produkto naudojimo instrukcijos (\workProdId{Manual}) validacija - paruoštas dokumentas peržiūrimas kolegų iš kitų padalinių, įsitikinama, jog instrukcija suprantama pirmą kartą produktą (\workProdId{Product}) naudojantiems žmonėms.} \label{CreateManual/3}
         \item Kol netenkinamas \ref{CreateManual/3} punktas, atliekami naudojimo instrukcijos pakeitimai.
         }
 \end{processTable}
@@ -304,7 +304,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     \inputs{
         \item \workProd{Product}
     	\item \workProd{Contract}
-    	\item \workProd{Backlog}
+    	\item \workProd{Backlog} 
     	\item \workProd{TechDoc}
     	\item \workProd{Manual}
     }
@@ -314,11 +314,11 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     }
     \veiklos{
         \item Atliekami sutartyje (\workProdId{Contract}) numatyti produkto (\workProdId{Product}) perdavimo klientui darbai.
-        \item Klientui perduodama \prodWork{Manual}.
+        \item \hl{Klientui perduodama \prodWork{Manual}}.
         \item Klientui perduodama \prodWork{TechDoc}.
-        \item Sudaroma ir pasirašoma \prodWork{Warranty}, kurioje numatomas garantinio aptarnavimo laikotarpis.
-    	\item Atliekama vidinė komunikacija apie užbaigtą projektą. Projekto vadovas dalinasi projekto eiga, priimtais kritiniais sprendimais ir rezultatais. Taip kaupiama \prodWork{Experience}. 
-    	\item Kol nesibaigia sutartyje (\workProdId{Contract}) numatytas adaptacinis laikotarpis, klientams teikiama techninė pagalba.
+        \item \hl{Sudaroma ir pasirašoma \prodWork{Warranty}, kurioje numatomas garantinio aptarnavimo laikotarpis.}
+    	\item \hl{ Atliekama vidinė komunikacija apie užbaigtą projektą. Projekto vadovas dalinasi projekto eiga, priimtais kritiniais sprendimais ir rezultatais. Taip kaupiama \prodWork{Experience}.} 
+    	\item \hl{Kol nesibaigia sutartyje (\workProdId{Contract}) numatytas adaptacinis laikotarpis, klientams teikiama techninė pagalba.}
     }
 \end{processTable}
 
@@ -357,7 +357,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         		\item yra užregistruota po garantino aptarnavimo sutartyje (\workProdId{Warranty}) numatyto garantinio laikotarpio
             \end{enumerate}
             tuomet užregistruota klaida (\workProdId{Ticket}) nėra taisoma ir šis procesas (\processId{BugFix}) yra užbaigiamas nevykdant tolesnių veiklų.
-    	\item Atliekama klaidos kilimo priežasties analizė (root cause analysis).
+    	\item \hl{Atliekama klaidos kilimo priežasties analizė (root cause analysis).}
     	\item Kuo įmanoma greičiau ištaisoma klaida ir sukuriama nauja produkto (\workProdId{Product}) versija.
     	\item Nauja produkto (\workProdId{Product}) versija perduodama klientams.
     	\item Užregistruota klaida (\workProdId{Ticket}) „Jira“ platformoje papildoma su klaidą ištaisančia prdoukto (\workProdId{Product}) versija bei klaidos kilimo priežastimi.    

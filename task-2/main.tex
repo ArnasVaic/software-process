@@ -80,7 +80,7 @@ Duomenis yra/bus? renkami iš deperatemnto "PTN" procesų aprašo dokumento (TOD
 
 \subsection{Procesų veritinimas}
 
-\url{https://docs.google.com/spreadsheets/d/1unX_xcZLEGHqQOMCuBBXYvVhYjChxpnq/edit?usp=share_link&ouid=113452949406463366361&rtpof=true&sd=true}
+\url{https://docs.google.com/spreadsheets/d/1unX_xcZLEGHqQOMCuBBXYvVhYjChxpnq/edit?usp=share_link&ouid=113452949406463366361&rtpof=true&sd=true }
 
 \subsection{Vertinimo rezultatai}
 
@@ -94,5 +94,155 @@ Duomenis yra/bus? renkami iš deperatemnto "PTN" procesų aprašo dokumento (TOD
 \subsection{Tikslinis gebėjimo profilis}
 
 \subsection{Gerinimo veiksmų planas}
+
+\subsubsection{Exploration aspect}
+
+Šis aspektas pagal esamus procesus yra pasiekęs 1 judrumo lygį. Aspektas gali pasiekti 3 judrumo lygį, jei atributas
+AA 1.1 iš L bus pakeltas į F. \\
+
+Tą pasiekti galima atsižvelgus į šiuo metu procesuose neįgyvendintą E.AP4 atributą (specify dependencies among requirements artifacts: Detect and specify dependencies among stories and other artifacts to prevent a failure caused by a missed dependent requirement). \\
+
+\textbf{E.AP4 gerinimas} 
+
+\subsubsubsection{Priklausomybių sekimas Projekto užduočių sąrašė (UR)}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.3 UR. Užduočių sąrašo rengimas
+    \item \textbf{Modifikacija:} pridėti veiklą:
+    \begin{quote}
+        "Kiekvienai užduočiai (PUS) priskiriamos priklausomybių žymos, nurodant, ar užduotis priklauso nuo kitų užduočių."
+    \end{quote}
+\end{itemize}
+
+\subsection*{Sprinto planavimas (SP)}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.4.1 SP. Sprinto planavimas
+    \item \textbf{Modifikacija:} 
+    \begin{quote}
+        "Sprinto planavimo metu, komanda peržiūri priklausomybes ir blokus užduočių sąraše (SUS) ir užtikrina jų tinkamą tvarką."
+    \end{quote}
+\end{itemize}
+
+\subsection*{Įgyvendinimo (ĮG) metu keisti priklausomybės statusą}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.4.2 ĮG. Įgyvendinimas
+    \item \textbf{Modifikacija:}
+    \begin{quote}
+        "Programinės įrangos kūrėjai atnaujina užduoties priklausomybių būseną užduočių sąraše (SUS), kai priklausomybės keičiasi."
+    \end{quote}
+\end{itemize}
+
+\subsection*{Kontrolė (KO)}
+\begin{itemize}
+    \item \textbf{Vieta:} sekcija 2.4.5 KO. Kontrolė
+    \item \textbf{Modifikacija:} 
+    \begin{quote}
+        "Sprinto peržiūros metu komanda aptaria iškilusius priklausomybių blokus ir siūlo patobulinimus ateičiai."
+    \end{quote}
+\end{itemize}
+
+\subsubsubsection*{Bendras pagerinimas}
+
+Šios priklausomybių valdymo praktikos užtikrina:
+\begin{itemize}
+    \item Priklausomybės yra nustatomos ir matomos nuo pat pradžių.
+    \item Priklausomybės yra reguliariai peržiūrimos ir atnaujinamos.
+\end{itemize}
+
+\subsubsection{Construction aspect}
+
+Keliamas iš 2 judrumo lygio į 3 judrumo lygį. Tam pasiekti gerinami atributai:
+\begin{enumerate}
+\item AA 2.1 L -> F 
+\item AA 2.2 L -> F 
+\item AA 3.1 P -> L 
+\end{enumerate}
+
+\section*{GP 2.1.2 Gerinimas siekiant AA 2.1 F lygio}
+
+\subsection*{Kasdieniai Stand-Up susitikimai}
+\textbf{Vieta PDF dokumente:} Skyrius 2.4 SC. Scrum ciklas \\
+\textbf{Modifikacija:} Nauja veiklą prie \textit{ĮG. Įgyvendinimas}.
+\begin{quote}
+\textbf{Kasdieniai Stand-Up susitikimai:} Kiekvieną dieną komanda rengia trumpą Stand-Up susitikimą, kad aptartų progresą, nustatytų kliūtis ir sinchronizuotų veiklas tarp komandos narių. Šis susitikimas paprastai trunka ne ilgiau kaip 15 minučių ir susideda iš trijų pagrindinių punktų: kas buvo padaryta vakar, kas bus daroma šiandien, ir kokios yra šiuo metu esančios kliūtys.
+\end{quote}
+
+\subsection*{Komunikacijos įrankių naudojimą planavimo ir įgyvendinimo etapuose}
+\textbf{Vieta:} Skyrius 2.4.1 SP. Sprinto planavimas ir 2.4.2 ĮG. Įgyvendinimas \\
+\textbf{Modifikacija:} Paminėkite Kanban lentų, Slack arba kitų komunikacijos įrankių naudojimą, kurie palaiko Agile principus. 
+\begin{quote}
+Planavimo ir įgyvendinimo metu komanda naudoja komunikacijos įrankius, tokius kaip Kanban lentos ir Slack, kad vizualizuotų darbus, stebėtų progresą ir palaikytų realaus laiko atnaujinimus tarp komandos narių ir suinteresuotųjų šalių. Ši sistema padeda palaikyti užduočių būklės matomumą, leidžiant operatyviai reaguoti į iškilusias problemas.
+\end{quote}
+
+\subsection*{Dokumentuokite komunikaciją Kontrolės (KO) procese}
+\textbf{Vieta:} Skyrius 2.4.5 KO. Kontrolė \\
+\textbf{Modifikacija:} Pridėkite žingsnį sprinto retrospektyvos procese, kuriame komandos nariai aptaria naudojamų komunikacijos įrankių ir praktikų efektyvumą. \\
+\textbf{Naujas tekstas:}
+\begin{quote}
+Sprinto retrospektyvos metu komandos nariai įvertina komunikacijos praktikų, įskaitant kasdienius Stand-Up susitikimus ir tokių įrankių kaip Kanban lentos ir Slack naudojimo, efektyvumą. Šis grįžtamasis ryšys dokumentuojamas Sprinto Peržiūros Ataskaitoje (SPA), siekiant nuolat gerinti komunikacijos praktikas.
+\end{quote}
+
+\section*{Išvada}
+Šių modifikacijų dėka pagrindinės Agile komunikacijos praktikos yra tiesiogiai integruotos į dokumentuotus procesus, pašalinant ankstesnius trūkumus kasdieniame koordinavime, matomume ir grįžtamojo ryšio cikluose. Tai turėtų padidinti \textit{GP 2.1.2} brandos lygį ir padėti pasiekti norimą F įvertinimą.
+
+\section*{GP 2.2.2 gerinimas, siekiant AA 2.2 Simple F lygio}
+
+Norint dar labiau pagerinti dokumentacijos procesą ir pasiekti 100\% brandos lygį, rekomenduojami šie žingsniai:
+
+\subsection*{1. Dokumentacijos kontrolinis sąrašas kiekvienam užduoties tipui}
+\textbf{Vieta PDF dokumente:} Skyrius 2.3 UR. Užduočių sąrašo rengimas \\
+\textbf{Papildymas:} Įtraukti standartizuotą kontrolinį sąrašą, kuris nurodo specifinius dokumentacijos reikalavimus pagal užduočių tipus (pvz., kūrimas, testavimas, dizainas).
+\begin{quote}
+"Kiekvienam užduočių tipui priskiriamas dokumentacijos kontrolinis sąrašas, kuris nurodo, kokia dokumentacija yra būtina. Pvz., kūrimo užduotims reikalinga techninė dokumentacija, bandymų užduotims - testavimo ataskaita, o dizaino užduotims - vartotojo vadovas."
+\end{quote}
+\textbf{Priežastis:} Dokumentacijos poreikių apibrėžimas pagal užduoties tipą sukuria nuoseklumą ir užtikrina, kad kiekvienai užduočiai būtų pateikta tik būtina dokumentacija.
+
+\subsection*{2. Dokumentacijos šablonai dažniausioms užduotims}
+\textbf{Vieta PDF dokumente:} Skyrius 3 Darbo produktų sąrašas \\
+\textbf{Papildymas:} Pateikti šablonus su privalomais skyriais skirtingiems dokumentacijos tipams (pvz., techninei, funkcinei dokumentacijai, sprendimų žurnalams).
+\begin{quote}
+"Projekto darbo produktams pateikiami šablonai, kurie supaprastina dokumentacijos parengimą. Kiekvienam dokumentacijos tipui yra sukurtas šablonas su privalomais skyriais, pvz., techninei dokumentacijai privalomas API aprašymas ir architektūros diagramos, o sprendimų žurnale turi būti įrašai apie priimtus sprendimus ir jų priežastis."
+\end{quote}
+
+\subsection*{3. Dokumentacijos peržiūros ir patvirtinimo darbo eiga}
+\textbf{Vieta PDF dokumente:} Skyrius 2.4.2 ĮG. Įgyvendinimas \\
+\textbf{Papildymas:} Pridėti privalomą dokumentacijos peržiūros ir patvirtinimo žingsnį kūrimo darbo eigoje.
+\begin{quote}
+"Kiekvienas parengtas dokumentacijos elementas turi būti peržiūrėtas ir patvirtintas komandos nario, kad būtų užtikrintas jo atitikimas projekto kriterijams ir užduoties poreikiams. Šiame procese dalyvauja architektas arba projekto vadovas, kurie tikrina dokumentacijos kokybę ir jos pritaikymą projekto užduočių reikalavimams."
+\end{quote}
+\textbf{Priežastis:} Šis žingsnis užtikrina, kad visa dokumentacija atitinka nustatytus kriterijus prieš patvirtinimą, taip didinant dokumentacijos tikslumą ir svarbą.
+
+\section*{Patobulinimų santrauka}
+Įgyvendinus šiuos papildomus žingsnius, dokumentacijos procesas taps labiau struktūruotas, nuoseklus ir atitiks Agile paprastumo principus. Šis požiūris padės pasiekti 100\% brandos lygį AA 2.2 Simple.
+
+\section*{Patobulinimai GP 3.1.1 siekiant L brandos lygio}
+
+Norint pasiekti L brandos lygį GP 3.1.1 Integruoti Agile inžinerijos metodus/praktikas į aspektų praktikas galima atlikti šiuos pakeitimus:
+
+\subsection*{1. Integruoti TDD}
+\textbf{Vieta:} Skyrius 2.4.2 ĮG. Įgyvendinimas \\
+\textbf{Papildymas:} Pridėti žingsnį, kuris reikalauja kūrėjų naudoti TDD taikomoms užduotims.
+\begin{quote}
+"Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta testais, siekiant išvengti klaidų ir garantuoti kodo kokybę."
+\end{quote}
+
+\subsection*{2. Pridėti porinio programavimo sesijas}
+\textbf{Vieta:}  2.4.2 ĮG. Įgyvendinimas \\
+\textbf{Papildymas:} Suderinti porinio programavimo sesijas sudėtingoms ar kritinėms užduotims, siekiant užtikrinti kodo kokybę ir dalintis žiniomis.
+\begin{quote}
+"Sunkesnėms arba sudėtingesnėms užduotims yra numatyti sesijų priskyrimai porinio programavimo principu, kai du kūrėjai kartu dirba su ta pačia užduotimi, siekdami užtikrinti kodo kokybę ir efektyviai dalintis žiniomis."
+\end{quote}
+
+\section*{Patobulinimų santrauka}
+Įgyvendinus šias praktikas dokumentuotuose procesuose, pasiekiami šie privalumai:
+\begin{itemize}
+    \item \textbf{Aukštesnė kodo kokybė} per TDD.
+    \item \textbf{Žinių pasidalinimas} ir bendradarbiavimas per porinį programavimą.
+\end{itemize}
+
+Šie pakeitimai padės GP 3.1.1 pasiekti L įvertinimą, įtraukiant Agile inžinerijos metodus tiesiai į darbo eigą ir užtikrinant geriausių praktikų nuoseklų laikymąsi.
+
+\subsection{Transition aspect}
+
+
 
 \end{document}
