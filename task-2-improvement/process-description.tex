@@ -17,6 +17,8 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 
 \subsection{\process{EngageClient}} % ARNAS
 
+
+\hl{...}
 \begin{figure}[H]%[htpb!]
     \centering
     \includegraphics[width=0.75\linewidth]{task-1/etc/diagrams/engage-client.png}
@@ -99,15 +101,12 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Architektas kartu su analitiku detaliai aprašo užduotis, nurodydami kokie funkciniai (\workProdId{FunReq}) bei nefunkciniai (\workProdId{NonFunReq}) reikalavimai įeiną į konkrečios užduoties apimtį.
         \item Architektas kartu su analitiku nurodo užduočių priėmimo kriterijus, kuriais vadovaujantis galima  objektyviai įvertini ar užduotis yra įgyvendinta.
         \item Projektų vadovas, architektas ir analitikas prioritetizuoja projekto užduočių sąrašą (\workProdId{Backlog}) jį surūšiuodami.
+        \item \hl{Kiekvienai užduočiai (PUS) priskiriamos priklausomybių žymos, nurodant, ar užduotis priklauso nuo kitų užduočių.}
     }
 \end{processTable}
 
 \newpage
 \subsection{\process{ScrumCycle}}
-
-%  ## Domanto klausimai
-% 
-%  - Jeigu sprinto backlog'e įdedamos klaidos (t.y. klaida yra tiesiog dar vienas task'as sprinto užduočių sąraše), kam tada reikalingas "KL. Klaidos" darbo produktas?
 
 \subsubsection{\process{Refinement}}
 
@@ -128,10 +127,14 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Projektų vadovas, kuris atsižvelgia į sprinto peržiūros ataskaitą (\workProdId{SprintReviewDoc}), nustato sprinto tikslus. Jei istoriniai praėjusių sprintų duomenys dar neegzistuoja, nes vykdomas pirmasis sprintas, atsižvelgiama į projektų užduočių sąrašo (\workProdId{Backlog}) pirminę prioritetizacija.
         \label{SP:1}
 
-        \item Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus.
+        \item Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus. \hl{Komanda peržiūri užduotis, kurios priklauso nuo kitų užduočių, užduočių sąraše (SUS) ir užtikrina jų tinkamą tvarką.}
+        
         \item Jei komandos nariai nusprendžia, kad tam tikra užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  turi būti išskaidoma į atomiškas užduotis, tai ir yra atliekama - skaidomai užduočiai sukuriamos vaikinės užduotys.
+        
         \item Komanda kiekvienai neįvertintai užduočiai įvertina laiką ir pastangas, naudojant pasakojimo vienetus, įprastai sekančius Fibonači seką.  Tai atliekama remiantis kelių komandos narių darbine patirtimi ir bendru susitarimu. Tuomet projekto užduočių sąraše (\workProdId{Backlog}) esančios užduoties atributas -- pasakojimo vienetai -- keičiamas į nutartą skaičių.
-        \item Projektų vadovas sukuria sprinto užduočių sarašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}). Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia.
+        
+        \item Projektų vadovas sukuria sprinto užduočių sarašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}). Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia. \hl{Sprinto užduočių sąrašas (\workProdId{SprintBacklog}) realizuojamas visai komandai ir SŠ matomomis „Kanban“ lentomis.}
+        
         \item Komandos nariai planuoja, kas atliks kurią sprinto užduotį. Nutarus, sprinto užduočių sąraše (\workProdId{SprintBacklog}) kiekvienos užduoties atributas -- atsakingas asmuo --  keičiamas į už užduoties įgyvendinimą atsakingo asmens vardą ir pavardę.
     }
 \end{processTable}
@@ -155,11 +158,20 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{TechDoc}
     }
     \veiklos{
+        \item \hl{\textbf{Kasdieniai Stand-Up susitikimai:} Kiekvieną dieną komanda rengia trumpą Stand-Up susitikimą, kad aptartų progresą, nustatytų kliūtis ir sinchronizuotų veiklas tarp komandos narių. Šis susitikimas paprastai trunka ne ilgiau kaip 15 minučių ir susideda iš trijų pagrindinių punktų: kas buvo padaryta vakar, kas bus daroma šiandien, ir kokios yra šiuo metu esančios kliūtys.}
         \item Kai programinės įrangos kūrėjai atlieka jiems priskirtą užduotį, užduoties statusas keičiamas IN PROGRESS. 
         \item Jei šis procesas vykdomas, kai užduotis buvo grąžinta į įgyvendinimą (\textit{ĮG}) po testavimo proceso (\textit{TE}), programinės įrangos kūrėjai atsižvelgia į klaidų aprašus (\workProdId{DefectReport}), kad ištaisytų klaidas. Kitu atveju veikla praleidžiama.
         \label{IG:2}
+
+        \item \hl{Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta testais, siekiant išvengti klaidų ir garantuoti kodo kokybę.}
+        
         \item Kiekvienas programinės įrangos kūrėjas rašo kodą, taip papildydami programinį kodą   
-        (\workProdId{Codebase}). 
+        (\workProdId{Codebase}).
+
+        \item \hl{Sudėtingas arba itin svarbias užduotis programuotojai dalinai atlieka naudodami porinio programavimo sesijas. Šių sesijų tikslas yra dalijimasis žiniomis ir momentinė kodo peržiūra.}
+
+        \item \hl{Jeigu rašant programinį kodą, kūrėjui paaiškėja, kad šios užduoties jis negalės atlikti nes pirma turi būti atlikta kita užduotis, kūrėjas sprinto užduočių saraše \workProdId{SprintBacklog} pažymi užduotį, nuo kurio priklauso jo atliekama užduotis. Toliau kūrėjas eina prie kitos jam priskirtos užduoties ir šios užduoties įgyvendinimas nėra tęsiamas iki kol kita užduoties statusas nepasikeičia į DONE.}
+        
         \label{IG:3}
         \item Programinės įrangos kūrėjai rašo vienetų testus, kurie padengia 70\% kodo eilučių, kad užtikrintų kodo korektiškumą. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).
         \label{IG:4}
@@ -200,8 +212,9 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \label{TE:2}
         \item Testuotojai rašo arba taiso klaidų aprašus (\workProdId{DefectReport}), kad jie atspindėtų programinio kodo kokybės būklę.
          \label{TE:3}
-        \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę.  
+        \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę. \hl{Jei šio proceso metu nebuvo rasta klaidų užduoties statusas pakeičiamas į DONE ir atnaujinamos užduočių priklausomybių žymos, jeigu yra užduočių, kurios priklauso nuo šios.}
          \label{TE:4}
+
         \item Laikas, kuris buvo praleistas atliekant \ref{TE:2}-\ref{TE:4} veiklas pažymimas sprinto užduočių sąraše (\workProdId{SprintBacklog}) esančios užduoties atribute 
          „testavimo valandos“.
     }
@@ -251,22 +264,15 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{StoryPointRange}
     }
     \veiklos{
-        \item Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė. Visi komandos nariai surašo savo  atsiliepimus.
+        \item Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė, \hl{įvertina komunikacijos praktikų, įskaitant kasdienius Stand-Up susitikimus ir tokių įrankių kaip „Kanban“ lentos, „Slack“ ir kt. naudojimo, efektyvumą. Komanda aptaria iškilusius užduočių priklausomybių blokus}. Visi komandos nariai surašo savo atsiliepimus.
         
         \item Projekto vadovas peržiūri sprinto užduočių sąrašą (\workProdId{SprintBacklog}), palygina faktinį užduotims atlikti sugaištą laiką su kūrimo valandų įvertinimais ir parengia laiko valdymo ataskaitą atsižvelgdamas į likusį laiką iš pradinių sąmatų (\workProdId{ResourceEstimates}).
 
         \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
         
         \item Remiantis komandos atsiliepimais, komanda ir projektų vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.
-        % \item Based on \textbf{1-2} and feedback documentation (\textit{FD}), the project manager and scrum team identifies necessary adjustments for the next sprint.
-        
-        % NOTE: Bet ar tai tikrai reikia čia atlikti? Gal geriau tai pažymėti sprinto peržiūros ataskaitoj ir td koregavimas atliekamas Sprinto Planavime?? also jeigu keičiama čia, tai reikia pridėti atitinkamai prie input'ų ir output'ų.
-        
-        % This includes updating the project backlog (\textit{PB}), reprioritizing tasks as needed and capturing these changes in the sprint review report (\textit{SRR}), refining the story point range (\textit{SP}).
 
         \item Jei projekto užduočių sąraše (\workProdId{Backlog}) visų užduočių statusas yra DONE, pereinama prie naudojimo dokumentacijos (\processId{CreateManual}), o SCRUM ciklai šiam projektui nebetęsiami.
-        % NOTE: čia gal nurodyti kokiomis sąlygomis nebereikia kitų sprint'ų?
-        % \item The project manager closes project if necessary - if no further sprints are required, they transition to usage documentation.
     }
 \end{processTable}
 
