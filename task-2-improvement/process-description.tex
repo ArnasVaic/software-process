@@ -11,17 +11,15 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 \thispagestyle{empty}
 \begin{figure}[H]%[htpb!]
     \centering
-    \includegraphics[width=0.85\linewidth]{task-1/etc/diagrams/processes.png}
+    \includegraphics[width=0.85\linewidth]{./etc/diagrams/processes.png}
 \end{figure}
 \end{landscape}
 
 \subsection{\process{EngageClient}} % ARNAS
 
-
-\hl{...}
 \begin{figure}[H]%[htpb!]
     \centering
-    \includegraphics[width=0.75\linewidth]{task-1/etc/diagrams/engage-client.png}
+    \includegraphics[width=0.75\linewidth]{./etc/diagrams/engage-client.png}
 \end{figure}
 
 \begin{processTable}{EngageClient}
@@ -38,11 +36,18 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{ProjectScope}
         
         \item \workProd{Contract}
+        
+        \item \hl{\workProd{Risks}}
     }
     \veiklos{
          \item Projektų vadovas, architektas ir analitikas bendrauja su klientu, aiškinasi jo poreikius projektui (\workProdId{ClientNeeds}). Ši veikla tęsiasi tol, kol įmonės atstovai surenka pakankamai informacijos paruošti klientui pasiūlymą.
-    
-        \item Projektų vadovas, architektas ir analitikas tarpusavyje įvertina kliento poreikius projektui (\workProdId{ClientNeeds}) atsižvelgdami į departamento patirtį su kitais projektais (\workProdId{Experience}) ir nustato laiko, kainos ir žmogiškųjų ištekliu sąmata (\workProdId{ResourceEstimates}) bei projekto apimtį (\workProdId{ProjectScope}). Laikas, kaina (nustatyti iš \workProdId{ResourceEstimates}), projekto apimtis (\workProdId{ProjectScope}), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (\workProdId{Contract}). \label{activity:prepare-deal}
+
+        \item \hl{Projektų vadovas, architektas ir analitikas paruošia pradinė projekto viziją tam, kad būtų patvirtintas projekto įgyvendinamumas ir suderinta bendra projekto kryptis su SŠ. Jie taip pat atlieka pagrįstumo analizę, siekdami įvertinti, ar kliento poreikiai (KP) yra įgyvendinami.}
+
+        \item Analitikas įvertina projekto rizikas (PR).
+
+        \item \hl{Projektų vadovas, architektas ir analitikas  atsižvelgdami į projekto viziją, pagrįstumo analizę, departamento patirtį su kitais projektais (PAT) bei projekto apimtimi (PA) nustato laiko, kainos ir žmogiškųjų išteklių sąmatą (IS). Laikas, kaina (nustatyti iš IS), projekto apimtis (PA), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (KS).}
+        \label{activity:prepare-deal}
 
         \item Klientui yra pateikiama sutartis (\workProdId{Contract}). Jei klientas yra patenkintas sutarties sąlygomis, pereinama prie sutarties pasirašymo \ref{activity:sign}. Klientas gali nesutikti su sutarties sąlygomis. Tokiu atveju vyksta derybos - klientas pateikia naujus poreikius (\workProdId{ClientNeeds}) ir dar kartą vykdoma veikla \ref{activity:prepare-deal}. Jei abi šalys nesugeba rasti kompromiso, procesas gali būti nutrauktas ir darbas su klientu netęsiamas.
 
@@ -106,6 +111,32 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 \end{processTable}
 
 \newpage
+\subsection{\process{CICD}}
+
+\begin{processTable}{CICD}
+    \tikslas{Paruošti kodo repozitoriją Automatizuoti kodo testavimo bei diegimo procesą.}
+
+    \inputs{
+        \item \hl{ \workProd{HighLevelArch} }
+    }
+
+    \outputs{
+        \item \hl{ \workProd{Product} }
+        \item \hl{ \workProd{Environment} }
+    }
+
+    \veiklos{
+        \item \hl{Architektas atsižvelgiant į aukšto lygio architektūrą \workProdId{HighLevelArch} sukuria kodo repositoriją, kurioje saugojamas programinis kodas, trečių šalių bibliotekų ir diegimo konfiguracija. Pagal šabloną sukuria pirminį projekto kodą.}
+
+        \item \hl{Architektas parengia saugyklą trečių šalių bibliotekoms saugoti. }
+
+        \item \hl{Architektas sukuria ir parengia testavimo aplinką (\workProdId{Environment}). }
+
+        \item \hl{Architektas sukonfiguruoja CI/CD. Parengia, kad automatiniai testai būtų paleidžiami, kai sukuriama nauja programinio kodo versija ir kad, jeigu testų rezultatai teigiami, automatiškai įdiegia naują produkto versiją testavimo aplinkoje (\workProdId{Environment}).}
+    }
+\end{processTable}
+
+\newpage
 \subsection{\process{ScrumCycle}}
 
 \subsubsection{\process{Refinement}}
@@ -163,26 +194,30 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Jei šis procesas vykdomas, kai užduotis buvo grąžinta į įgyvendinimą (\textit{ĮG}) po testavimo proceso (\textit{TE}), programinės įrangos kūrėjai atsižvelgia į klaidų aprašus (\workProdId{DefectReport}), kad ištaisytų klaidas. Kitu atveju veikla praleidžiama.
         \label{IG:2}
 
-        \item \hl{Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta testais, siekiant išvengti klaidų ir garantuoti kodo kokybę.}
+        \item \hl{Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta vienetų testais, siekiant išvengti klaidų ir garantuoti kodo kokybę. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).}
         
         \item Kiekvienas programinės įrangos kūrėjas rašo kodą, taip papildydami programinį kodą   
         (\workProdId{Codebase}).
 
         \item \hl{Sudėtingas arba itin svarbias užduotis programuotojai dalinai atlieka naudodami porinio programavimo sesijas. Šių sesijų tikslas yra dalijimasis žiniomis ir momentinė kodo peržiūra.}
+        \label{IG:4}
 
         \item \hl{Jeigu rašant programinį kodą, kūrėjui paaiškėja, kad šios užduoties jis negalės atlikti nes pirma turi būti atlikta kita užduotis, kūrėjas sprinto užduočių saraše \workProdId{SprintBacklog} pažymi užduotį, nuo kurio priklauso jo atliekama užduotis. Toliau kūrėjas eina prie kitos jam priskirtos užduoties ir šios užduoties įgyvendinimas nėra tęsiamas iki kol kita užduoties statusas nepasikeičia į DONE.}
-        
         \label{IG:3}
-        \item Programinės įrangos kūrėjai rašo vienetų testus, kurie padengia 70\% kodo eilučių, kad užtikrintų kodo korektiškumą. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).
-        \label{IG:4}
-        \item Programinės įrangos kūrėjas, atsakingas už užduotį, keičia užduoties statuso atributą į \mbox{IN~REVIEW}.
+
+        \item Programinės įrangos kūrėjas, atsakingas už užduotį, keičia užduoties statuso atributą į \mbox{IN~REVIEW}, \hlc[yellow]{prieš tai įsitikindamas, kad testų rezultatai (automatiškai sugeneruojami CI/CD infrastruktūros) yra teigiami ir nėra konfliktų su pagrindine programinio kodo atšaka, jeigu yra -- juos pataiso}.
         \label{IG:5}
+
         \item Užduotį, kuri yra IN REVIEW, kitas komandos narys peržiūri, komentuoja kodą. Jeigu kitas komandos narys pareikalauja pakeitimų, pakeičia užduoties statusą į IN PROGRESS. Už užduotį atsakingas asmuo turi pakartoti \ref{IG:3}-\ref{IG:6} veiklas.
         \label{IG:6}
         \item Kitam komandos nariui patvirtinus kodo kokybę, programinės įrangos kūrėjas pažymi, kad programinį kodą (\workProdId{Codebase}) galima testuoti - užduoties statusas keičiamas į TESTING, o atributas atsakingas asmuo  keičiamas į už užduoties testavimą atsakingo asmens vardą ir pavardę.  
         \label{IG:7}
-        \item Visą reikalingą techninę dokumentaciją (\workProdId{TechDoc}) parašo programinės įrangos kūrėjas.
+
+        \item \hl{Vykdomas techninės dokumentacijos poreikio įvertinimas. Vertinama pagal šiuos kriterijus: \textbf{konfigūracija} -- ar užduoties rezultatas konfigūruojamas produkto konfigūraciniuose failuose, \textbf{išoriškumas} -- ar užduoties rezultatas pasiekiamas išoriniams vartotojams (pvz. API), \textbf{kritiškumas} -- užduoties rezultato poveikis bendram produkto funkcionalumui.}
+
+        \item \hl{Techninė dokumentacija užduočiai rašoma tik jei jos poreikio vertinimas teigiamas.} Visą reikalingą techninę dokumentaciją (\workProdId{TechDoc}) parašo programinės įrangos kūrėjas.
         \label{IG:8}
+
         \item Laikas, praleistas atliekant \ref{IG:2}-\ref{IG:8} veiklas pažymimas sprinto užduočių sąrašo (\workProdId{SprintBacklog})  užduoties atribute  „kūrimo valandos“.
     }
 \end{processTable}
@@ -212,6 +247,9 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \label{TE:2}
         \item Testuotojai rašo arba taiso klaidų aprašus (\workProdId{DefectReport}), kad jie atspindėtų programinio kodo kokybės būklę.
          \label{TE:3}
+
+        \item \hl{    Automatizuotus regresinius testus kuria ir rašo testuotojas, kuris yra atsakingas už testų kūrimo ir priežiūros procesą. Šie testai užtikrina, kad kodo pakeitimai nesukelia klaidų ir nepažeidžia esamo funkcionalumo. Laikoma, kad atnaujintas programinis kodas (\workProdId{Codebase}). }
+         
         \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę. \hl{Jei šio proceso metu nebuvo rasta klaidų užduoties statusas pakeičiamas į DONE ir atnaujinamos užduočių priklausomybių žymos, jeigu yra užduočių, kurios priklauso nuo šios.}
          \label{TE:4}
 
@@ -231,14 +269,15 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     \inputs{
         \item \workProd{Codebase}
         \item \workProd{Backlog}
+        \item \hl{Environment}
+        \item \hl{Product}
     }
     \outputs{
        \item \workProd{Feedback}
-       \item \workProd{Product}
     }
     \veiklos{
-        \item Programinės įrangos kurėjai sukuria naujos produkto versijos (\workProdId{Product}) artefaktą.
-        \item Programinės įrangos kūrėjas pristato produktą (\workProdId{Product}) suinteresuotoms šalims.
+        \item \hl{Programinės įrangos kūrėjas pristato naujasią produkto versiją (\workProdId{Product}), įdiegtą testavimo aplinkoje (\workProdId{Environment}), suinteresuotoms šalims.}
+
         \item Komandos nariai išklauso SŠ atsiliepimus apie atliktą darbą. Aptaria visus trūkumus, galimus patobulinimus ir pakeitimus projekto užduočių saraše (\workProdId{Backlog}).
         \item Projekto vadovas surašo surinktus atisiliepimus į grįžtamojo ryšio registrą (\workProdId{Feedback}).
     }
@@ -258,6 +297,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{StoryPointRange}
         \item \workProd{Feedback}
         \item \workProd{Backlog}
+        \item \hl{\workProd{Risks}}
     }
     \outputs{
         \item \workProd{SprintReviewDoc}
@@ -268,7 +308,9 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         
         \item Projekto vadovas peržiūri sprinto užduočių sąrašą (\workProdId{SprintBacklog}), palygina faktinį užduotims atlikti sugaištą laiką su kūrimo valandų įvertinimais ir parengia laiko valdymo ataskaitą atsižvelgdamas į likusį laiką iš pradinių sąmatų (\workProdId{ResourceEstimates}).
 
-        \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
+        \item \hl{Projekto vadovas peržiūri projekto rizikas (PR) ir dokumentuoja neatitikimus}
+
+        \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, \hl{dokumentuotais neatitikimais} projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
         
         \item Remiantis komandos atsiliepimais, komanda ir projektų vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.
 

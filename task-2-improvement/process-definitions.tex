@@ -3,6 +3,7 @@
 \defineProcess{EngageClient}{KĮ}{Kliento įtraukimas}
 \defineProcess{RA}{RA}{Reikalavimų analizė}
 \defineProcess{DraftBacklog}{UR}{Užduočių sąrašo rengimas}
+\defineProcess{CICD}{AR}{Aplinkos rengimas}
 
 \defineProcess{CreateManual}{ND}{Naudojimo dokumentacija}
 \defineProcess{CloseProject}{PU}{Projekto užbaigimas}
@@ -34,7 +35,7 @@
 \def\processPK{#1}
 }
 {
-\begin{tabular}{p{0.1\textwidth}|p{0.9\textwidth}}
+\begin{longtable}{p{0.1\textwidth}|p{0.9\textwidth}}
 
 \textbf{\processId{\processPK}} & \textbf{\processName{\processPK}} 
 \\ \hline
@@ -46,7 +47,7 @@ Sukurti darbo produktai  & \begin{itemize} \producedWorkProducts \end{itemize}
 \\ \hline
 Veiklos & \begin{enumerate} \activities \end{enumerate}
 \label{processTable:\processPK}
-\end{tabular}
+\end{longtable}
 }
 
 % \begin{processTable}{PrimaryKey}

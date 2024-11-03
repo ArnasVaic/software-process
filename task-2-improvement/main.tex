@@ -3,7 +3,7 @@
 \usepackage[lithuanian]{babel}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float} % For accuratelly placing images
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=1.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{pdflscape}
 \usepackage{longtable}
@@ -14,6 +14,13 @@
 % For striketrghough
 \usepackage{xcolor}
 \usepackage{soul}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
 
 % For colored highlights 
 \usepackage{xcolor}
