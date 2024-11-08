@@ -23,5 +23,13 @@ Usually there will be open questions.
 - [Scrum gidas lietuviškai](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Lithuanian.pdf)
 
 ## TODO
-- [ ] Atnaujinti diagramą
-- [ ] FIX: ĮG procese testai rašomi du kartus
+- [X] Atnaujinti diagramą
+- [X] FIX: ĮG procese testai rašomi du kartus
+- [X] "vienetų testai" -> "modulių testai"
+- [ ] (DOMANTAS) Lentelės iš excel'io 
+- [ ] (DOMANTAS) Highlights iš excel'io (maintenance)
+- [ ] (LIUDAS) Perrikiuoti darbo produktų sąrašą
+- [X] 3.2.2.1 - atnaujinti pagal atnaujintą excel'į: išmesti kontrolės ir pridėti pristatymų metu various communication tools
+- [ ] Double check: "programinio kodo kūrėjas" -> "programinės įrangos kūrėjas".
+- [ ] Darbo produktų pakeitimus įdėti į task-2 (main)
+- [ ] Peržiūrėti pakeitimus ir atnaujinti task-2-improvement

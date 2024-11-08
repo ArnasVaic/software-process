@@ -129,9 +129,13 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \label{SP:1}
 
         \item \hl{Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus}.
+        
         \item \hl{Jei komandos nariai nusprendžia, kad tam tikra užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  turi būti išskaidoma į atomiškas užduotis, tai ir yra atliekama - skaidomai užduočiai sukuriamos vaikinės užduotys.}
+        
         \item \hl{Komanda kiekvienai neįvertintai užduočiai įvertina laiką ir pastangas, naudojant pasakojimo vienetus, įprastai sekančius Fibonači seką.  Tai atliekama remiantis kelių komandos narių darbine patirtimi ir bendru susitarimu.} Tuomet projekto užduočių sąraše (\workProdId{Backlog}) esančios užduoties atributas -- pasakojimo vienetai -- keičiamas į nutartą skaičių.
+        
         \item \hl{Projektų vadovas sukuria sprinto užduočių sąrašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}).} Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia.
+        
         \item \hl{Komandos nariai planuoja, kas atliks kurią sprinto užduotį.} Nutarus, sprinto užduočių sąraše (\workProdId{SprintBacklog}) kiekvienos užduoties atributas -- atsakingas asmuo --  keičiamas į už užduoties įgyvendinimą atsakingo asmens vardą ir pavardę.
     }
 \end{processTable}
@@ -258,11 +262,6 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \hl{Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).}
         
         \item \hl{Remiantis komandos atsiliepimais, komanda ir projekto vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.}
-        % \item Based on \textbf{1-2} and feedback documentation (\textit{FD}), the project manager and scrum team identifies necessary adjustments for the next sprint.
-        
-        % NOTE: Bet ar tai tikrai reikia čia atlikti? Gal geriau tai pažymėti sprinto peržiūros ataskaitoj ir td koregavimas atliekamas Sprinto Planavime?? also jeigu keičiama čia, tai reikia pridėti atitinkamai prie input'ų ir output'ų.
-        
-        % This includes updating the project backlog (\textit{PB}), reprioritizing tasks as needed and capturing these changes in the sprint review report (\textit{SRR}), refining the story point range (\textit{SP}).
 
         \item \hl{Jei projekto užduočių sąraše (\workProdId{Backlog}) visų užduočių statusas yra DONE, pereinama prie naudojimo dokumentacijos (\processId{CreateManual}), o SCRUM ciklai šiam projektui nebetęsiami.}
         % NOTE: čia gal nurodyti kokiomis sąlygomis nebereikia kitų sprint'ų?

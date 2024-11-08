@@ -44,7 +44,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 
         \item \hl{Projektų vadovas, architektas ir analitikas paruošia pradinė projekto viziją tam, kad būtų patvirtintas projekto įgyvendinamumas ir suderinta bendra projekto kryptis su SŠ. Jie taip pat atlieka pagrįstumo analizę, siekdami įvertinti, ar kliento poreikiai (KP) yra įgyvendinami.}
 
-        \item Analitikas įvertina projekto rizikas (PR).
+        \item \hl{Analitikas identifikuoja ir įvertina projekto rizikas, pagal jas sukuria rizikų valdymo planą (\workProdId{Risks}).}
 
         \item \hl{Projektų vadovas, architektas ir analitikas  atsižvelgdami į projekto viziją, pagrįstumo analizę, departamento patirtį su kitais projektais (PAT) bei projekto apimtimi (PA) nustato laiko, kainos ir žmogiškųjų išteklių sąmatą (IS). Laikas, kaina (nustatyti iš IS), projekto apimtis (PA), produkto perdavimo sąlygos ir adaptacinio laikotarpio terminas tuomet yra teisiškai įforminami sutartyje (KS).}
         \label{activity:prepare-deal}
@@ -114,25 +114,25 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 \subsection{\process{CICD}}
 
 \begin{processTable}{CICD}
-    \tikslas{Paruošti kodo repozitoriją Automatizuoti kodo testavimo bei diegimo procesą.}
+    \tikslas{Paruošti kodo repozitoriją. Automatizuoti kodo testavimo bei diegimo procesą.}
 
     \inputs{
-        \item \hl{ \workProd{HighLevelArch} }
+        \item \hl{\workProd{HighLevelArch}}
     }
 
     \outputs{
-        \item \hl{ \workProd{Product} }
-        \item \hl{ \workProd{Environment} }
+        \item \hl{\workProd{Product}}
+        \item \hl{\workProd{Environment}}
     }
 
     \veiklos{
-        \item \hl{Architektas atsižvelgiant į aukšto lygio architektūrą \workProdId{HighLevelArch} sukuria kodo repositoriją, kurioje saugojamas programinis kodas, trečių šalių bibliotekų ir diegimo konfiguracija. Pagal šabloną sukuria pirminį projekto kodą.}
+        \item \hl{Architektas atsižvelgdamas į aukšto lygio architektūrą (\workProdId{HighLevelArch}) sukuria kodo repozitoriją, kurioje bus saugomas programinis kodas (\workProdId{Codebase}), trečių šalių bibliotekų ir diegimo konfigūracija. Pagal pasirinkto karkaso (pavyzdžiui: .NET, Spring Boot) šabloną  sukuria pirminį projekto programinį kodą.}
 
-        \item \hl{Architektas parengia saugyklą trečių šalių bibliotekoms saugoti. }
+        \item \hl{Architektas parengia saugyklą trečių šalių bibliotekoms saugoti.}
 
-        \item \hl{Architektas sukuria ir parengia testavimo aplinką (\workProdId{Environment}). }
+        \item \hl{Architektas sukuria ir parengia testavimo aplinką (\workProdId{Environment}).}
 
-        \item \hl{Architektas sukonfiguruoja CI/CD. Parengia, kad automatiniai testai būtų paleidžiami, kai sukuriama nauja programinio kodo versija ir kad, jeigu testų rezultatai teigiami, automatiškai įdiegia naują produkto versiją testavimo aplinkoje (\workProdId{Environment}).}
+        \item \hl{Architektas ruošia trečiųjų šalių bibliotekų saugyklas ir konfigūruoja CI/CD - užtikrina, kad sukūrus naują programinio kodo versiją būtų paleidžiami automatiniai testai, jiems suveikus be klaidų, nauja produkto versija automatiškai įkeliama į testavimo aplinką (\workProdId{Environment}).}
     }
 \end{processTable}
 
@@ -158,13 +158,13 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item Projektų vadovas, kuris atsižvelgia į sprinto peržiūros ataskaitą (\workProdId{SprintReviewDoc}), nustato sprinto tikslus. Jei istoriniai praėjusių sprintų duomenys dar neegzistuoja, nes vykdomas pirmasis sprintas, atsižvelgiama į projektų užduočių sąrašo (\workProdId{Backlog}) pirminę prioritetizacija.
         \label{SP:1}
 
-        \item Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus. \hl{Komanda peržiūri užduotis, kurios priklauso nuo kitų užduočių, užduočių sąraše (SUS) ir užtikrina jų tinkamą tvarką.}
+        \item Projektų vadovas, bendro komandos susitikimo metu, \ref{SP:1}  veikloje įvardintus tikslus paskelbia komandai. Į tai atsižvelgę komandos nariai gali atnaujinti projekto užduočių sąrašo (\workProdId{Backlog}) prioritetus. 
         
         \item Jei komandos nariai nusprendžia, kad tam tikra užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  turi būti išskaidoma į atomiškas užduotis, tai ir yra atliekama - skaidomai užduočiai sukuriamos vaikinės užduotys.
         
         \item Komanda kiekvienai neįvertintai užduočiai įvertina laiką ir pastangas, naudojant pasakojimo vienetus, įprastai sekančius Fibonači seką.  Tai atliekama remiantis kelių komandos narių darbine patirtimi ir bendru susitarimu. Tuomet projekto užduočių sąraše (\workProdId{Backlog}) esančios užduoties atributas -- pasakojimo vienetai -- keičiamas į nutartą skaičių.
         
-        \item Projektų vadovas sukuria sprinto užduočių sarašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}). Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia. \hl{Sprinto užduočių sąrašas (\workProdId{SprintBacklog}) realizuojamas visai komandai ir SŠ matomomis „Kanban“ lentomis.}
+        \item Projektų vadovas sukuria sprinto užduočių sarašą (\workProdId{SprintBacklog}) atrinkdamas aukščiausio prioriteto  užduotis iš projekto užduočių sąrašo (\workProdId{Backlog})  taip, kad jų bendra pasakojimo vienetų suma tilptų į pasakojimo vienetų intervalą (\workProdId{StoryPointRange}). Pirmojo sprinto metu, dar neturint pasakojimo vienetų intervalo, parenkama tiek užduočių, kiek komanda bendru nutarimu nusprendžia. \hl{Komanda peržiūri užduotis, kurios priklauso nuo kitų užduočių, užduočių sąraše (SUS) ir užtikrina jų tinkamą prioritetą užduočių sąraše (SUS).} \hl{Sprinto užduočių sąrašas (\workProdId{SprintBacklog}) realizuojamas visai komandai ir SŠ matomomis „Kanban“ lentomis.}
         
         \item Komandos nariai planuoja, kas atliks kurią sprinto užduotį. Nutarus, sprinto užduočių sąraše (\workProdId{SprintBacklog}) kiekvienos užduoties atributas -- atsakingas asmuo --  keičiamas į už užduoties įgyvendinimą atsakingo asmens vardą ir pavardę.
     }
@@ -189,20 +189,20 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{TechDoc}
     }
     \veiklos{
-        \item \hl{\textbf{Kasdieniai Stand-Up susitikimai:} Kiekvieną dieną komanda rengia trumpą Stand-Up susitikimą, kad aptartų progresą, nustatytų kliūtis ir sinchronizuotų veiklas tarp komandos narių. Šis susitikimas paprastai trunka ne ilgiau kaip 15 minučių ir susideda iš trijų pagrindinių punktų: kas buvo padaryta vakar, kas bus daroma šiandien, ir kokios yra šiuo metu esančios kliūtys.}
+        \item \hl{Kiekvieną dieną komanda rengia trumpą Stand-Up susitikimą, kad aptartų progresą, nustatytų kliūtis ir sinchronizuotų veiklas tarp komandos narių. Šis susitikimas įprastai trunka ne ilgiau kaip 15 minučių ir susideda iš trijų pagrindinių punktų: kas buvo padaryta vakar, kas bus daroma šiandien, ir su kokiomis kliūtimis susiduriama.}
         \item Kai programinės įrangos kūrėjai atlieka jiems priskirtą užduotį, užduoties statusas keičiamas IN PROGRESS. 
         \item Jei šis procesas vykdomas, kai užduotis buvo grąžinta į įgyvendinimą (\textit{ĮG}) po testavimo proceso (\textit{TE}), programinės įrangos kūrėjai atsižvelgia į klaidų aprašus (\workProdId{DefectReport}), kad ištaisytų klaidas. Kitu atveju veikla praleidžiama.
         \label{IG:2}
 
-        \item \hl{Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta vienetų testais, siekiant išvengti klaidų ir garantuoti kodo kokybę. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).}
+        \item \hl{Programinės įrangos kūrėjai pritaiko testų kūrimo metodą (TDD), prieš pradedant kurti funkcionalumą. TDD užtikrina, kad kiekviena funkcija būtų padengta modulių testais, siekiant išvengti klaidų ir garantuoti kodo kokybę. Laikoma, kad yra atnaujinamas programinis kodas (\workProdId{Codebase}).}
         
         \item Kiekvienas programinės įrangos kūrėjas rašo kodą, taip papildydami programinį kodą   
         (\workProdId{Codebase}).
 
-        \item \hl{Sudėtingas arba itin svarbias užduotis programuotojai dalinai atlieka naudodami porinio programavimo sesijas. Šių sesijų tikslas yra dalijimasis žiniomis ir momentinė kodo peržiūra.}
+        \item \hl{Sudėtingas arba itin svarbias užduotis programinės įrangos kūrėjai dalinai atlieka porose. Darbo porose tikslas - dalintis žiniomis ir efektyvesnė kodo peržiūra.}
         \label{IG:4}
 
-        \item \hl{Jeigu rašant programinį kodą, kūrėjui paaiškėja, kad šios užduoties jis negalės atlikti nes pirma turi būti atlikta kita užduotis, kūrėjas sprinto užduočių saraše \workProdId{SprintBacklog} pažymi užduotį, nuo kurio priklauso jo atliekama užduotis. Toliau kūrėjas eina prie kitos jam priskirtos užduoties ir šios užduoties įgyvendinimas nėra tęsiamas iki kol kita užduoties statusas nepasikeičia į DONE.}
+        \item \hl{Jeigu rašant programinį kodą, programinės įrangos kūrėjui paaiškėja, kad šios užduoties jis negalės atlikti, nes pirma turi būti atlikta kita užduotis, programinės įrangos kūrėjas sprinto užduočių saraše (\workProdId{SprintBacklog}) pažymi užduotį, nuo kurios priklauso jo atliekama užduotis. Toliau šios užduoties įgyvendinimas nėra tęsiamas iki kol kitos užduoties statusas nepasikeičia į DONE.}
         \label{IG:3}
 
         \item Programinės įrangos kūrėjas, atsakingas už užduotį, keičia užduoties statuso atributą į \mbox{IN~REVIEW}, \hlc[yellow]{prieš tai įsitikindamas, kad testų rezultatai (automatiškai sugeneruojami CI/CD infrastruktūros) yra teigiami ir nėra konfliktų su pagrindine programinio kodo atšaka, jeigu yra -- juos pataiso}.
@@ -250,7 +250,7 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
 
         \item \hl{    Automatizuotus regresinius testus kuria ir rašo testuotojas, kuris yra atsakingas už testų kūrimo ir priežiūros procesą. Šie testai užtikrina, kad kodo pakeitimai nesukelia klaidų ir nepažeidžia esamo funkcionalumo. Laikoma, kad atnaujintas programinis kodas (\workProdId{Codebase}). }
          
-        \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę. \hl{Jei šio proceso metu nebuvo rasta klaidų užduoties statusas pakeičiamas į DONE ir atnaujinamos užduočių priklausomybių žymos, jeigu yra užduočių, kurios priklauso nuo šios.}
+        \item Jei šio proceso metu buvo rasta klaidų, užduotis grąžinama atgal į įgyvendinimo (\processId{Development}) procesą, kad programinės įrangos kūrėjai išspręstų klaidas. Testuotojas turi pakeisti užduoties būseną, kad sprinto užduočių sąraše (\workProdId{SprintBacklog}) būtų nurodyta, kad jos statusas IN PROGRESS, o atributas -- atsakingas asmuo -- keičiamas į už užduoties taisymą atsakingo asmens vardą ir pavardę. \hl{Jei šio proceso metu nebuvo rasta klaidų, užduoties statusas pakeičiamas į DONE. Tuomet automatiškai atnaujinamos visos nuo šios užduoties priklausomos užduotys – jų priklausomybės statusas pakeičiamas į nebeblokuojantį.}
          \label{TE:4}
 
         \item Laikas, kuris buvo praleistas atliekant \ref{TE:2}-\ref{TE:4} veiklas pažymimas sprinto užduočių sąraše (\workProdId{SprintBacklog}) esančios užduoties atribute 
@@ -269,15 +269,16 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
     \inputs{
         \item \workProd{Codebase}
         \item \workProd{Backlog}
-        \item \hl{Environment}
-        \item \hl{Product}
+        \item \hl{\workProd{Environment}}
+        \item \hl{\workProd{Product}}
     }
     \outputs{
        \item \workProd{Feedback}
     }
     \veiklos{
-        \item \hl{Programinės įrangos kūrėjas pristato naujasią produkto versiją (\workProdId{Product}), įdiegtą testavimo aplinkoje (\workProdId{Environment}), suinteresuotoms šalims.}
 
+        \item \hl{Programinės įrangos kūrėjas pristato naujasią produkto versiją (\workProdId{Product}), įdiegtą testavimo aplinkoje (\workProdId{Environment}), suinteresuotoms šalims.} \hl{Tai gali vykti nuotoliniu būdu arba gyvo susitikimo metu, per kurį naudojami įvairūs informacijos radiatoriai pvz: skaidrės, projektoriai, rašomosios lentos ir t. t.}
+        
         \item Komandos nariai išklauso SŠ atsiliepimus apie atliktą darbą. Aptaria visus trūkumus, galimus patobulinimus ir pakeitimus projekto užduočių saraše (\workProdId{Backlog}).
         \item Projekto vadovas surašo surinktus atisiliepimus į grįžtamojo ryšio registrą (\workProdId{Feedback}).
     }
@@ -304,13 +305,13 @@ Dokumente pateiktos diagramos sumodeliuotos naudojant BPMN 2.0 notaciją.
         \item \workProd{StoryPointRange}
     }
     \veiklos{
-        \item Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė, \hl{įvertina komunikacijos praktikų, įskaitant kasdienius Stand-Up susitikimus ir tokių įrankių kaip „Kanban“ lentos, „Slack“ ir kt. naudojimo, efektyvumą. Komanda aptaria iškilusius užduočių priklausomybių blokus}. Visi komandos nariai surašo savo atsiliepimus.
+        \item Visi komandos nariai apmąsto sprinto eigą, aptaria, kas pavyko ir su kokiais sunkumais susidūrė. \hl{Komanda aptaria iškilusias užduočių priklausomybes (angl. blockers)}. Visi komandos nariai surašo savo atsiliepimus.
         
         \item Projekto vadovas peržiūri sprinto užduočių sąrašą (\workProdId{SprintBacklog}), palygina faktinį užduotims atlikti sugaištą laiką su kūrimo valandų įvertinimais ir parengia laiko valdymo ataskaitą atsižvelgdamas į likusį laiką iš pradinių sąmatų (\workProdId{ResourceEstimates}).
 
         \item \hl{Projekto vadovas peržiūri projekto rizikas (PR) ir dokumentuoja neatitikimus}
 
-        \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita, \hl{dokumentuotais neatitikimais} projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
+        \item Remiantis grįžtamojo ryšio registru (\workProdId{Feedback}) ir laiko valdymo ataskaita projekto vadovas atlieka projekto užduočių sąrašo (\workProdId{Backlog}) atnaujinimą, prireikus, užduočių prioritetų keitimą, pasakojimo vienetų intervalo (\workProdId{StoryPointRange}) patikslinimą. Šie pakeitimai fiksuojami sprinto peržiūros ataskaitoje (\workProdId{SprintReviewDoc}).
         
         \item Remiantis komandos atsiliepimais, komanda ir projektų vadovas nustato komandos procesų pakeitimus, kurie įsigalioja nuo kito sprinto.
 
